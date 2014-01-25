@@ -1,13 +1,27 @@
 ---
-layout: default
+layout: home
 title: Sean Kross
+base_url: /
 ---
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+<div id="wrap">
+	
+	<div class="jumbotron">
+
+	  <!-- Main component for a primary marketing message or call to action -->
+	  <div class="container">
+	    <h1 class="text-center">Postcards</h1>
+	    <p class="text-center">A Blog by Sean Kross</p>
+	  </div>
+
+	</div> <!-- /jumbotron -->
+
+	<div class="container">
+		<ul class="list-unstyled" class="center">
+			{% for post in site.posts %}
+			<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+
 </div>
