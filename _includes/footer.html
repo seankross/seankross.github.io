@@ -3,16 +3,24 @@
   <div class="navbar-collapse">
     <div class="container">
       	<ul style="margin-bottom: 0px" class="navbar-text list-unstyled list-inline visible-xs">
-  		    <li><a href="#about">About</a></li>
-          <li><a href="https://twitter.com/seankross"><img src="img/Twitter_logo_blue.png" height=20></a></li>
-          <li><a href="https://github.com/seankross"><img src="img/GitHub-Mark-64px.png" height=25></a></li>
+          {% if page.layout == 'about' %}
+          <li><a href="{{ page.base_url }}">Home</a></li>
+          {% else %}
+          <li><a href="{{ page.base_url }}about">About</a></li>
+          {% endif %}
+          <li><a href="https://twitter.com/seankross"><img src="{{ page.base_url }}img/Twitter_logo_blue.png" height=20></a></li>
+          <li><a href="https://github.com/seankross"><img src="{{ page.base_url }}img/GitHub-Mark-64px.png" height=25></a></li>
   	  	</ul>
         <ul style="margin-bottom: 0px" class="navbar-text list-unstyled list-inline hidden-xs">
-          <li><a href="#about">About</a></li>
+          {% if page.layout == 'about' %}
+          <li><a href="{{ page.base_url }}">Home</a></li>
+          {% else %}
+          <li><a href="{{ page.base_url }}about">About</a></li>
+          {% endif %}
         </ul>
   		  <ul style="margin-bottom: 0px" class="navbar-text list-unstyled list-inline navbar-right hidden-xs">
-  		    <li><a href="https://twitter.com/seankross"><img src="img/Twitter_logo_blue.png" height=20></a></li>
-  		    <li><a href="https://github.com/seankross"><img src="img/GitHub-Mark-64px.png" height=25></a></li>
+  		    <li><a href="https://twitter.com/seankross"><img src="{{ page.base_url }}img/Twitter_logo_blue.png" height=20></a></li>
+  		    <li><a href="https://github.com/seankross"><img src="{{ page.base_url }}img/GitHub-Mark-64px.png" height=25></a></li>
   		  </ul>
     </div>
   </div>
