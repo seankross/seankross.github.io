@@ -6,9 +6,4 @@ jumbo_title: Title
 jumbo_subtitle: A Subtitle
 ---
 
-How I made this site
-
-```python
-def yooo:
-	print "Hello Wolrd!"
-```
+This site uses Jekyll and Github Pages.
