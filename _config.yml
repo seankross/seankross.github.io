@@ -1,2 +1,7 @@
 name: Sean Kross
 pygments: true
+base_url: /
+markdown: redcarpet
+
+github: seankross
+twitter: seankross

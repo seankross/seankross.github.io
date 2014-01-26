@@ -1,26 +1,19 @@
 ---
 layout: home
 title: Sean Kross
-base_url: /
+jumbo_title: Postcards
+jumbo_subtitle: A Blog by Sean Kross
 ---
 
 <div id="wrap">
 	
-	<div class="jumbotron">
-
-	  <!-- Main component for a primary marketing message or call to action -->
-	  <div class="container">
-	    <h1 class="text-center"><a href="{{ page.base_url }}" style="text-decoration: none; color: inherit;">Postcards</a></h1>
-	    <p class="text-center">A Blog by Sean Kross</p>
-	  </div>
-
-	</div> <!-- /jumbotron -->
+	{% include jumbotron.html %}
 
 	<div class="container">
 		<ul class="list-unstyled" class="center">
 			{% for post in site.posts %}
-			<li><h2><a href="{{ post.url }}">{{ post.title }}</a>
-				<span class="hidden-xs" style="width: 8em; float: right; ">{{ post.date | date: "%B %-d, %Y" }}</span></h2></li>
+				<li><h4><a href="{{ post.url }}">{{ post.title }}</a>
+					<span class="hidden-xs" style="width: 8em; float: right; ">{{ post.date | date: "%B %-d, %Y" }}</span></h2></li>
 			{% endfor %}
 		</ul>
 	</div>
