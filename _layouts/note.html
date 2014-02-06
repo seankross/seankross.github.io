@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    {% include header.html %}
+  </head>
+  <body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <div id="wrap">
+
+          <!-- Begin page content -->
+          <div class="container">
+            <div class="page-header">
+              <h1>{{ page.header }}</h1>
+            </div>
+            {{ content }}
+          </div>
+        </div>
+
+  </body>
+</html>
