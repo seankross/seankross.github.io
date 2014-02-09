@@ -6,5 +6,4 @@ jumbo_title: Making This Site
 jumbo_subtitle:
 ---
 
-This site was built (and is still being built) using three core technologies: [GitHub Pages](http://pages.github.com/), [Jekyll](http://jekyllrb.com/), and [Bootstrap](http://getbootstrap.com/). Let's take a little tour through each of them in case you'd like to build your own site.
-
+This site was built using three core technologies: [GitHub Pages](http://pages.github.com/) for fee hosting and version control, [Jekyll](http://jekyllrb.com/) for actually rendering the site, and [Bootstrap](http://getbootstrap.com/) for design. Let me explain a little about these technologes in case you're unfamiliar.
