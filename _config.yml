@@ -3,5 +3,5 @@ pygments: true
 base_url: /
 markdown: redcarpet
 
-github: seankross
+github_uname: seankross
 twitter: seankross
