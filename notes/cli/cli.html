@@ -1,0 +1,1252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  
+  <!-- bootstrap -->
+  <!--<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet"  id="style">-->
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  
+  <!-- highlight.js -->
+  <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/default.min.css" rel="stylesheet" id="code-style">-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/highlight.min.js"></script>
+  <script>
+  hljs.LANGUAGES.r=function(a){var b="([a-zA-Z]|\\.[a-zA-Z.])[a-zA-Z0-9._]*";return{c:[a.HCM,{b:b,l:b,k:{keyword:"function if in break next repeat else for return switch while try tryCatch|10 stop warning require library attach detach source setMethod setGeneric setGroupGeneric setClass ...|10",literal:"NULL NA TRUE FALSE T F Inf NaN NA_integer_|10 NA_real_|10 NA_character_|10 NA_complex_|10"},r:0},{cN:"number",b:"0[xX][0-9a-fA-F]+[Li]?\\b",r:0},{cN:"number",b:"\\d+(?:[eE][+\\-]?\\d*)?L\\b",r:0},{cN:"number",b:"\\d+\\.(?!\\d)(?:i\\b)?",r:0},{cN:"number",b:"\\d+(?:\\.\\d*)?(?:[eE][+\\-]?\\d*)?i?\\b",r:0},{cN:"number",b:"\\.\\d+(?:[eE][+\\-]?\\d*)?i?\\b",r:0},{b:"`",e:"`",r:0},{cN:"string",b:'"',e:'"',c:[a.BE],r:0},{cN:"string",b:"'",e:"'",c:[a.BE],r:0}]}}(hljs); </script>
+  <!--<script type="text/javascript", src="https://yandex.st/highlightjs/7.3/languages/r.min.js"></script>-->
+  
+  <!-- Manific Popup -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/0.8.9/jquery.magnific-popup.min.js"></script>
+  
+  <script type="text/javascript"
+    src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  <script defer="defer">
+  // Function to generate the dynamic table of contents
+  jQuery.fn.generate_TOC = function () {
+    var base = $(this[0]);
+  
+    var selectors = ['h1', 'h2', 'h3', 'h4'];
+  
+    var last_ptr = [{}, {}, {}, {}];
+  
+    var anchors = {};
+  
+    generate_anchor = function (text) {
+      var test = text.replace(/\W/g, '_');
+  
+      while(test in anchors){
+        //if no suffix, add one
+        if(test.match(/_\d+$/) === null){
+          test = test + "_2";
+        }
+        //else generate unique id for duplicates by adding one to the suffix
+        else {
+          test = test.replace(/_(\d+)$/, function(match, number){ var num=+number+1; return("_" + num) });
+        }
+      }
+      anchors[test]=1;
+      return(test);
+    }
+  
+    $(selectors.join(',')).filter(function(index) { return $(this).parent().attr("id") != 'header'; }).each(function () {
+  
+      var heading = $(this);
+      var idx = selectors.indexOf(heading.prop('tagName').toLowerCase());
+      var itr = 0;
+  
+      while (itr <= idx) {
+        if (jQuery.isEmptyObject(last_ptr[itr])) {
+          last_ptr[itr] = $('<ul>').addClass('nav');
+          if (itr === 0) {
+            base.append(last_ptr[itr])
+          } else {
+            if(last_ptr[itr-1].children('li').length === 0){
+              last_ptr[itr-1].append(last_ptr[itr]);
+            }
+            else {
+              last_ptr[itr - 1].children('li').last().append(last_ptr[itr]);
+            }
+          }
+        }
+        itr++;
+      }
+      var anchor = generate_anchor(heading.text());
+      heading.attr('id', anchor);
+      var a = $('<a>')
+      .text(heading.text())
+      .attr('href', '#' + anchor);
+  
+    var li = $('<li>')
+      .append(a);
+  
+    last_ptr[idx].append(li);
+    for (i = idx + 1; i < last_ptr.length; i++) {
+      last_ptr[i] = {};
+    }
+    });
+  }
+  /* run scripts when document is ready */
+  $(function() {
+    "use strict";
+  
+    var $window = $(window);
+    var $body = $(document.body);
+  
+    /* size of thumbnails */
+  
+    var hidden_types = ['source']
+    var output_types = ['output', 'message', 'warning', 'error']
+  
+    /* style tables */
+    $('table').addClass('table table-striped table-bordered table-hover table-condensed');
+  
+    $('pre code').each(function(i, e) {
+      hljs.highlightBlock(e);
+    });
+  
+    /* Magnific Popup */
+    $(".thumbnail").each(function(){
+      $(this).magnificPopup({
+        disableOn: 768,
+        closeOnContentClick: true,
+  
+        type: 'image',
+        items: {
+          src: $(this).find('img').attr('src'),
+        }
+      });
+    });
+  
+    function toggle_block(obj, show) {
+      var span = obj.find('span');
+      if(show === true){
+        span.removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
+        obj.next('pre').slideDown();
+      }
+      else {
+        span.removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
+        obj.next('pre').slideUp();
+      }
+    }
+  
+    function toggle_thumbnails(imgs, show){
+      if(show === true){
+        imgs.parents().show()
+        imgs.slideDown();
+      }
+      else {
+        imgs.slideUp(400, function(){ $(this).parent().hide(); });
+      }
+    }
+  
+    function global_toggle(obj){
+      var type = obj.attr('type');
+      var show = !obj.parent('li').hasClass('active');
+      if(show === true){
+        obj.parent('li').addClass('active');
+      }
+      else{
+        obj.parent('li').removeClass('active');
+      }
+      if(type == 'figure'){
+        toggle_thumbnails($('.thumbnail img'), show);
+      }
+      else {
+        $('.toggle.' + type).each(function() { toggle_block($(this), show); });
+      }
+    }
+  
+    /* onclick toggle next code block */
+    $('.toggle').click(function() {
+      var span = $(this).find('span');
+      toggle_block($(this), !span.hasClass('glyphicon-chevron-down'));
+      return false
+    })
+  
+    // global toggles
+    $('.toggle-global').click(function(){
+      var type = $(this).attr('type');
+      if(type === 'all-source'){
+          $('li a.source').each(function() {
+            global_toggle($(this));
+          });
+        }
+      else if(type === 'all-output'){
+        $.each(output_types, function(i, val){
+          console.log(val);
+          global_toggle($('li a.' + val));
+        });
+      }
+      else {
+        console.log($(this));
+        global_toggle($(this));
+      }
+      return false;
+    });
+    /* table of contents */
+    if($(['h1', 'h2', 'h3', 'h4'].join(',')).length > 0){
+      $('body > #wrap > .container > .row').append('<div class="col-md-2"><div id="toc" class="well sidebar sidenav affix hidden-print"/></div>');
+      $('#toc').generate_TOC();
+    }
+  
+    $.each(hidden_types, function(i, type) {
+      $('li[type=' + type + ']').each(function(){ global_toggle($(this)); });
+    });
+  
+    /* remove paragraphs with no content */
+    $('p:empty').remove();
+  
+    $body.scrollspy({
+      target: '.sidebar',
+    });
+  
+    /* theme switch */
+    $('.theme-switch').click(function(){
+      var css = $('link[title=' + $(this).attr('title') + ']');
+      $('#theme[rel=stylesheet]').attr('href', css.attr('href'));
+      $('.theme-switch').closest('li').removeClass('active');
+      $(this).closest('li').addClass('active');
+      return false;
+    });
+    /* code style switch */ //TODO use same function for both of these?
+    $('.highlight-switch').click(function(){
+      var css = $('link[title="' + $(this).attr('title') + '"]');
+      $('#highlight[rel=stylesheet]').attr('href', css.attr('href'));
+      $('.highlight-switch').closest('li').removeClass('active');
+      $(this).closest('li').addClass('active');
+      return false;
+    });
+  
+    //TODO refresh on show/hide
+    $window.on('load', function () {
+      $body.scrollspy('refresh');
+    })
+  
+  });
+  
+  </script>
+  <style>
+  /* Knitr_bootstrap styles */
+  #header {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  #wrap .container-fluid {
+    padding: 0;
+    overflow: hidden;
+  }
+  .toggle{
+    text-transform: capitalize;
+  }
+  
+  .toggle-global{
+    text-transform: capitalize;
+  }
+  
+  /* Sticky footer styles */
+  * {
+    margin:0;
+  }
+  html,
+  body {
+      height: 100%;
+      padding:0 !important;
+      /* The html and body elements cannot have any padding or margin. */
+      /*overflow-x: hidden;*/
+  }
+  
+  /* Wrapper for page content to push down footer */
+  #wrap {
+      min-height: 100%;
+      height: auto !important;
+      height: 100%;
+      /* Negative indent footer by it's height */
+      margin: 0 auto -120px;
+  }
+  
+  /* Set the fixed height of the footer here */
+  #push,
+  #footer {
+      height: 120px;
+  }
+  
+  #footer {
+    text-align: center;
+  }
+  
+  /* Top level subheader elements.  These are the first nested items underneath a header element. */
+  .header li {
+    font-size: 20px;
+  }
+  
+  /* Makes the font smaller for all subheader elements. */
+  .sub-header li {
+      font-size: 12px;
+  }
+  
+  button.thumbnails {
+    margin-left:0px;
+  }
+  
+  /*
+   * Side navigation
+   *
+   * Scrollspy and affixed enhanced navigation to highlight sections and secondary
+   * sections of docs content.
+   */
+  
+  /* By default it's not affixed in mobile views, so undo that */
+  .sidebar.affix {
+    position: static;
+  }
+  
+  /* First level of nav */
+  .sidenav {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top:    10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  /* All levels of nav */
+  .sidebar .nav > li > a {
+    display: block;
+    padding: 5px 20px;
+  }
+  .sidebar .nav > li > a:hover,
+  .sidebar .nav > li > a:focus {
+    text-decoration: none;
+    border-right: 1px solid;
+  }
+  .sidebar .nav > .active > a,
+  .sidebar .nav > .active:hover > a,
+  .sidebar .nav > .active:focus > a {
+    font-weight: bold;
+    background-color: transparent;
+    border-right: 1px solid;
+  }
+  
+  /* Nav: second level (shown on .active) */
+  .sidebar .nav .nav {
+    display: none; /* Hide by default, but at >768px, show it */
+    margin-bottom: 8px;
+  }
+  .sidebar .nav .nav > li > a {
+    padding-top:    3px;
+    padding-bottom: 3px;
+    padding-left: 30px;
+    font-size: 90%;
+  }
+  
+  .sidebar .nav .nav .nav > li > a {
+    padding-left: 40px;
+  }
+  .sidebar .nav .nav .nav .nav > li > a {
+    padding-left: 50px;
+  }
+  
+  /* Show and affix the side nav when space allows it */
+  @media screen and (min-width: 992px) {
+    .sidebar .nav > .active > ul {
+      display: block;
+    }
+    /* Widen the fixed sidebar */
+    .sidebar.affix,
+    .sidebar.affix-bottom {
+      width: 213px;
+    }
+    .sidebar.affix-top,
+    .sidebar.affix {
+      position: fixed; /* Undo the static from mobile first approach */
+      top: 30px;
+    }
+    .sidebar.affix-bottom {
+      position: absolute; /* Undo the static from mobile first approach */
+    }
+    .sidebar.affix-bottom .sidenav,
+    .sidebar.affix .sidenav {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    /* Widen the fixed sidebar again */
+    .sidebar.affix-bottom,
+    .sidebar.affix {
+      width: 263px;
+    }
+  }
+  
+  #toc {
+    padding: 10px 0px;
+    margin:0;
+    border:0;
+  }
+  
+  
+  .panel pre {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  button + pre {
+    margin: 0;
+    padding: 0;
+  }
+  pre code {
+    border-radius: 0;
+  }
+  /* Magnific Popup CSS */
+  .mfp-bg {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1042;
+    overflow: hidden;
+    position: fixed;
+    background: #0b0b0b;
+    opacity: 0.8;
+    filter: alpha(opacity=80); }
+  
+  .mfp-wrap {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1043;
+    position: fixed;
+    outline: none !important;
+    -webkit-backface-visibility: hidden; }
+  
+  .mfp-container {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    padding: 0 8px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  
+  .mfp-container:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle; }
+  
+  .mfp-align-top .mfp-container:before {
+    display: none; }
+  
+  .mfp-content {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 auto;
+    text-align: left;
+    z-index: 1045; }
+  
+  .mfp-inline-holder .mfp-content,
+  .mfp-ajax-holder .mfp-content {
+    width: 100%;
+    cursor: auto; }
+  
+  .mfp-ajax-cur {
+    cursor: progress; }
+  
+  .mfp-zoom-out-cur,
+  .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+    cursor: -moz-zoom-out;
+    cursor: -webkit-zoom-out;
+    cursor: zoom-out; }
+  
+  .mfp-zoom {
+    cursor: pointer;
+    cursor: -webkit-zoom-in;
+    cursor: -moz-zoom-in;
+    cursor: zoom-in; }
+  
+  .mfp-auto-cursor .mfp-content {
+    cursor: auto; }
+  
+  .mfp-close,
+  .mfp-arrow,
+  .mfp-preloader,
+  .mfp-counter {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none; }
+  
+  .mfp-loading.mfp-figure {
+    display: none; }
+  
+  .mfp-hide {
+    display: none !important; }
+  
+  .mfp-preloader {
+    color: #cccccc;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    text-align: center;
+    margin-top: -0.8em;
+    left: 8px;
+    right: 8px;
+    z-index: 1044; }
+  
+  .mfp-preloader a {
+    color: #cccccc; }
+  
+  .mfp-preloader a:hover {
+    color: white; }
+  
+  .mfp-s-ready .mfp-preloader {
+    display: none; }
+  
+  .mfp-s-error .mfp-content {
+    display: none; }
+  
+  button.mfp-close,
+  button.mfp-arrow {
+    overflow: visible;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    display: block;
+    padding: 0;
+    z-index: 1046;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+  
+  button::-moz-focus-inner {
+    padding: 0;
+    border: 0; }
+  
+  .mfp-close {
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-decoration: none;
+    text-align: center;
+    opacity: 0.65;
+    padding: 0 0 18px 10px;
+    color: white;
+    font-style: normal;
+    font-size: 28px;
+    font-family: Arial, Baskerville, monospace; }
+    .mfp-close:hover, .mfp-close:focus {
+      opacity: 1; }
+    .mfp-close:active {
+      top: 1px; }
+  
+  .mfp-close-btn-in .mfp-close {
+    color: #333333; }
+  
+  .mfp-image-holder .mfp-close,
+  .mfp-iframe-holder .mfp-close {
+    color: white;
+    right: -6px;
+    text-align: right;
+    padding-right: 6px;
+    width: 100%; }
+  
+  .mfp-counter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #cccccc;
+    font-size: 12px;
+    line-height: 18px; }
+  
+  .mfp-arrow {
+    position: absolute;
+    opacity: 0.65;
+    margin: 0;
+    top: 50%;
+    margin-top: -55px;
+    padding: 0;
+    width: 90px;
+    height: 110px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  
+  .mfp-arrow:active {
+    margin-top: -54px; }
+  
+  .mfp-arrow:hover,
+  .mfp-arrow:focus {
+    opacity: 1; }
+  
+  .mfp-arrow:before, .mfp-arrow:after,
+  .mfp-arrow .mfp-b,
+  .mfp-arrow .mfp-a {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 35px;
+    margin-left: 35px;
+    border: medium inset transparent; }
+  .mfp-arrow:after,
+  .mfp-arrow .mfp-a {
+    border-top-width: 13px;
+    border-bottom-width: 13px;
+    top: 8px; }
+  .mfp-arrow:before,
+  .mfp-arrow .mfp-b {
+    border-top-width: 21px;
+    border-bottom-width: 21px; }
+  
+  .mfp-arrow-left {
+    left: 0; }
+    .mfp-arrow-left:after,
+    .mfp-arrow-left .mfp-a {
+      border-right: 17px solid white;
+      margin-left: 31px; }
+    .mfp-arrow-left:before,
+    .mfp-arrow-left .mfp-b {
+      margin-left: 25px;
+      border-right: 27px solid #3f3f3f; }
+  
+  .mfp-arrow-right {
+    right: 0; }
+    .mfp-arrow-right:after,
+    .mfp-arrow-right .mfp-a {
+      border-left: 17px solid white;
+      margin-left: 39px; }
+    .mfp-arrow-right:before,
+    .mfp-arrow-right .mfp-b {
+      border-left: 27px solid #3f3f3f; }
+  
+  .mfp-iframe-holder {
+    padding-top: 40px;
+    padding-bottom: 40px; }
+  
+  .mfp-iframe-holder .mfp-content {
+    line-height: 0;
+    width: 100%;
+    max-width: 900px; }
+  
+  .mfp-iframe-scaler {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    padding-top: 56.25%; }
+  
+  .mfp-iframe-scaler iframe {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    background: black; }
+  
+  .mfp-iframe-holder .mfp-close {
+    top: -40px; }
+  
+  /* Main image in popup */
+  img.mfp-img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    line-height: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 40px 0 40px;
+    margin: 0 auto; }
+  
+  /* The shadow behind the image */
+  .mfp-figure:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 40px;
+    bottom: 40px;
+    display: block;
+    right: 0;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    background: #444444; }
+  
+  .mfp-figure {
+    line-height: 0; }
+  
+  .mfp-bottom-bar {
+    margin-top: -36px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    cursor: auto; }
+  
+  .mfp-title {
+    text-align: left;
+    line-height: 18px;
+    color: #f3f3f3;
+    word-wrap: break-word;
+    padding-right: 36px; }
+  
+  .mfp-figure small {
+    color: #bdbdbd;
+    display: block;
+    font-size: 12px;
+    line-height: 14px; }
+  
+  .mfp-image-holder .mfp-content {
+    max-width: 100%; }
+  
+  .mfp-gallery .mfp-image-holder .mfp-figure {
+    cursor: pointer; }
+  
+  @media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {
+    /**
+     * Remove all paddings around the image on small screen
+     */
+    .mfp-img-mobile .mfp-image-holder {
+      padding-left: 0;
+      padding-right: 0; }
+  
+    .mfp-img-mobile img.mfp-img {
+      padding: 0; }
+  
+    /* The shadow behind the image */
+    .mfp-img-mobile .mfp-figure:after {
+      top: 0;
+      bottom: 0; }
+  
+    .mfp-img-mobile .mfp-bottom-bar {
+      background: rgba(0, 0, 0, 0.6);
+      bottom: 0;
+      margin: 0;
+      top: auto;
+      padding: 3px 5px;
+      position: fixed;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; }
+  
+    .mfp-img-mobile .mfp-bottom-bar:empty {
+      padding: 0; }
+  
+    .mfp-img-mobile .mfp-counter {
+      right: 5px;
+      top: 3px; }
+  
+    .mfp-img-mobile .mfp-close {
+      top: 0;
+      right: 0;
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+      background: rgba(0, 0, 0, 0.6);
+      position: fixed;
+      text-align: center;
+      padding: 0; }
+  
+    .mfp-img-mobile .mfp-figure small {
+      display: inline;
+      margin-left: 5px; } }
+  @media all and (max-width: 900px) {
+    .mfp-arrow {
+      -webkit-transform: scale(0.75);
+      transform: scale(0.75); }
+  
+    .mfp-arrow-left {
+      -webkit-transform-origin: 0;
+      transform-origin: 0; }
+  
+    .mfp-arrow-right {
+      -webkit-transform-origin: 100%;
+      transform-origin: 100%; }
+  
+    .mfp-container {
+      padding-left: 6px;
+      padding-right: 6px; } }
+  .mfp-ie7 .mfp-img {
+    padding: 0; }
+  .mfp-ie7 .mfp-bottom-bar {
+    width: 600px;
+    left: 50%;
+    margin-left: -300px;
+    margin-top: 5px;
+    padding-bottom: 5px; }
+  .mfp-ie7 .mfp-container {
+    padding: 0; }
+  .mfp-ie7 .mfp-content {
+    padding-top: 44px; }
+  .mfp-ie7 .mfp-close {
+    top: 0;
+    right: 0;
+    padding-top: 0; }
+  
+  //Magnific overrides
+  .mfp-image img{
+    background: white;
+  }
+  .mfp-figure:after {
+    background: white;
+  }
+  
+  /*
+   * Off Canvas navbar toggle right
+   * --------------------------------------------------
+   */
+  
+  @media screen and (max-width: 768px) {
+    .row-offcanvas .collapsing {
+    -webkit-transition: none 0;
+      -moz-transition: none 0;
+      transition: none 0;
+    }
+   .row-offcanvas .navbar {
+    position: absolute;
+    z-index: 2;
+      right:0;
+      height:100%;
+      width:55px;
+      border:0;
+      background-color:transparent;
+    }
+    .row-offcanvas .navbar-toggle {
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+    .row-offcanvas {
+      position: relative;
+    }
+    .row-offcanvas-right.active .navbar {
+    position: absolute;
+    z-index: 2;
+      right: -28.4%;
+      width:40%;
+      background-color:#eee;
+      border:0 solid #ddd;
+      border-left-width:1px;
+    }
+    .row-offcanvas-right.active {
+      left: -30%;
+    }
+    .row-offcanvas-right.active .navbar-collapse {
+      position: relative;
+      width: 100%;
+    }
+    .row-offcanvas .content {
+    /*width:calc(100% - 60px);*/
+    }
+  }
+  </style>
+</head>
+<body>
+<title >
+Test file
+</title>
+<div id="wrap">
+<div class="container">
+<div class="row row-offcanvas row-offcanvas-right">
+<div class="contents col-xs-12 col-md-10">
+<h1 id="the-command-line-interface">The Command Line Interface</h1>
+<h2 id="introduction">Introduction</h2>
+<p>You've probably seen it in the movies: an elite computer hacker sitting in front of a black screen with green glowing text, furiously typing in commands and saying something like &quot;I'll isolate the router and freeze their packets!&quot; or &quot;Spike them!&quot; What these &quot;hackers&quot; are actually doing is interacting with a Command Line Interface. Sometimes we'll refer to the Command Line Interface as the CLI.</p>
+<p>Nearly every computer has a CLI. On Mac you can use Terminal (Command + Space bar then just type &quot;terminal&quot; and press enter), while on Windows you should use <a href="http://git-scm.com/download/win">Git Bash</a> which you should have installed back in the Intro to Git lesson.</p>
+<p>You can use the CLI to:</p>
+<ul>
+<li>navigate the folders on your computer</li>
+<li>create files, folders, and programs</li>
+<li>edit files and programs</li>
+<li>run your computer programs</li>
+</ul>
+<h2 id="all-about-directories">All About Directories</h2>
+<p>Computers are organized in a hierarchy of folders, where on folder can contain many folders and files. Programmers often refer to folders and directories, and the terms are interchangeable. This directory hierarchy forms a tree, like the small tree seen in the image below. We can use the CLI to navigate these trees on your computer.</p>
+<p><img width=90% src="https://raw.githubusercontent.com/DataScienceSpecialization/courses/master/assets/img/IntroToCLI/musictree1.png"/></p>
+<p>As you can see in the image below, my Debussy directory is contained in my Music directory. This is the simplest case of how directories are structured.</p>
+<p><img width=90% src="https://raw.githubusercontent.com/DataScienceSpecialization/courses/master/assets/img/IntroToCLI/musictree2.png"/></p>
+<p>The directory structure on most computers is much more complicated, but the structure on your computer probably looks something like this:</p>
+<p><img width=60% src="https://raw.githubusercontent.com/DataScienceSpecialization/courses/master/assets/img/IntroToCLI/bigtree1.png"/></p>
+<p>There are a few special directories that you should be aware of on your computer. The directory at the top of this tree is called the root directory. The root directory contains all other directories, and is represented by a slash (<code>/</code>).</p>
+<p>The home directory is another special directory that is represented by a tilde (<code>~</code>). Your home directory contains your personal files, like your photos, documents, and the contents of your desktop. When you log into a computer through the CLI you usually start off in your home directory (more on that soon).</p>
+<h2 id="navigating-directories-with-the-cli">Navigating directories with the CLI</h2>
+<p>Windows users: open Git Bash. If you don't have Git Bash installed, you can download it <a href="http://git-scm.com/download/win">here</a>.</p>
+<p>Mac users: open Terminal. <em>Pro Tip</em>: You can quickly open Terminal by pressing Command + Space, typing &quot;terminal,&quot; and then hitting enter.</p>
+<p>You should now have your CLI open and it should look similar to my CLI:</p>
+<p><img width=60% src="https://raw.githubusercontent.com/DataScienceSpecialization/courses/master/assets/img/IntroToCLI/bash1.png"/></p>
+<p>On your CLI you will see your prompt, which will looks something like the name of your computer, followed by your username, followed by a dollar sign (<code>$</code>). When you open up your CLI you will be in your home directory, but soon you'll be navigating the whole directory structure. Whatever directory you're currently working with in your CLI is called the <strong>working directory</strong>.</p>
+<h2 id="the-path">The Path</h2>
+<p>You can imagine tracing all of the directories from your root directory to the directory you're currently in. This is called the &quot;path&quot; to your working directory.</p>
+<p><img width=60% src="https://raw.githubusercontent.com/DataScienceSpecialization/courses/master/assets/img/IntroToCLI/redtree.png"/></p>
+<p>In your CLI prompt, type <code>pwd</code> and press enter. <code>pwd</code> is a small computer program which in an acronym for <strong>p</strong>rint <strong>w</strong>orking <strong>d</strong>irectory. After entering a command, you should get the same prompt as you had before.</p>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> Source &amp; Output
+</button><pre style=""><code class="source r">~$ pwd
+/Users/sean</code></pre>
+</div>
+<p><br style="line-height:5px"/> You use the CLI prompt by typing in a command and pressing enter. <code>pwd</code> can be used at any time to display the path to your working directory.</p>
+<h2 id="formula-for-cli-commands">Formula for CLI commands</h2>
+<ul>
+<li>CLI commands generally follow this recipe: <code>[command]</code> <code>[flags]</code> <code>[arguments]</code></li>
+<li><code>[command]</code> is the CLI command which does a specific task</li>
+<li><code>[flags]</code> are options we give to the command to trigger certain behaviors, preceded by a hyphen (<code>-</code>)</li>
+<li><code>[arguments]</code> can be what the command is going to modify, or other options for the command</li>
+</ul>
+<p>Depending on the command there can be zero or more flags and arguments, for example <code>pwd</code> is a command that requires no flags or arguments.</p>
+<h2 id="the-command-catalog">The Command Catalog</h2>
+<h3 id="clear">clear</h3>
+<p><code>clear</code> will clear out the commands in your CLI window.</p>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> Source &amp; Output
+</button><pre style=""><code class="source r">~$ pwd
+/Users/sean
+~$ clear</code></pre>
+</div>
+<hr />
+<h3 id="ls">ls</h3>
+<ul>
+<li><code>ls</code> lists files and folders in the current directory</li>
+<li><code>ls -a</code> lists hidden and unhidden files and folders</li>
+<li><code>ls -al</code> lists details for hidden and unhidden files and folders</li>
+<li>Notice that <code>-a</code> and <code>-l</code> are flags (they're preceded by a <code>-</code>)</li>
+<li>They can be combined into the flag: <code>-al</code></li>
+</ul>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> Source &amp; Output
+</button><pre style=""><code class="source r">~$ ls
+Desktop   Photos   Music
+~$ ls -a
+Desktop   Photos   Music  .Trash  .DS_Store
+~$</code></pre>
+</div>
+<hr />
+<h3 id="cd">cd</h3>
+<ul>
+<li><code>cd</code> stands for &quot;change directory&quot;</li>
+<li><code>cd</code> takes as an argument the directory you want to visit</li>
+<li><code>cd</code> with no argument takes you to your home directory</li>
+<li><code>cd ..</code> allows you to change directory to one level above your current directory</li>
+</ul>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> Source &amp; Output
+</button><pre style=""><code class="source r">~$ cd Music/Debussy
+~$ pwd
+/Users/sean/Music/Debussy
+~$ cd ..
+~$ pwd
+/Users/sean/Music
+~$ cd
+~$ pwd
+/Users/sean
+~$</code></pre>
+</div>
+<hr />
+<h3 id="mkdir">mkdir</h3>
+<ul>
+<li><code>mkdir</code> stands for &quot;make directory&quot;</li>
+<li>Just like: right click -&gt; create new folder</li>
+<li><code>mkdir</code> takes as an argument the name of the directory you're creating</li>
+</ul>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> Source &amp; Output
+</button><pre style=""><code class="source r">~$ mkdir Documents
+~$ ls
+Desktop   Photos  Music   Documents
+~$ cd Documents
+~$ pwd
+/Users/sean/Documents
+~$ cd
+~$</code></pre>
+</div>
+<hr />
+<h3 id="touch">touch</h3>
+<ul>
+<li><code>touch</code> creates an empty file</li>
+</ul>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> Source &amp; Output
+</button><pre style=""><code class="source r">~$ touch test_file
+~$ ls
+Desktop   Photos  Music   Documents   test_file
+~$</code></pre>
+</div>
+<hr />
+<h3 id="cp">cp</h3>
+<ul>
+<li><code>cp</code> stands for &quot;copy&quot;</li>
+<li><code>cp</code> takes as its first argument a file, and as its second argument the path to where you want the file to be copied</li>
+</ul>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> Source &amp; Output
+</button><pre style=""><code class="source r">~$ cp test_file Documents
+~$ cd Documents
+~$ ls 
+test_file
+~$ cd ..
+~$</code></pre>
+</div>
+<p><br style="line-height:5px"/></p>
+<ul>
+<li><code>cp</code> can also be used for copying the contents of directories, but you must use the <code>-r</code> flag</li>
+<li>The line: <code>cp -r Documents More_docs</code> copies the contents of <code>Documents</code> into <code>More_docs</code></li>
+</ul>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> Source &amp; Output
+</button><pre style=""><code class="source r">~$ mkdir More_docs
+~$ cp -r Documents More_docs
+~$ cd More_docs
+~$ ls 
+test_file
+~$ cd ..
+~$</code></pre>
+</div>
+<hr />
+<h3 id="rm">rm</h3>
+<ul>
+<li><code>rm</code> stands for &quot;remove&quot;</li>
+<li><code>rm</code> takes the name of a file you wish to remove as its argument</li>
+</ul>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> Source &amp; Output
+</button><pre style=""><code class="source r">~$ ls
+Desktop   Photos  Music   Documents   More_docs   test_file
+~$ rm test_file
+~$ ls
+Desktop   Photos  Music   Documents   More_docs
+~$</code></pre>
+</div>
+<p><br style="line-height:5px"/></p>
+<ul>
+<li>You can also use <code>rm</code> to delete entire directories and their contents by using the <code>-r</code> flag</li>
+<li><strong>Be very careful when you do this, there is no way to undo an <code>rm</code></strong></li>
+</ul>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> Source &amp; Output
+</button><pre style=""><code class="source r">~$ ls
+Desktop   Photos  Music   Documents   More_docs
+~$ rm -r More_docs
+~$ ls
+Desktop   Photos  Music   Documents
+~$</code></pre>
+</div>
+<hr />
+<h3 id="mv">mv</h3>
+<ul>
+<li><code>mv</code> stands for &quot;move&quot;</li>
+<li>With <code>mv</code> you can move files between directories</li>
+</ul>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> Source &amp; Output
+</button><pre style=""><code class="source r">~$ touch new_file
+~$ mv new_file Documents
+~$ ls
+Desktop   Photos  Music   Documents
+~$ cd Documents
+~$ ls
+test_file   new_file
+~$</code></pre>
+</div>
+<p><br style="line-height:5px"/></p>
+<ul>
+<li>You can also use <code>mv</code> to rename files</li>
+</ul>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> Source &amp; Output
+</button><pre style=""><code class="source r">~$ ls
+test_file   new_file
+~$ mv new_file renamed_file
+~$ ls
+test_file renamed_file
+~$</code></pre>
+</div>
+<hr />
+<h3 id="echo">echo</h3>
+<ul>
+<li><code>echo</code> will print whatever arguments you provide</li>
+</ul>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> Source &amp; Output
+</button><pre style=""><code class="source r">~$ echo Hello World!
+Hello World!
+~$</code></pre>
+</div>
+<hr />
+<h3 id="date">date</h3>
+<ul>
+<li><code>date</code> will print today's date</li>
+</ul>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> Source &amp; Output
+</button><pre style=""><code class="source r">~$ date
+Mon Nov  4 20:48:03 EST 2013
+~$</code></pre>
+</div>
+<p><br></br></p>
+<h2 id="exercises">Exercises</h2>
+<p>Using your new command line skills, try each exercise below. You can reveal our answers to each exercise by clicking the blue box. Do not change your working directory or take any other action without being explicitly instructed to do so. You should however feel free to create, copy, and delete directories and files from the command line just to experiment and to get more practice!</p>
+<hr />
+<ol start="0" style="list-style-type: decimal">
+<li>Create a folder called <code>cli_exercise</code> and make it your working directory.</li>
+</ol>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-up"></span> Source
+</button><pre style="display:none"><code class="source r">~$ mkdir cli_exercise
+~$ cd cli_exercise
+</code></pre>
+</div>
+<hr />
+<ol style="list-style-type: decimal">
+<li>Create a new folder called <code>myFolder</code>, and then initialize a file in <code>myFolder</code> called <code>myFile.txt</code>.</li>
+</ol>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-up"></span> Source
+</button><pre style="display:none"><code class="source r">~$ mkdir myFolder
+~$ touch myFolder/myFile.txt</code></pre><!--<button class="output R toggle btn btn-xs btn-success">
+<span class="glyphicon glyphicon-chevron-up"></span> Output
+</button><pre style="display:none"><code class="output r"></code></pre>-->
+</div>
+<hr />
+<ol start="2" style="list-style-type: decimal">
+<li>Copy <code>myFolder</code> and its contents to a new folder inside of <code>cli_exercise</code> called <code>newDir</code>. (There should be two folders in <code>cli_exercise</code> after you run this command)</li>
+</ol>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-up"></span> Source
+</button><pre style="display:none"><code class="source r">~$ cp -r myFolder newDir
+</code></pre><!--<button class="output R toggle btn btn-xs btn-success">
+<span class="glyphicon glyphicon-chevron-up"></span> Output
+</button><pre style="display:none"><code class="output r"></code></pre>-->
+</div>
+<hr />
+<ol start="3" style="list-style-type: decimal">
+<li>Initialize a new file in <code>newDir</code> called <code>newFile.txt</code>.</li>
+</ol>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-up"></span> Source
+</button><pre style="display:none"><code class="source r">~$ touch newDir/newFile.txt
+</code></pre><!--<button class="output R toggle btn btn-xs btn-success">
+<span class="glyphicon glyphicon-chevron-up"></span> Output
+</button><pre style="display:none"><code class="output r"></code></pre>-->
+</div>
+<hr />
+<ol start="4" style="list-style-type: decimal">
+<li>Copy <code>newFile.txt</code> into <code>myFolder</code>.</li>
+</ol>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-up"></span> Source
+</button><pre style="display:none"><code class="source r">~$ cp myDir/newFile.txt myFolder
+</code></pre><!--<button class="output R toggle btn btn-xs btn-success">
+<span class="glyphicon glyphicon-chevron-up"></span> Output
+</button><pre style="display:none"><code class="output r"></code></pre>-->
+</div>
+<hr />
+<ol start="5" style="list-style-type: decimal">
+<li>Change your working directory to <code>myFolder</code> and rename <code>newFile.txt</code> to <code>textDoc.txt</code>.</li>
+</ol>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-up"></span> Source
+</button><pre style="display:none"><code class="source r">~$ cd myFolder
+~$ mv newFile.txt textDoc.txt</code></pre><!--<button class="output R toggle btn btn-xs btn-success">
+<span class="glyphicon glyphicon-chevron-up"></span> Output
+</button><pre style="display:none"><code class="output r"></code></pre>-->
+</div>
+<hr />
+<ol start="6" style="list-style-type: decimal">
+<li>Move <code>textDoc.txt</code> into <code>newDir</code> <em>without changing your working directory</em>.</li>
+</ol>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-up"></span> Source
+</button><pre style="display:none"><code class="source r">~$ mv textDoc.txt ../newDir
+</code></pre><!--<button class="output R toggle btn btn-xs btn-success">
+<span class="glyphicon glyphicon-chevron-up"></span> Output
+</button><pre style="display:none"><code class="output r"></code></pre>-->
+</div>
+<hr />
+<ol start="7" style="list-style-type: decimal">
+<li>Change your working directory to one level above your current working directory, then delete <code>myFolder</code> and all of its contents.</li>
+</ol>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-up"></span> Source
+</button><pre style="display:none"><code class="source r">~$ cd ..
+~$ rm -r myFolder</code></pre><!--<button class="output R toggle btn btn-xs btn-success">
+<span class="glyphicon glyphicon-chevron-up"></span> Output
+</button><pre style="display:none"><code class="output r"></code></pre>-->
+</div>
+<hr />
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Redirection_(computing)">Input/Output Redirection</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Pipe_(computing)">Pipes</a></li>
+</ul>
+<h3 id="other-useful-commands">Other Useful Commands</h3>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Cat_(Unix)">cat</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Less_(Unix)">less</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Head_(Unix)">head</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tail_(Unix)">tail</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Wc_(Unix)">wc</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Uniq">uniq</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Grep">grep</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cal_(Unix)">cal</a>
+</div>
+</div>
+</div>
+
+<div id="push">
+
+</div>
+<div id="footer">
+<div class="container">
+<p class="text-muted" id="credit">
+Styled with <a href="https://github.com/jimhester/knitrBootstrap">knitrBootstrap</a>
+</p>
+</div>
+</div>
+<link rel="stylesheet" id="theme" href="https://netdna.bootstrapcdn.com/bootswatch/3.0.0/cosmo/bootstrap.min.css" media="screen"></link><link rel="stylesheet" id="highlight" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/github.min.css" media="screen"></link>
+</div>
+
+
+</li>
+</ul>
+</body>
+</html>
