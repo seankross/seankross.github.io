@@ -1,0 +1,17 @@
+There are 6 possible configurations of the cylinder. A "B" represents a bullet
+and an "E" represents an empty chamber. The 6 configurations are:
+
+1. BBEEEE
+2. BEEEEB
+3. EBBEEE
+4. EEBBEE
+5. EEEBBE
+6. EEEEBB
+
+Imagine the first letter is the chamber first aligned with the barrel. We know
+we are not in configuration 1 or 2 since no bullet was fired on the first pull
+of the trigger. That leaves four configurations remaining. We pulled the trigger
+once, so the second letter now represents the chamber aligned with the barrel.
+Since there is a bullet in the second chamber in only configuration 3, we know
+the probability that a bullet will be fired with the next pull of the trigger is
+0.25. 
