@@ -30,6 +30,16 @@ groups so that there are an equal number of tails in each group?
 
 - [Solution]()
 
-Suppose you're on a game show, and you're given the choice of three doors: Behind one door is a car; behind the others, goats. You pick a door, say No. 1, and the host, who knows what's behind the doors, opens another door, say No. 3, which has a goat. He then says to you, "Do you want to pick door No. 2?" Is it to your advantage to switch your choice?
+You live in a cabin with a unique feature: Each window in the cabin has a view 
+to the South. There are windows on each exterior wall. One day, gazing out of 
+one of the windows, you spot a bear. What color is it?
+
+- [Solution](bear.txt)
+
+Suppose you're on a game show, and you're given the choice of three doors: 
+Behind one door is a car; behind the others, goats. You pick a door, say No. 1, 
+and the host, who knows what's behind the doors, opens another door, say No. 3, 
+which has a goat. He then says to you, "Do you want to pick door No. 2?" Is it 
+to your advantage to switch your choice?
 
 - [Solution](http://en.wikipedia.org/wiki/Monty_Hall_problem#Solutions)
