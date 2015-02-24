@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/seankross
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://seankross.com
+  * I am seankross (https://keybase.io/seankross) on keybase.
+  * I have a public key with fingerprint 920D 6BAA 1092 52E6 9977  1CE8 B5CD 7B45 761C C977
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "920d6baa109252e699771ce8b5cd7b45761cc977",
+            "host": "keybase.io",
+            "key_id": "b5cd7b45761cc977",
+            "kid": "0101fdbd0dbdcb91efdde60a511f312bcf6111d2f50922b9c176fca33b832da6e5c70a",
+            "uid": "dc4198613d5d571fd7e1a40ac0d30b19",
+            "username": "seankross"
+        },
+        "service": {
+            "hostname": "seankross.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1424819016,
+    "expire_in": 157680000,
+    "prev": "45bc93caf37cc36f8f506221b06e2d6a6fcbea71f37d7d0b7a2b4ce09efe8729",
+    "seqno": 3,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.4
+Comment: https://keybase.io/crypto
+
+yMISAnicbVJbSFRRFB1fDUphb4rw5yoKOcg9931H8IWkBVFBRUo0nNcdr6NzpzuP
+FDGLwcKPwhI0KMgP06AMS/0pzIp8pJANTRH4YR8SfZRBGRlldK7UT3TgcNh7r7XO
+3ov9dEOaKyulMPqh48hA1+WU2ccVUdfhj2nVLRyySDPnbeECdO0xzKCf2iHbDEY4
+L6cLPFEQhIDXBVmgiq6rKsBUQzImKpJkVQEYsxzn4eqssMNgMgiGaZFpsRwLfCZh
+2f/gA2sFHvDAIIjw7GKkA2oQQhUeygAYIhAQNhQAABEMmXUgIB0DVTEwFEWkiQKB
+CpWxykMmF12TI1gCuqYAkchEVpmySgGUeIh5IvII6A4wTO0gbKQMHaYwGLCtcJhr
+9bDAjpmYOh44o/wLKcJWI2OHbCtiYauBleoikZDXYUaaQw70FEW+PyI+ZAYJM5IR
+YtQOm1aQ8wKGxBHTUQWSIGlA54Hi4WhTyLSpz3QQzB6NZ8f5hsaYpCQjrIsYGqKK
+sagYGrNBEQSAeIUKRIHMCkQhm1NUiUp4pEIBSZjyOjWopgrOuGF6MmhxXpG1Cf3O
+QKY/CCNRm3KtTx4dT3elZLnWZaQ6q+DKytz4d0HKxtyrO1anrvRcfFs83+S6XzCe
+G9+98/SDxKfZjof93PWiqt6qnvaC120VoWOSbyn7bvne2Lx7S/2t0kq54+mBs+9q
+fx2aWUmCyu7rvsEBbS47c0FMfdHY+jB5KCtjdMqdX5KYqS5Xc4evDRjpW5eG9t1I
+JI4uc8q9to7RZzWJhWTpwdX4uaXK/qmJz54jfb7v7v3jj+LbG1Czdqasf7lyU9fi
+Jff09Jvn3aGrsV7/8ESyPqf+xNDo4fgSndS+zQ5qPwp3pY1M1o9kjuOxzrn365Nf
+cn4WRwvudDYVEWlC+FobqnEvFib2bAycTz2R3zeY9ypesvn2tgtj7ZCsvJwtuZn3
+G7ylLLU=
+=Wp/x
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/seankross
+
+==================================================================
+
