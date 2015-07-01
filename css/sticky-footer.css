@@ -5,6 +5,7 @@ html,
 body {
   height: 100%;
   /* The html and body elements cannot have any padding or margin. */
+  /* background-color: #fffff8; */ /* Maybe someday */
 }
 
 /* Wrapper for page content to push down footer */
@@ -35,4 +36,27 @@ body {
 }
 .container .text-muted {
   margin: 20px 0;
+}
+
+.readable-text {
+  font-size: 1.575em;
+  line-height: 1.5;
+  font-family: Garamond, Cambria, Times, serif;
+  letter-spacing: .01rem;
+}
+
+.readable-small {
+  font-size: 1.375em;
+  line-height: 1.5;
+  font-family: Garamond, Cambria, Times, serif;
+  letter-spacing: .01rem;
+}
+
+div code {
+  font-size: 0.7em;
+}
+
+div pre {
+  font-size: 0.85em;
+  line-height: 1;
 }
