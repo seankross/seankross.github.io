@@ -5,6 +5,6 @@ jumbo_title: Postcards
 jumbo_subtitle: About
 ---
 
-Hi! I'm Sean. I graduated from NYU, now I'm at the University of Maryland. I live in downtown Washington DC. I spend most of my time writing code, taking pictures, and reading books. 
+Hi! I'm Sean. In the past I attended NYU and the University of Maryland. Currently I live in Fells Point in Baltimore. I spend most of my time writing code, taking pictures, and reading books. 
 
 Email: sean at seankross dot com
