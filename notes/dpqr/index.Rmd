@@ -1,0 +1,272 @@
+---
+title: "Introduction to dnorm, pnorm, qnorm, and rnorm for new biostatisticians"
+author: "Sean Kross"
+date: "October 1, 2015"
+output: html_document
+---
+
+Today I was in Dan's office hours and someone asked, "what is the equivalent in 
+R of the back of the stats textbook table of probabilities and their 
+corresponding Z-scores?" 
+([This](http://home.ubalt.edu/ntsbarsh/Business-stat/StatistialTables.pdf) 
+is an example of the kind of table the student was talking about.) This 
+question indicated to me that although we've been asked to use some of the
+distribution functions in past homeworks, there may be some misunderstanding
+about how these functions work.
+
+Right now I'm going to focus on the functions for the normal distribution, but 
+you can find a list of all distribution functions by typing 
+`help(Distributions)` into your R console.
+
+---
+
+## `dnorm`
+
+As we all know the probability density for the normal distribution is:
+
+$$
+f(x|\mu,\sigma) = \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}
+$$
+
+The function `dnorm` returns the value of the probability density function for 
+the normal distribution given parameters for $x$, $\mu$, and $\sigma$. Some
+examples of using `dnorm` are below:
+
+```{r}
+# This is a comment. Anything I write after the octothorpe is not executed.
+
+# This is the same as computing the pdf of the normal with x = 0, mu = 0 and
+# sigma = 0. The dnorm function takes three main arguments, as do all of the
+# *norm functions in R.
+
+dnorm(0, mean = 0, sd = 1)
+
+# The line of code below does the same thing as the same as the line of code 
+# above, since mean = 0 and sd = 0 are the default arguments for the dnorm 
+# function.
+
+dnorm(0)
+
+# Another exmaple of dnorm where parameters have been changed.
+
+dnorm(2, mean = 5, sd = 3)
+```
+
+Although $x$ represents the independent variable of the pdf for the normal 
+distribution, it's also useful to think of $x$ as a Z-score. Let me show you
+what I mean by graphing the pdf of the normal distribution with `dnorm`.
+
+```{r}
+# First I'll make a vector of Z-scores
+z_scores <- seq(-3, 3, by = .1)
+
+# Let's print the vector
+z_scores
+
+# Let's make a vector of the values the function takes given those Z-scores.
+# Remember for dnorm the default value for mean is 0 and for sd is 1.
+dvalues <- dnorm(z_scores)
+
+# Let's examine those values
+dvalues
+
+# Now we'll plot these values
+plot(dvalues, # Plot where y = values and x = index of the value in the vector
+     xaxt = "n", # Don't label the x-axis
+     type = "l", # Make it a line plot
+     main = "pdf of the Standard Normal",
+     xlab= "Z-score") 
+
+# These commands label the x-axis
+axis(1, at=which(dvalues == dnorm(0)), labels=c(0))
+axis(1, at=which(dvalues == dnorm(1)), labels=c(-1, 1))
+axis(1, at=which(dvalues == dnorm(2)), labels=c(-2, 2))
+```
+
+As you can see, `dnorm` will give us the "height" of the pdf of the normal 
+distribution at whatever Z-score we provide as an argument to `dnorm`.
+
+---
+
+## `pnorm`
+
+The function `pnorm` returns the integral from $-\infty$ to $q$ of the pdf of
+the normal distribution where $q$ is a Z-score. Try to guess the value of 
+`pnorm(0)`. (`pnorm` has the same default `mean` and `sd` arguments as `dnorm`).
+
+```{r}
+# To be clear about the arguments in this example:
+# q = 0, mean = 0, sd = 1
+pnorm(0) 
+```
+
+The `pnorm` function also takes the argument `lower.tail`. If `lower.tail` is
+set equal to `FALSE` then `pnorm` returns the integral from $q$ to $\infty$ of 
+the pdf of the normal distribution. Note that `pnorm(q)` is the same as 
+`1-pnorm(q, lower.tail = FALSE)`
+
+```{r}
+pnorm(2)
+
+pnorm(2, mean = 5, sd = 3)
+
+pnorm(2, mean = 5, sd = 3, lower.tail = FALSE)
+
+1 - pnorm(2, mean = 5, sd = 3, lower.tail = FALSE)
+```
+
+`pnorm` is the function that replaces the table of probabilites and Z-scores at
+the back of the statistics textbook. Let's take our vector of Z-scores from
+before (`z_scores`) and compute a new vector of "probability masses" using
+`pnorm`. Any guesses about what this plot will look like?
+
+```{r}
+pvalues <- pnorm(z_scores)
+
+# Now we'll plot these values
+plot(pvalues, # Plot where y = values and x = index of the value in the vector
+     xaxt = "n", # Don't label the x-axis
+     type = "l", # Make it a line plot
+     main = "cdf of the Standard Normal",
+     xlab= "Quantiles",
+     ylab="Probability Density") 
+
+# These commands label the x-axis
+axis(1, at=which(pvalues == pnorm(-2)), labels=round(pnorm(-2), 2))
+axis(1, at=which(pvalues == pnorm(-1)), labels=round(pnorm(-1), 2))
+axis(1, at=which(pvalues == pnorm(0)), labels=c(.5))
+axis(1, at=which(pvalues == pnorm(1)), labels=round(pnorm(1), 2))
+axis(1, at=which(pvalues == pnorm(2)), labels=round(pnorm(2), 2))
+```
+
+It's the plot of the cumulative distribution function of the normal 
+distribution! Isn't that neat?
+
+---
+
+## `qnorm`
+
+The `qnorm` function is simply the inverse of the cdf, which you can also think
+of as the inverse of `pnorm`! You can use `qnorm` to determine the answer to
+the question: What is the Z-score of the $pth$ quantile of the normal 
+distribution?
+
+```{r}
+# What is the Z-score of the 50th quantile of the normal distribution?
+qnorm(.5)
+
+# What is the Z-score of the 96th quantile of the normal distribution?
+qnorm(.96)
+
+# What is the Z-score of the 99th quantile of the normal distribution?
+qnorm(.99)
+
+# They're truly inverses!
+pnorm(qnorm(0))
+qnorm(pnorm(0))
+```
+
+Let's plot `qnorm` and `pnorm` next to each other to further illustrate the fact
+they they are inverses.
+
+```{r, warning=FALSE}
+# This is for getting two graphs next to each other
+oldpar <- par()
+par(mfrow=c(1,2))
+
+# Let's make a vector of quantiles: from 0 to 1 by increments of .05
+quantiles <- seq(0, 1, by = .05)
+quantiles
+
+# Now we'll find the Z-score at each quantile
+qvalues <- qnorm(quantiles)
+qvalues
+
+# Plot the z_scores
+plot(qvalues,
+     type = "l", # We want a line graph
+     xaxt = "n", # No x-axis
+     xlab="Probability Density",
+     ylab="Z-scores")
+
+# Same pnorm plot from before
+plot(pvalues, # Plot where y = values and x = index of the value in the vector
+     xaxt = "n", # Don't label the x-axis
+     type = "l", # Make it a line plot
+     main = "cdf of the Standard Normal",
+     xlab= "Quantiles",
+     ylab="Probability Density") 
+
+# These commands label the x-axis
+axis(1, at=which(pvalues == pnorm(-2)), labels=round(pnorm(-2), 2))
+axis(1, at=which(pvalues == pnorm(-1)), labels=round(pnorm(-1), 2))
+axis(1, at=which(pvalues == pnorm(0)), labels=c(.5))
+axis(1, at=which(pvalues == pnorm(1)), labels=round(pnorm(1), 2))
+axis(1, at=which(pvalues == pnorm(2)), labels=round(pnorm(2), 2))
+
+# Restore old plotting settings
+par(oldpar)
+```
+
+---
+
+## `rnorm`
+
+If you want to generate a vector of normally distributed random numbers, `rnorm`
+is the function you should use. The first argument `n` is the number of numbers
+you want to generate, followed by the standard `mean` and `sd` arguments. Let's
+illustrate the weak law of large numbers using `rnorm`.
+
+```{r, warning=FALSE}
+# set.seed is a function that takes a number as an argument and sets a seed from
+# which random numbers are generated. It's important to set a seed so that your
+# code is reproduceable. If you wanted to you could always set your seed to the
+# same number. I like to set seeds to the "date" which is really just
+# the arithmetic equation "month minus day minus year". So today's seed 
+# is -2006.
+set.seed(10-1-2015)
+rnorm(5)
+
+# If I set the seed to the same seed again, I'll generate the same vector of
+# numbers.
+set.seed(10-1-2015)
+rnorm(5)
+
+# Now onto using rnorm
+
+# Let's generate three different vectors of random numbers from a normal
+# distribution
+n10 <- rnorm(10, mean = 70, sd = 5)
+n100 <- rnorm(100, mean = 70, sd = 5)
+n10000 <-  rnorm(10000, mean = 70, sd = 5)
+
+# Let's just look at one of the vectors
+n10
+```
+
+Which historgram do you think will be most centered around the true mean of 70?
+
+```{r, warning=FALSE}
+# This is for getting two graphs next to each other
+oldpar <- par()
+par(mfrow=c(1,3))
+
+# The breaks argument specifies how many bars are in the histogram
+hist(n10, breaks = 5)
+hist(n100, breaks = 20)
+hist(n10000, breaks = 100)
+
+# Restore old plotting settings
+par(oldpar)
+```
+
+---
+
+## Closing thoughts
+
+These concepts generally hold true for all the distribution functions built into
+R. You can learn more about all of the distribution functions by typing
+`help(Distributions)` into the R console. If you have any questions about this
+demonstration or about R programming please send me an [email](http://seankross.com/about/). If you'd like to change or contribute to this document I welcome pull requests
+on [GitHub](https://github.com/seankross/seankross.github.io/tree/master/notes).
+This document and all code contained within is licensed [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
