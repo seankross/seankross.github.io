@@ -1,0 +1,23 @@
+---
+title: "swirl Downloads Over Time"
+author: "Sean Kross"
+date: "January 29, 2016"
+output: html_document
+---
+
+```{r, message=FALSE}
+library(cranlogs)
+library(dplyr)
+swdl <- cran_downloads("swirl", from = "2014-01-15", to = "last-day")
+plot(swdl$date, swdl$count, type = "l", xlab = "Date", ylab = "Downloads",
+     main = "Daily")
+
+swdl <- swdl %>%
+  mutate(Month = format(as.Date(date), "%Y-%m")) %>%
+  group_by(Month) %>%
+  summarize(mdl = sum(count)) %>%
+  mutate(Month = paste0(Month, "-01"))
+
+plot(as.Date(swdl$Month), swdl$mdl, type = "l", xlab = "Date", 
+     ylab = "Downloads", main = "Monthly")
+```
