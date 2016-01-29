@@ -5,6 +5,8 @@ date: "January 29, 2016"
 output: html_document
 ---
 
+Downloads of `swirl` from https://cran.rstudio.com/. Data source: http://cranlogs.r-pkg.org/.
+
 ```{r, message=FALSE}
 library(cranlogs)
 library(dplyr)
