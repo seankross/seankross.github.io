@@ -6,6 +6,3 @@ baseurl: "/"
 url: "http://seankross.com" 
 twitter_username: seankross
 github_username: seankross
-
-# Build settings
-markdown: redcarpet

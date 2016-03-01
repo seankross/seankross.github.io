@@ -1,3 +1,7 @@
+# By Sean Kross February 2016
+# Licensed CC0
+# https://creativecommons.org/publicdomain/zero/1.0/
+
 set.seed(2-25-16)
 par(mfrow = c(1, 2))
 
