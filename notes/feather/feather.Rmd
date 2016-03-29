@@ -1,0 +1,95 @@
+---
+title: "Microbenchmarking Feather"
+author: "Sean Kross"
+date: "March 29, 2016"
+output: html_document
+---
+
+First fill a data frame:
+
+```{r}
+library(devtools)
+# install_github("wesm/feather/R")
+library(feather)
+library(microbenchmark)
+
+set.seed(3-29-16)
+
+rows <- 100000
+
+x <- data.frame(ints = round(runif(rows, -100, 100)), stringsAsFactors = FALSE)
+x$floats <- runif(rows, -100, 100)
+x$bools <- sample(c(TRUE, FALSE), rows, replace = TRUE)
+x$dates <- as.POSIXct(runif(rows, 100000000, 1459293171), origin = "1970-01-01")
+x$categories <- as.factor(sample(c(LETTERS, 0:9), rows, replace = TRUE))
+x$strings <- replicate(rows, paste0(sample(letters, sample(1:10, 1), replace = TRUE), collapse = ""))
+
+```
+
+Benchmark writes:
+
+```{r}
+
+microbenchmark(
+  write.csv(x, file = "x.csv"), times = 10
+)
+
+microbenchmark(
+  save(x, file = "x.rda"), times = 10
+)
+
+microbenchmark(
+  saveRDS(x, file = "x.rds"), times = 10
+)
+
+microbenchmark(
+  write_feather(x, "x.feather"), times = 10
+)
+
+```
+
+File size:
+
+```{r}
+rm(x, rows)
+
+file.size("x.csv")
+file.size("x.rda")
+file.size("x.rds")
+file.size("x.feather")
+```
+
+Benchmark reads:
+
+```{r}
+microbenchmark(
+  y <- read.csv("x.csv"), times = 10
+)
+
+rm(y)
+
+microbenchmark(
+  load("x.rda"), times = 10
+)
+
+rm(x)
+
+microbenchmark(
+  y <- readRDS("x.rds"), times = 10
+)
+
+rm(y)
+
+microbenchmark(
+  y <- read_feather("x.feather"), times = 10
+)
+
+session_info()
+```
+
+- [Pull requests are welcome!](https://github.com/seankross/seankross.github.io/tree/master/notes/feather)
+- If you run this on your machine I'd love to see the results: @seankross
+
+---
+
+### License: CC0
