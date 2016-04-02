@@ -27,6 +27,8 @@
 
 ### ⛵ [colorpile - community-driven color palettes](https://github.com/ropenscilabs/colorpile)
 
-### [Additions to roxygen]
+### 📦 [New features in roxygen](https://github.com/gmbecker/roxygen/tree/tests-tag)
 
-### [Creat()ing forms in shiny]()
+### ✅ [shinyforms - Easily create questionnaire-type forms with Shiny](https://github.com/daattali/shinyforms)
+
+### 👍 [jsonvalidate - validate json](https://github.com/ropenscilabs/jsonvalidate)
