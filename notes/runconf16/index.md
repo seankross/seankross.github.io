@@ -32,3 +32,12 @@
 ### ✅ [shinyforms - Easily create questionnaire-type forms with Shiny](https://github.com/daattali/shinyforms)
 
 ### 👍 [jsonvalidate - validate json](https://github.com/ropenscilabs/jsonvalidate)
+
+### 📡 [Best practices for writing an API package](https://github.com/hadley/httr/blob/master/vignettes/api-packages.Rmd)
+
+---
+
+If there are any projects that you know are missing please
+[fork](https://github.com/seankross/seankross.github.io/tree/master/notes/runconf16) 
+this document on GitHub, make changes, and then send a pull
+request.
