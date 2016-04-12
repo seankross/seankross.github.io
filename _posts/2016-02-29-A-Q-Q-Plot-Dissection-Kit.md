@@ -281,8 +281,8 @@ The first thing to keep in mind is that in this instance the Q-Q plot is
 comparing the quantiles of two different samples, unlike in all of the previous
 examples in this post where sample quantiles are being compared to theoretical
 quantiles. The general trend of this Q-Q plot shows is that the quantiles of
-batch 1 generally occur before the quantiles of batch 2. The first and last
-quantiles of both batches match up, but the closer a quantile from batch 1 is 
+batch 2 generally occur before the quantiles of batch 1. The first and last
+quantiles of both batches match up, but the closer a quantile from batch 2 is 
 to the "middle" (the median of both batches combined) the earlier that quantile
-will occur in batch 1 compared to batch 2.
+will occur in batch 2 compared to batch 1.
 
