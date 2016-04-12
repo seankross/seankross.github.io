@@ -1,5 +1,5 @@
 ---
-title: "Popularity of the Names of Disney Princesses"
+title: "Popularity of the Names of Disney Princesses Over Time in the United States"
 author: "Sean Kross"
 date: "April 12, 2016"
 output: html_document
@@ -31,7 +31,7 @@ elsa <- babynames %>%
 
 plot(jasmine$year, jasmine$prop, type = "l", lwd = 2,
      col = "Purple", xlim = c(1880, 2015), xlab = "Year", 
-     ylab = "Proportion of Baby Names")
+     ylab = "Proportion of Baby Names", bty = "n")
 
 lines(ariel$year, ariel$prop, type = "l", lwd = 2,
      xlab = "Year", ylab = "Proportion of Baby Names")
@@ -54,11 +54,13 @@ legend("topleft", legend = c("Jasmine", "Ariel", "Belle",
                                 "Green", "Red", "Blue"),
        bty = "n")
 
-# Shining, shimmering, splended
+# Shining, shimmering, splendid
 
 plot(belle$year, belle$prop, type = "l", lwd = 3,
       col = "#FFCC33", xlim = c(1970, 2015),
-     ylim = c(0, max(elsa$prop)))
+     ylim = c(0, max(elsa$prop)), bty = "n",
+     xlab = "Year", 
+     ylab = "Proportion of Baby Names")
 
 lines(tiana$year, tiana$prop, type = "l", lwd = 3,
       col = "green")
