@@ -51,16 +51,17 @@ Below is the first plot we'll be dissecting and the code that drew the plots.
 # Draw two plots next to each other
 par(mfrow = c(1, 2))
 
-# Add some spice to the default histogram function
-hist_ <- function(x, ...){
-  hist(x, breaks = 30, xlab = "Z", ylab = "",  yaxt='n', freq = FALSE, ...)
-}
-
 # normal_density are the y-values for the normal curve
 # zs are the x-values for the normal curve
 n <- 1000
 normal_density <- dnorm(seq(-4, 4, 0.01))
 zs <- seq(-4, 4, 0.01)
+
+# Add some spice to the default histogram function
+hist_ <- function(x, ...){
+  hist(x, breaks = 30, xlab = "Z", ylab = "",  yaxt='n', freq = FALSE, ...)
+  lines(zs, normal_density, type = "l", col = "red", lwd = 2)
+}
 
 # Gaussian Normal
 # rnorm() generates random numbers from a normal distribution
@@ -69,7 +70,6 @@ gaussian_rv <- rnorm(n)
 
 # Draw the histogram
 hist_(gaussian_rv, main = "Gaussian Distribution")
-lines(zs, normal_density, type = "l", col = "red", lwd = 2)
 
 # Draw the Q-Q plot
 qqnorm(gaussian_rv)
@@ -101,7 +101,6 @@ the Y-axis followed by a reflection across the X-Axis:
 skew_right <- c(gaussian_rv[gaussian_rv > 0] * 2.5, gaussian_rv)
 
 hist_(skew_right, main = "Skewed Right", ylim = c(0, max(normal_density)))
-lines(zs, normal_density, type = "l", col = "red", lwd = 2)
 
 qqnorm(skew_right)
 qqline(skew_right, col = "blue", lwd = 2)
@@ -111,7 +110,6 @@ qqline(skew_right, col = "blue", lwd = 2)
 skew_left <- c(gaussian_rv[gaussian_rv < 0]*2.5, gaussian_rv)
 
 hist_(skew_left, main = "Skewed Left", ylim = c(0, max(normal_density)))
-lines(zs, normal_density, type = "l", col = "red", lwd = 2)
 
 qqnorm(skew_left)
 qqline(skew_left, col = "blue", lwd = 2)
@@ -146,7 +144,6 @@ distribution occurring in both the left and right tails:
 fat_tails <- c(gaussian_rv*2.5, gaussian_rv)
 
 hist_(fat_tails, main = "Fat Tails", ylim = c(0, max(normal_density)), xlim = c(-10, 10))
-lines(zs, normal_density, type = "l", col = "red", lwd = 2)
 
 qqnorm(fat_tails)
 qqline(fat_tails, col = "blue", lwd = 2)
@@ -155,7 +152,6 @@ qqline(fat_tails, col = "blue", lwd = 2)
 thin_tails <- rnorm(n, sd = .7)
 
 hist_(thin_tails, main = "Thin Tails")
-lines(zs, normal_density, type = "l", col = "red", lwd = 2)
 
 qqnorm(thin_tails)
 qqline(thin_tails, col = "blue", lwd = 2)
@@ -193,3 +189,44 @@ distributed.
 
 I hope I've helped improve your understanding of Q-Q plots. If you find any
 interesting examples in the wild send them my way.
+
+## Update (2016-04-11)
+
+<blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/seankross">@seankross</a> <a href="https://twitter.com/jtleek">@jtleek</a> nice tutorial! It would also be cool to illustrate a bimodal distribution.</p>&mdash; Aaron McAdie (@allezaaron) <a href="https://twitter.com/allezaaron/status/704772815354880000">March 1, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+Great idea! Here's the code for creating and visualizing a bimodal distribution:
+
+```r
+# Bimodal
+bimodal <- c(rnorm(500, -1, .25), rnorm(500, 1, .25))
+  
+hist_(bimodal, main = "Bimodal", xlim = c(-2, 2))
+
+qqnorm(bimodal)
+qqline(bimodal, col = "blue", lwd = 2)
+```
+
+<img src="/img/biqq.png" class="img-thumbnail">
+
+You can see that the tails of this distribution resemble the "thin tails"
+example. The first quantiles occur closer to zero compared to the first
+quantiles of a theoretical normal distribution. This trend continues until the
+points reach the y = x line around -0.6. Notice how the points cross the blue
+line of the Q-Q plot at the same point on the histogram where the red normal
+curve passes through the top of the histogram bar centered near -0.6. This point
+is a great illustration of what it means for the theoretical and the actual 
+quantiles to be aligned. The points in Q-Q plot then cross below the blue line
+indicating that the actual quantiles that are close to zero are farther from
+zero than they should be theoretically. At the center of the theoretical
+distribution there are no data in the actual dataset, and therefore there is no
+point in the Q-Q plot at (0, 0). The upper half of the Q-Q plot is a reflection
+across X and Y of the bottom half. At first the data is farther from zero than
+it would be theoretically, and then the "thin tails" affect comes into play
+toward the right side of the histogram.
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">&quot;Ah, a Q-Q plot. I&#39;ll go ahead and interpret it correctly on my first try,&quot; I said, my brow sweating profusely <a href="https://t.co/WZfjsXoeBw">pic.twitter.com/WZfjsXoeBw</a></p>&mdash; David Robinson (@drob) <a href="https://twitter.com/drob/status/719551926350716928">April 11, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+May your brows be dry my friends.
+
