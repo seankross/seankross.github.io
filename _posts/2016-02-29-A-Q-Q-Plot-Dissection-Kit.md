@@ -230,3 +230,59 @@ toward the right side of the histogram.
 
 May your brows be dry my friends.
 
+## Update (2016-04-12)
+
+<blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/hspter">@hspter</a> Can someone help me understand what&#39;s going on in <a href="https://twitter.com/drob">@drob</a>&#39;s one? It doesn&#39;t look like any of the examples <a href="https://twitter.com/seankross">@seankross</a> has on page.</p>&mdash; Brandon Hurr (@bhive01) <a href="https://twitter.com/bhive01/status/719981827767664640">April 12, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+Below is my attempt at making a dataset that resembles the dataset in [David](https://twitter.com/drob)'s
+tweet:
+
+```r
+# @drob
+
+batch1_seed <- c(550, 600, 650, 700, 750, 770, 800)
+
+batch2_seed <- c(530, 550, 575, 600, 660, 725,800)
+
+batch1 <- replicate(500, {
+  seed <- sample(batch1_seed, 1)
+  rnorm(1, mean = seed, 15)
+})
+
+batch2 <- replicate(500, {
+  seed <- sample(batch2_seed, 1)
+  rnorm(1, mean = seed, 15)
+})
+
+h1 <- hist(batch1, breaks = 30)
+h2 <- hist(batch2, breaks = 30)
+
+plot(h1, col = rgb(0, 0, 1, .25), xlim = c(450, 850),
+     ylim = c(0, 40), xlab = "Random Variable",
+     main = "@drob", ylab = "", yaxt = "n")
+plot(h2, col = rgb(1, 0, 0, .25), xlim=c(0, 10), add=T,
+     ylab = "",  yaxt='n')
+
+par(xpd = TRUE)
+legend(350, 40, c("Batch 1", "Batch 2"), bty = "n",
+       pch = 15, col = c(rgb(0, 0, 1, .25), rgb(1, 0, 0, .25)))
+par(xpd = FALSE)
+
+qqplot(batch2, batch1, xlim = c(300, 900), 
+       ylim = c(300, 900), xlab = "Batch 2",
+       ylab = "Batch 1", main = "Q-Q Plot")
+abline(a = 0, b = 1, col = "blue", lwd = 2)
+
+```
+<img src="/img/drobqq.png" class="img-thumbnail">
+
+The first thing to keep in mind is that in this instance the Q-Q plot is
+comparing the quantiles of two different samples, unlike in all of the previous
+examples in this post where sample quantiles are being compared to theoretical
+quantiles. The general trend of this Q-Q plot shows is that the quantiles of
+batch 1 generally occur before the quantiles of batch 2. The first and last
+quantiles of both batches match up, but the closer a quantile from batch 1 is 
+to the "middle" (the median of both batches combined) the earlier that quantile
+will occur in batch 1 compared to batch 2.
+
