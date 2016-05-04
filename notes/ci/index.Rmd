@@ -65,6 +65,20 @@ true_mean <- mean(population)
 mean(true_mean > lower_bounds & true_mean < upper_bounds)
 ```
 
+Visualizing these confidence intervals in the style of
+[Hadley Wickham's notes](http://stat310.had.co.nz/lectures/22-confidence.pdf):
+
+```{r}
+# Only considering the first 100 confidence intervals
+plot(0, 0, xlim = c(1, 100), ylim = c(min(lower_bounds), max(upper_bounds)),
+     xlab = "Sample Number", ylab = "", bty = "n", col = "white")
+for(i in 1:100){
+  segments(i, lower_bounds[i], i, upper_bounds[i], lwd = 2)
+}
+abline(h = true_mean, col = "red", lwd = 2)
+legend(70, .55, legend = "True Mean", col = "red", lty = 1, bty = "n")
+```
+
 ---
 
 [Link to Code](https://github.com/seankross/seankross.github.io/blob/master/notes/ci/index.Rmd) | Pull Requests Welcome | CC0
