@@ -87,7 +87,7 @@ looking for volunteer translators!)
 - Anyone can make and distribute their own swirl course for
 free.
 
-## What a swirl course?
+## What is a swirl course?
 
 - A swirl course is a collection of lessons.
 - Each lesson contains about 20 minutes of instruction
@@ -110,7 +110,7 @@ about a particular topic in data science.
 - More courses
 - Better channels for distributing swirl courses
 - Feedback for course instrcutors to assess student's 
-performance.
+performance
 
 ## We want you!
 
