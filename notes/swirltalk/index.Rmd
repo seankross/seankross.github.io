@@ -116,6 +116,16 @@ performance
 
 <img src="github.png" width=800>
 
+## Acknowledgements
+
+- Co-Creators: 
+    - Nick Carchedi, Bill Bauer, Gina Grdina
+- Generous support from: 
+    - Brian Caffo, Roger Peng, Jeff Leek
+- Financial support from:
+    - The United States [National 
+Institutes of Health](https://projectreporter.nih.gov/project_info_description.cfm?aid=8829370&icde=22004333)
+
 ## Questions?
 
 - Find me:
