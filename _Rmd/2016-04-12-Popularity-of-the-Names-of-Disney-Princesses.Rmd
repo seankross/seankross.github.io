@@ -6,6 +6,14 @@ jumbo_title: Popularity of the Names of Disney Princesses
 jumbo_subtitle:
 ---
 
+This is a small exploration of the `babynames` package which
+contains a dataset tracking how many children were born with
+a certain name according to the US Social Security 
+Administration. I thought it would be interesting to look at
+the popularity of the names of the Disney Princesses. Spikes
+in popularity roughly correspond to when their respective 
+movies were released.
+
 ```{r, message=FALSE, fig.width=10, fig.asp=0.5625}
 library(dplyr)
 library(babynames)
@@ -29,7 +37,9 @@ merida <- babynames %>%
 
 elsa <- babynames %>%
   filter(name == "Elsa", sex == "F")
+```
 
+```{r, message=FALSE, fig.width=10, fig.asp=0.5625}
 plot(jasmine$year, jasmine$prop, type = "l", lwd = 2,
      col = "Purple", xlim = c(1880, 2015), xlab = "Year", 
      ylab = "Proportion of Baby Names", bty = "n")
@@ -54,7 +64,9 @@ legend("topleft", legend = c("Jasmine", "Ariel", "Belle",
        lwd = rep(2, 6), col = c("Purple", "Black", "#FFCC33",
                                 "Green", "Red", "Blue"),
        bty = "n")
+```
 
+```{r, message=FALSE, fig.width=10, fig.asp=0.5625}
 # Shining, shimmering, splendid
 
 plot(belle$year, belle$prop, type = "l", lwd = 3,
