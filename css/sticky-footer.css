@@ -60,3 +60,8 @@ div pre {
   font-size: 0.85em;
   line-height: 1;
 }
+
+pre code {
+  overflow-wrap: normal;
+  white-space: pre;
+}
