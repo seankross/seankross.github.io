@@ -9,9 +9,9 @@ jumbo_subtitle:
 My brother and I were talking about saving for retirement, specifically whether
 he should wait to invest in his 
 [IRA](https://en.wikipedia.org/wiki/Individual_retirement_account) until he gets
-a large stipend at the end of the summer or if he should invest a little bit of
+a large stipend at the end of the summer or if he should invest a smaller amount of
 money (~$100 per week) throughout the year. Some people call the first approach
-"lump sum investing"" and the latter appraoch "dollar cost averaging." This post
+"lump sum investing" and the latter appraoch "dollar cost averaging." This post
 is an attempt to visualize the difference between these two approaches.
 
 We're both customers of Charles Schwab which allows us to buy their funds
