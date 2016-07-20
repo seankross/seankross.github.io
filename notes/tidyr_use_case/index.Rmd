@@ -1,0 +1,21 @@
+---
+title: "tidyr Use Case"
+author: "Sean Kross"
+date: "July 20, 2016"
+output: html_document
+---
+
+Ran into the perfect `tidyr` use case today:
+
+```{r, message=FALSE}
+library(plotly)
+library(tidyr)
+library(dplyr)
+data("EuStockMarkets")
+
+stocks <- as.data.frame(EuStockMarkets) %>%
+  gather(Index, Price) %>%
+  mutate(Date = rep(time(EuStockMarkets), 4))
+
+plot_ly(stocks, x = Date, y = Price, color = Index)
+```
