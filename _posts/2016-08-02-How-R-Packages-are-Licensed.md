@@ -60,3 +60,41 @@ licensing families among R packages on CRAN.
       theme(legend.text=element_text(size=15), axis.title.x = element_text(size=15))
 
 ![center](/img/2016-08-02-How-R-Packages-are-Licensed/unnamed-chunk-1-1.png){: .img-thumbnail max-width="100%" height="auto"}
+
+## Update (Bioconductor)
+
+<blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/seankross">@seankross</a> <a href="https://twitter.com/rdpeng">@rdpeng</a> <a href="https://twitter.com/hrbrmstr">@hrbrmstr</a> Cool. With <a href="https://twitter.com/Bioconductor">@bioconductor</a> (v3.3) pkgs included there are 1148 Artistic-2.0, 8975 GPL(*), 1169 other <a href="https://twitter.com/hashtag/rstats?src=hash">#rstats</a></p>&mdash; Gabe Becker (@groundwalkergmb) <a href="https://twitter.com/groundwalkergmb/status/760524247768961024">August 2, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+Thanks for the idea Gabe. Below is a look at the licenses for packages on
+Bioconductor.
+
+
+    library(BiocInstaller)
+    bioc_table <- table(available.packages(contrib.url(biocinstallRepos())[1:4])[,"License"])
+    
+    # Sort licenses into families
+    names(bioc_table) %<>%
+      map_chr(function(x){
+        sorting_hat(x, c("Artistic", "CC", "BSD", "MIT", "LGPL", "GPL"))
+      })  
+    
+    # Tidy the data and plot!
+    bioc_tbl <- as.data.frame(bioc_table) %>%
+      rename(License = Var1) %>%
+      group_by(License) %>%
+      summarize(Freq = sum(Freq)) %>%
+      ungroup() %>%
+      arrange(desc(Freq))
+    
+    bioc <- bioc_tbl$Freq
+    names(bioc) <- bioc_tbl$License
+    
+    waffle(bioc/10, rows = 12,
+           title = "How R Packages on Bioconductor are Licensed",
+           xlab = "1 Square = 10 R Packages",
+           colors = c("#E5C494", "#66C2A5", "#FFD92F", "#E78AC3", 
+                      "#FC8D62", "#8DA0CB", "#A6D854")) +
+      theme(legend.text=element_text(size=15), axis.title.x = element_text(size=15))
+
+![center](/img/2016-08-02-How-R-Packages-are-Licensed/unnamed-chunk-2-1.png){: .img-thumbnail max-width="100%" height="auto"}
