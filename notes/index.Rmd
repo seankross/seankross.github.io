@@ -1,0 +1,15 @@
+---
+title: "Notes"
+output: html_document
+---
+
+I put other webpages that I don't know what to do with here.
+
+- [cli](cli/cli.html) A command line interface tutorial that could be better.
+- [dpqr](dpqr/) Notes on stats functions in R.
+- [feather](feather/) A small demo of the feather package for R.
+- [runconf16](runconf16/) A list of all of the project we did at the 
+2016 ROpenSci unconference.
+- [swirldl](swirldl/) Swirl downloads over time.
+- [swirltalk](swirltalk/) A talk I gave about swirl.
+- [tidyr_use_case](tidyr_use_case/) A small example use of the tidyr R package.
