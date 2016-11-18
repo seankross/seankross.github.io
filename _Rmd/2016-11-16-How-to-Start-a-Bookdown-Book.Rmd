@@ -14,8 +14,9 @@ I'm currently working on three different books:
 level of productivity has been 
 [made possible in part](https://youtu.be/j3RpwtkSg1M) by 
 [bookdown](https://bookdown.org/home/about.html),
-an R package that transforms R Markdown documents into a book that looks
-beautiful online with EPUB and PDF versions included. 
+an R package by the incredible and prolific
+[Yihui Xie](https://twitter.com/xieyihui) which transforms R Markdown documents 
+into a book that looks beautiful online with EPUB and PDF versions included. 
 
 Getting started with bookdown is not yet a totally straightforward process so I
 thought I would share what I do when I start a bookdown book. First open up 
@@ -44,8 +45,6 @@ bookdown::gitbook:
         <li><a href="./">A Minimal Bookdown Book</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-bookdown::html_chapters:
-  css: [style.css, toc.css]
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex
@@ -109,16 +108,12 @@ title: "A Minimal Bookdown Book"
 author: "Sean Kross"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
-output:
- bookdown::html_chapters:
-   includes:
-     in_header: style.css
 documentclass: book
 bibliography: [book.bib]
 biblio-style: apalike
 link-citations: yes
 github-repo: seankross/bookdown-start
-url: 'https\://github.com/seankross/bookdown-start'
+url: 'http\://seankross.com/bookdown-start/'
 description: "Everything you need (and nothing more) to start a bookdown book."
 ---
 ```
@@ -192,8 +187,12 @@ Most of this post has been cobbled together from public GitHub repositories I
 found on [bookdown.org](https://bookdown.org/) combined with a few hours of 
 playing with and tweaking bookdown. My
 [bookdown-start](https://github.com/seankross/bookdown-start)
-repo is just a pared down version of Yihui Xie's
+repo is just a pared down version of Yihui's
 [bookdown-demo](https://github.com/rstudio/bookdown-demo) repo. I use the
 workflow described above whenever I start a book and if you have any
 improvements, suggestions, or cool hacks I'm interested in hearing about them.
+For a complete and robust treatment of using bookdown you should read
+Yihui's book: 
+[Authoring Books and Technical Documents with R Markdown](https://bookdown.org/yihui/bookdown/). Thanks again to Yihui for
+creating this awesome package and for providing feedback for this post.
 
