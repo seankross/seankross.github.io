@@ -73,7 +73,7 @@ And voila, mission accomplished! By modifying just the source files, the code in
 the Rmd file and the screenshot of the app will now be updated whenever you
 `knit()` the Rmd file. If you want to play around with an example of this 
 process in action I set up a
-[GitHub repo](github.com/seankross/teaching-shiny) with a simple example. Thank
+[GitHub repo](https://github.com/seankross/teaching-shiny) with a simple example. Thank
 you to [Yihui Xie](https://twitter.com/xieyihui) for 
 [knitr](https://github.com/yihui/knitr) and
 [Winston Chang](https://twitter.com/winston_chang) for the
