@@ -80,3 +80,10 @@ you to [Yihui Xie](https://twitter.com/xieyihui) for
 [Winston Chang](https://twitter.com/winston_chang) for the
 [webshot](https://github.com/wch/webshot) package and may all your programmatic
 document dreams come true!
+
+# Update (2016-11-25)
+
+Thanks Yihui for this tip:
+
+<blockquote class="twitter-tweet" data-conversation="none" data-cards="hidden" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/seankross">@seankross</a> Instead of read_chunk, an easier and more elegant way is <br>```{r server, code=readLines(&#39;app/server.R&#39;)} <a href="https://t.co/6lrmNPcW0u">https://t.co/6lrmNPcW0u</a></p>&mdash; Yihui Xie (@xieyihui) <a href="https://twitter.com/xieyihui/status/801492007080382464">November 23, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
