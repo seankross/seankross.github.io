@@ -103,7 +103,7 @@ usually put the Preface and/or the Introduction in this file. At the top of this
 file is a slice of yaml frontmatter that looks like this:
 
 ```
---- 
+---
 title: "A Minimal Bookdown Book"
 author: "Sean Kross"
 date: "`r Sys.Date()`"

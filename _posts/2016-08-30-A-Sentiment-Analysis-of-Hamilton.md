@@ -27,81 +27,91 @@ We can get the lyrics by scraping a lyrics
 web pages that contain the lyrics for each song:
 
 
-    library(rvest)
-    library(magrittr)
-    
-    ham_raw <- read_html("http://www.allmusicals.com/h/hamilton.htm")
-    
-    ham_lyrics_pages <- ham_raw %>%
-      html_nodes(".lyrics-list") %>%
-      html_nodes("a") %>%
-      html_attr("href")
-    
-    head(ham_lyrics_pages)
+{% highlight r %}
+library(rvest)
+library(magrittr)
+
+ham_raw <- read_html("http://www.allmusicals.com/h/hamilton.htm")
+
+ham_lyrics_pages <- ham_raw %>%
+  html_nodes(".lyrics-list") %>%
+  html_nodes("a") %>%
+  html_attr("href")
+
+head(ham_lyrics_pages)
+{% endhighlight %}
 
 
-    ## [1] "http://www.allmusicals.com/lyrics/hamilton/alexanderhamilton.htm" 
-    ## [2] "http://www.allmusicals.com/lyrics/hamilton/aaronburrsir.htm"      
-    ## [3] "http://www.allmusicals.com/lyrics/hamilton/myshot.htm"            
-    ## [4] "http://www.allmusicals.com/lyrics/hamilton/thestoryoftonight.htm" 
-    ## [5] "http://www.allmusicals.com/lyrics/hamilton/theschuylersisters.htm"
-    ## [6] "http://www.allmusicals.com/lyrics/hamilton/farmerrefuted.htm"
+{% highlight text %}
+## [1] "http://www.allmusicals.com/lyrics/hamilton/alexanderhamilton.htm" 
+## [2] "http://www.allmusicals.com/lyrics/hamilton/aaronburrsir.htm"      
+## [3] "http://www.allmusicals.com/lyrics/hamilton/myshot.htm"            
+## [4] "http://www.allmusicals.com/lyrics/hamilton/thestoryoftonight.htm" 
+## [5] "http://www.allmusicals.com/lyrics/hamilton/theschuylersisters.htm"
+## [6] "http://www.allmusicals.com/lyrics/hamilton/farmerrefuted.htm"
+{% endhighlight %}
 
 Now I can scrape each individual page for the lyrics:
 
 
-    library(stringr)
-    
-    # Pre-allocating a list
-    ham_song_lyrics <- vector(mode = "list", length = length(ham_lyrics_pages))
-    
-    for (i in seq_along(ham_song_lyrics)) {
-      lyrics_raw <- read_html(ham_lyrics_pages[i])
-      ham_song_lyrics[[i]] <- lyrics_raw %>%
-        html_nodes("div#page") %>%
-        html_text() %>%
-        strsplit("\r\n") %>%
-        unlist()
-      song_name <- str_extract(ham_lyrics_pages[i], "[a-z|0-9]+\\.htm") %>%
-        str_replace("\\.htm", "")
-      names(ham_song_lyrics[[i]]) <- rep(song_name, length(ham_song_lyrics[[i]]))
-    }
+{% highlight r %}
+library(stringr)
+
+# Pre-allocating a list
+ham_song_lyrics <- vector(mode = "list", length = length(ham_lyrics_pages))
+
+for (i in seq_along(ham_song_lyrics)) {
+  lyrics_raw <- read_html(ham_lyrics_pages[i])
+  ham_song_lyrics[[i]] <- lyrics_raw %>%
+    html_nodes("div#page") %>%
+    html_text() %>%
+    strsplit("\r\n") %>%
+    unlist()
+  song_name <- str_extract(ham_lyrics_pages[i], "[a-z|0-9]+\\.htm") %>%
+    str_replace("\\.htm", "")
+  names(ham_song_lyrics[[i]]) <- rep(song_name, length(ham_song_lyrics[[i]]))
+}
+{% endhighlight %}
 
 
 
 
-    ham_song_lyrics %<>% unlist()
-    
-    # Some data cleaning
-    
-    library(
-      # Pardon me, are you Aaron
-      purrr
-      # sir?
-      )
-    
-    ham_song_lyrics %<>%
-      map_chr(gsub, pattern = "Last Update.+", replacement = "") %>%
-      discard(function(x) grepl("\\[|\\]", x)) %>%
-      discard(function(x) c("^Hamilton:$", "^Eliza:$", "^Angelica:$",
-                            "^Lafayette:$", "^Choirs:$", "Chorus:$",
-                            "^Both:$", "^Mulligan:$", "^Laurens:$", 
-                            "^King George:$") %>%
-                            map_lgl(grepl, x = x) %>% any())
-    
-    # Making a Tidy Data Frame of lyrics
-    
-    library(dplyr)
-    
-    ham_lyric_tbl <- data.frame(lyric = ham_song_lyrics,
-                                song = names(ham_song_lyrics),
-                                stringsAsFactors = FALSE) %>%
-      mutate(line = row_number())
+{% highlight r %}
+ham_song_lyrics %<>% unlist()
+
+# Some data cleaning
+
+library(
+  # Pardon me, are you Aaron
+  purrr
+  # sir?
+  )
+
+ham_song_lyrics %<>%
+  map_chr(gsub, pattern = "Last Update.+", replacement = "") %>%
+  discard(function(x) grepl("\\[|\\]", x)) %>%
+  discard(function(x) c("^Hamilton:$", "^Eliza:$", "^Angelica:$",
+                        "^Lafayette:$", "^Choirs:$", "Chorus:$",
+                        "^Both:$", "^Mulligan:$", "^Laurens:$", 
+                        "^King George:$") %>%
+                        map_lgl(grepl, x = x) %>% any())
+
+# Making a Tidy Data Frame of lyrics
+
+library(dplyr)
+
+ham_lyric_tbl <- data.frame(lyric = ham_song_lyrics,
+                            song = names(ham_song_lyrics),
+                            stringsAsFactors = FALSE) %>%
+  mutate(line = row_number())
+{% endhighlight %}
 
 
-    library(knitr)
-    kable(ham_lyric_tbl[896:900,1:2], format = "html", 
-          row.names=FALSE)
+{% highlight r %}
+library(knitr)
+kable(ham_lyric_tbl[896:900,1:2], format = "html", 
+      row.names=FALSE)
+{% endhighlight %}
 
 ---
 
@@ -143,20 +153,24 @@ further so that each "token" (essentially each word) is ready for sentiment
 analysis.
 
 
-    library(tidytext)
-    
-    ham_token_tbl <- ham_lyric_tbl %>%
-      unnest_tokens(word, lyric) %>%
-      anti_join(stop_words)
+{% highlight r %}
+library(tidytext)
+
+ham_token_tbl <- ham_lyric_tbl %>%
+  unnest_tokens(word, lyric) %>%
+  anti_join(stop_words)
+{% endhighlight %}
 
 Now that each song is tokenized we can start exploring the data. Let's take a
 look at the most common words in the show:
 
 
-    ham_token_tbl %>%
-      count(word, sort = TRUE) %>%
-      slice(1:15) %>%
-      kable(format = "html", row.names=FALSE)
+{% highlight r %}
+ham_token_tbl %>%
+  count(word, sort = TRUE) %>%
+  slice(1:15) %>%
+  kable(format = "html", row.names=FALSE)
+{% endhighlight %}
 
 ---
 
@@ -237,13 +251,17 @@ I like how this forms a little song of its own: "I'm da Hamilton! Time? Wait!
 Don't Burr, you're shot sir! Hey Alexander!" Next let's examine which pairs of words appear together most often in a verse:
 
 
-    ham_grams <- ham_token_tbl %>%
-      pair_count(line, word, sort = TRUE)
+{% highlight r %}
+ham_grams <- ham_token_tbl %>%
+  pair_count(line, word, sort = TRUE)
+{% endhighlight %}
 
 
-    ham_grams %>%
-      slice(1:10) %>%
-      kable(format = "html", row.names=FALSE, align = "c")
+{% highlight r %}
+ham_grams %>%
+  slice(1:10) %>%
+  kable(format = "html", row.names=FALSE, align = "c")
+{% endhighlight %}
 
 ---
 
@@ -317,20 +335,22 @@ pairings. We can visualize words that commonly appear with other words across
 different verses as a network:
 
 
-    library(igraph)
-    library(ggraph)
-    
-    set.seed(1776) # New York City
-    ham_grams %>%
-            filter(n >= 5) %>%
-            graph_from_data_frame() %>%
-            ggraph(layout = "fr") +
-            geom_edge_link(aes(edge_alpha = n, edge_width = n)) +
-            geom_node_point(color = "#0052A5", size = 5) +
-            geom_node_text(aes(label = name), vjust = 1.5) +
-            ggtitle(expression(paste("Word Network in Lin-Manuel Miranda's ", 
-                                     italic("Hamilton")))) +
-            theme_void()
+{% highlight r %}
+library(igraph)
+library(ggraph)
+
+set.seed(1776) # New York City
+ham_grams %>%
+        filter(n >= 5) %>%
+        graph_from_data_frame() %>%
+        ggraph(layout = "fr") +
+        geom_edge_link(aes(edge_alpha = n, edge_width = n)) +
+        geom_node_point(color = "#0052A5", size = 5) +
+        geom_node_text(aes(label = name), vjust = 1.5) +
+        ggtitle(expression(paste("Word Network in Lin-Manuel Miranda's ", 
+                                 italic("Hamilton")))) +
+        theme_void()
+{% endhighlight %}
 
 ![center](/img/2016-08-30-A-Sentiment-Analysis-of-Hamilton/unnamed-chunk-11-1.png){: .img-thumbnail max-width="100%" height="auto"}
 
@@ -346,39 +366,41 @@ on a song-by-song basis. A
 smoothing line is a good way to track the general sentiment of the show:
 
 
-    # Creating the set of sentiments we'll use
-    nrc <- sentiments %>%
-      filter(lexicon == "nrc") %>%
-      select(-score, -lexicon) %>%
-      filter(sentiment %in% c("positive", "negative"))
-    
-    # Joining sentiment and song
-    library(tidyr)
-    hamilton_sentiment <- ham_token_tbl %>%
-      inner_join(nrc) %>% 
-      count(index = song, sentiment) %>% 
-      spread(sentiment, n, fill = 0) %>% 
-      mutate(sentiment = positive - negative)
-    
-    # Putting the songs back in order
-    ham_song_names_tbl <- data.frame(num = 1:length(ham_lyrics_pages))
-    ham_song_names_tbl$index <- str_extract(ham_lyrics_pages, "[a-z|0-9]+\\.htm") %>%
-      str_replace("\\.htm", "")
-    
-    hamilton_sentiment %<>%
-      left_join(ham_song_names_tbl) %>%
-      arrange(num)
-    
-    plot(hamilton_sentiment$sentiment, bty = "n",
-         xlab = "Song Number", ylab = "Sentiment",
-         main = "Sentiment Analysis of Hamilton",
-         pch = 19, col = "#E0162B")
-    
-    loess_ham <- loess.smooth(hamilton_sentiment$num,
-                              hamilton_sentiment$sentiment,
-                              span = .15, degree = 2)
-    
-    lines(loess_ham, col = "#0052A5", lwd = 5)
+{% highlight r %}
+# Creating the set of sentiments we'll use
+nrc <- sentiments %>%
+  filter(lexicon == "nrc") %>%
+  select(-score, -lexicon) %>%
+  filter(sentiment %in% c("positive", "negative"))
+
+# Joining sentiment and song
+library(tidyr)
+hamilton_sentiment <- ham_token_tbl %>%
+  inner_join(nrc) %>% 
+  count(index = song, sentiment) %>% 
+  spread(sentiment, n, fill = 0) %>% 
+  mutate(sentiment = positive - negative)
+
+# Putting the songs back in order
+ham_song_names_tbl <- data.frame(num = 1:length(ham_lyrics_pages))
+ham_song_names_tbl$index <- str_extract(ham_lyrics_pages, "[a-z|0-9]+\\.htm") %>%
+  str_replace("\\.htm", "")
+
+hamilton_sentiment %<>%
+  left_join(ham_song_names_tbl) %>%
+  arrange(num)
+
+plot(hamilton_sentiment$sentiment, bty = "n",
+     xlab = "Song Number", ylab = "Sentiment",
+     main = "Sentiment Analysis of Hamilton",
+     pch = 19, col = "#E0162B")
+
+loess_ham <- loess.smooth(hamilton_sentiment$num,
+                          hamilton_sentiment$sentiment,
+                          span = .15, degree = 2)
+
+lines(loess_ham, col = "#0052A5", lwd = 5)
+{% endhighlight %}
 
 ![center](/img/2016-08-30-A-Sentiment-Analysis-of-Hamilton/unnamed-chunk-12-1.png){: .img-thumbnail max-width="100%" height="auto"}
 

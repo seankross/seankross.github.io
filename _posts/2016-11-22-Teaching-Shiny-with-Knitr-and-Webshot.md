@@ -38,12 +38,14 @@ example here's the code from my simple `server.R` file which is in a directory
 called `app`:
 
 
-    # ---- server ----
-    
-    library(shiny)
-    shinyServer(function(input, output) {
-      
-    })
+{% highlight r %}
+# ---- server ----
+
+library(shiny)
+shinyServer(function(input, output) {
+  
+})
+{% endhighlight %}
 
 You can then set up the Rmd file to include the code above like so:
 

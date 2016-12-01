@@ -23,7 +23,9 @@ thought I would share what I do when I start a bookdown book. First open up
 your favorite R console and install bookdown if you haven't already:
 
 
-    install.packages("bookdown")
+{% highlight r %}
+install.packages("bookdown")
+{% endhighlight %}
 
 I created a GitHub repository which contains what I consider to be the absolute
 smallest amount of [boilerplate](https://en.wikipedia.org/wiki/Boilerplate_code)
@@ -102,10 +104,10 @@ usually put the Preface and/or the Introduction in this file. At the top of this
 file is a slice of yaml frontmatter that looks like this:
 
 ```
---- 
+---
 title: "A Minimal Bookdown Book"
 author: "Sean Kross"
-date: "2016-11-18"
+date: "2016-12-02"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]

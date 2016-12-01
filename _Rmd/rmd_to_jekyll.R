@@ -13,7 +13,7 @@ KnitPost <- function(input, outfile, figsfolder, cachefolder, base.url="/") {
   opts_chunk$set(fig.path = fig.path)
   opts_chunk$set(cache.path = cache.path)
   opts_chunk$set(fig.cap = "center")
-  render_jekyll(highlight = "none")
+  render_jekyll(highlight = "pygments")
   knit(input, outfile, envir = parent.frame())
   
   # Add Inline Attribute List
