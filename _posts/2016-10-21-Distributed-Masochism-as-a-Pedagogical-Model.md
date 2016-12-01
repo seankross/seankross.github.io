@@ -36,7 +36,7 @@ in the course are ironed out at a faster rate compared to traditional in-person
 courses. All of the material in our courses is open-source and available on
 GitHub, and we teach our students how to use Git and GitHub.  We can take
 advantage of improvements and contributions the students think we should make
-to our courses through pull requests that we recieve. Student contributions 
+to our courses through pull requests that we receive. Student contributions 
 further reduce the overall start-up pain experienced by other students.
 
 With students from all over the world participating in our online courses we're
