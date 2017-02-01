@@ -1,0 +1,47 @@
+---
+layout: post
+title: "Tidying and Comparing Binomial Data"
+date: 2017-02-01 12:00:00
+jumbo_title: Tidying and Comparing Binomial Data
+jumbo_subtitle:
+---
+
+```{r}
+library(dplyr)
+library(tidyr)
+library(purrr)
+
+set.seed(2017-01-31)
+
+# Setting up fake data
+datasetA <- sample(c(TRUE, FALSE), 1000, replace = TRUE) %>%
+  matrix(ncol = 10) %>%
+  as.data.frame()
+colnames(datasetA) <- paste0("variable", 0:9)
+
+datasetB <- sample(c(TRUE, FALSE), 1000, replace = TRUE, prob = c(.4, .6)) %>%
+  matrix(ncol = 10) %>%
+  as.data.frame()
+colnames(datasetB) <- paste0("variable", 0:9)
+
+#
+A_tbl <- datasetA %>%
+  map(sum) %>%
+  as.data.frame() %>%
+  mutate(set = "A") %>%
+  gather(variable, n_true, -set)
+
+B_tbl <- datasetB %>%
+  map(sum) %>%
+  as.data.frame() %>%
+  mutate(set = "B") %>%
+  gather(variable, n_true, -set)
+
+prop_tbl <- bind_rows(A_tbl, B_tbl) %>%
+  spread(set, n_true) %>%
+  mutate(p_value = map2(.$A, .$B, function(a, b){
+    prop.test(c(a, b), c(100, 100))$p.value
+  })) %>%
+  mutate(signif = p_value < .05 / nrow(.))
+
+```
