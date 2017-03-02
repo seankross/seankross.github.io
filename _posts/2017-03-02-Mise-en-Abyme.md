@@ -41,13 +41,13 @@ Once you've uploaded the graph you can then
 you can supply as the `popup` argument in `addMarkers()`.
 
 I showed this insanity to Brooke and Roger, and Brooke mentioned that it
-reminder her of the artistic concept of
+reminded her of the artistic concept of
 [mise en abyme](https://en.wikipedia.org/wiki/Mise_en_abyme) (literally: placed 
 into abyss), which describes the experience of
 standing between two mirrors. The next logical question for the three of us was:
 what are the limits of using an `<iframe>` in a Leaflet popup? How deep does
 this rabbit hole go? I uploaded [my first map](https://seankross.neocities.org/map.html)
-and attempted to embed that site into yet another iframe:
+and attempted to embed that site into yet another popup:
 
 
 {% highlight r %}
