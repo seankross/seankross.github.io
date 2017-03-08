@@ -6,6 +6,8 @@ jumbo_title: Send a Text from R with Twilio
 jumbo_subtitle: We traced the call. It's coming from inside the script!
 ---
 
+Now on CRAN: [the `twilio` package](https://github.com/seankross/twilio)!
+
 [Twilio](https://www.twilio.com/) is a tech company that has created a set of
 incredible tools for connecting computer programs to telephony. Their company
 provides a wide range of APIs for making phone and video calls, programmatically
