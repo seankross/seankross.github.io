@@ -42,6 +42,8 @@ I currently maintain a couple packages on [CRAN](https://www.r-project.org/):
 - [minimap](https://github.com/seankross/minimap) - A tool for creating tile 
 grid maps of the United States, Canada, and Mexico. (Get in touch with me if
 you'd like to add a country).
+- [twilio](https://github.com/seankross/twilio) - Send and receive text messages
+using the [Twilio](https://www.twilio.com/) API.
 
 # Books
 
