@@ -9,7 +9,8 @@ jumbo_subtitle: About
 
 Hi! I'm Sean. In the past I attended NYU and the University of Maryland. 
 Currently I live in Fells Point in Baltimore. I spend most of my time writing 
-code, taking pictures, and reading books. 
+code, taking pictures, and reading books. If you're interested in what I've been
+reading lately see the [supplementary materials](supplementary-materials.html).
 
 Email: sean at seankross dot com
 
