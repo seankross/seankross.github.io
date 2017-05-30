@@ -95,7 +95,7 @@ ggplot(emoji_tbl, aes(Emoji, Frequency)) +
 grid.export("gglucy.svg")
 {% endhighlight %}
 
-![](http://seankross.com/img/2017-05-30-Which-Emojis-Does-Lucy-Use-in-Commit-Messages/gglucy.png)
+<img src="http://seankross.com/img/2017-05-30-Which-Emojis-Does-Lucy-Use-in-Commit-Messages/gglucy.png" alt="center" class="img-thumbnail" max-width="100%" height="auto">
 
 Strong showings by the see-no-evil monkey, the rooster, and the classic
 [information desk woman](https://emojipedia.org/information-desk-person/). Next
