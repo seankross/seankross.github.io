@@ -9,7 +9,7 @@ jumbo_subtitle:
 I just got back from [rOpenSci](https://ropensci.org/)'s Unconf which was an
 absolutely amazing experience! I'm working on a full write up of the conference
 but while I was there I was able to hang out with Vanderbilt University 
-Biostatistics PhD student [Lucy D'Agostino McGowan](https://twitter.com/LucyStats). Lucy is the Co-foudner of
+Biostatistics PhD student [Lucy D'Agostino McGowan](https://twitter.com/LucyStats). Lucy is the Co-founder of
 [R-Ladies Nashville](https://www.meetup.com/rladies-nashville/), the
 Co-founder of the fantastic
 [Live Free or Dichotomize](http://livefreeordichotomize.com/) blog, and the
