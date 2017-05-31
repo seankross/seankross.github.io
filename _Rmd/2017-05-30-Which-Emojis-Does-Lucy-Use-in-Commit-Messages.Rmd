@@ -172,3 +172,10 @@ If you want to add emojis to your own commit messages Lucy has a great tip:
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">cmd + ctrl + space to include emojis in the mac terminal 🐓🍻🐙 <a href="https://t.co/Iwde1QFtpy">https://t.co/Iwde1QFtpy</a> <a href="https://t.co/BhmWuB1XbE">pic.twitter.com/BhmWuB1XbE</a></p>&mdash; Lucy (@LucyStats) <a href="https://twitter.com/LucyStats/status/859933057201123328">May 4, 2017</a></blockquote>
 <script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
+---
+
+## Update: Scooped!
+
+It seems that statistician and wonderful R blogger
+[Maëlle Salmon](https://twitter.com/ma_salmon) had the same idea before me and
+wrote a [very similar blog post](http://www.masalmon.eu/2017/05/03/lucysemojis/)!
