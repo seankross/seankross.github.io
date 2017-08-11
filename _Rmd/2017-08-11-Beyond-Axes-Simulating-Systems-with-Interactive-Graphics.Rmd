@@ -1,0 +1,64 @@
+---
+layout: post
+title: "Simulating Systems with Interactive Graphics"
+date: 2017-08-11 13:00:00
+jumbo_title: Simulating Systems with Interactive Graphics
+jumbo_subtitle:
+---
+
+On August 3rd I gave the following talk at the 2017 Joint Statistical Meetings
+as part of a session titled 
+["Creating Interactive Graphics"](https://ww2.amstat.org/meetings/jsm/2017/onlineprogram/ActivityDetails.cfm?SessionID=213963) 
+organized by
+[Peter Hickey](https://twitter.com/PeteHaitch) and
+[John Muschelli](https://twitter.com/StrictlyStat). The talk was followed by a
+panel discussion with fellow speakers [Carson Sievert](https://twitter.com/cpsievert)
+and [Leo Collado-Torres](https://twitter.com/fellgernon). You can find the slides
+for this talk [here](http://seankross.com/jsm-talk/). During this talk I
+discussed an R package I'm currently working on called p5 which you can check
+out [on GitHub](https://github.com/seankross/p5).
+
+---
+```{r, eval=FALSE, echo=FALSE}
+library(webshot)
+library(purrr)
+
+paste0("http://seankross.com/jsm-talk/#", 1:26) %>%
+  walk2(1:26, ~ webshot(.x, file = paste0(file.path("img",
+      "2017-08-11-Beyond-Axes-Simulating-Systems-with-Interactive-Graphics", .y), ".png"), 
+      delay = 0.5, vwidth = 400, vheight = 300, zoom = 2))
+```
+
+```{r, echo=FALSE, results='asis'}
+library(markdown)
+library(purrr)
+
+row_template <- '<div class="row">
+
+<div class="col-md-6 pull-left">
+
+<!-- <iframe src="" style="width:400px;height:300px" frameborder="0" scrolling="no"></iframe> -->
+
+<img style="width:100%%;max-width:400px" src="/img/2017-08-11-Beyond-Axes-Simulating-Systems-with-Interactive-Graphics/%s.png">
+
+</div>
+
+<div class="col-md-1 hidden-xs">
+</div>
+
+<div class="col-md-5 pull-right">
+
+%s
+
+</div>
+
+</div>
+'
+
+#slides <- paste0("http://seankross.com/iqss-talk/#", 1:14)
+text_ <- ari:::parse_html_comments("../../jsm-talk/index.Rmd")
+slides <- 1:26
+text_ <- text_ %>% map_chr(~ renderMarkdown(text = .x))
+
+walk2(slides, text_, ~ cat(sprintf(row_template, .x, .y)))
+```
