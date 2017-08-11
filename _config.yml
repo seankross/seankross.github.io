@@ -2,7 +2,7 @@
 title: Postcards
 email: sean@seankross.com
 description: A blog by Sean Kross
-baseurl: "/"
-url: "http://seankross.com" 
+baseurl:
+url: "http://seankross.com"
 twitter_username: seankross
 github_username: seankross

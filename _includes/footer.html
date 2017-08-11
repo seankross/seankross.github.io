@@ -6,34 +6,34 @@
         <!-- Mobile View -->
       	<ul style="margin-bottom: 0px" class="navbar-text list-unstyled list-inline visible-xs">
           {% if page.layout == 'about' %}
-          <li><a href="{{ site.baseurl }}">Home</a></li>
+          <li><a href="{{ site.url }}">Home</a></li>
           {% else %}
-          <li><a href="{{ site.baseurl }}about">About</a></li>
+          <li><a href="{{ site.url }}/about">About</a></li>
           {% endif %}
 
           {% if site.twitter_username != null %}
-          <li><a href="https://twitter.com/{{ site.twitter_username }}"><img src="{{ site.baseurl }}img/Twitter_logo_blue.png" height=20></a></li>
+          <li><a href="https://twitter.com/{{ site.twitter_username }}"><img src="{{ site.url }}/img/Twitter_logo_blue.png" height=20></a></li>
           {% endif %}
 
           {% if site.github_username != null %}
-          <li><a href="https://github.com/{{ site.github_username }}"><img src="{{ site.baseurl }}img/GitHub-Mark-64px.png" height=25></a></li>
+          <li><a href="https://github.com/{{ site.github_username }}"><img src="{{ site.url }}/img/GitHub-Mark-64px.png" height=25></a></li>
           {% endif %}
   	  	</ul>
 
         <ul style="margin-bottom: 0px" class="navbar-text list-unstyled list-inline hidden-xs">
           {% if page.layout == 'about' %}
-          <li><a href="{{ site.baseurl }}">Home</a></li>
+          <li><a href="{{ site.url }}">Home</a></li>
           {% else %}
-          <li><a href="{{ site.baseurl }}about">About</a></li>
+          <li><a href="{{ site.url }}/about">About</a></li>
           {% endif %}
         </ul>
   		  <ul style="margin-bottom: 0px" class="navbar-text list-unstyled list-inline navbar-right hidden-xs">
           {% if site.twitter_username != null %}
-          <li><a href="https://twitter.com/{{ site.twitter_username }}"><img src="{{ site.baseurl }}img/Twitter_logo_blue.png" height=20></a></li>
+          <li><a href="https://twitter.com/{{ site.twitter_username }}"><img src="{{ site.url }}/img/Twitter_logo_blue.png" height=20></a></li>
           {% endif %}
 
           {% if site.github_username != null %}
-          <li><a href="https://github.com/{{ site.github_username }}"><img src="{{ site.baseurl }}img/GitHub-Mark-64px.png" height=25></a></li>
+          <li><a href="https://github.com/{{ site.github_username }}"><img src="{{ site.url }}/img/GitHub-Mark-64px.png" height=25></a></li>
           {% endif %}
   		  </ul>
     </div>
