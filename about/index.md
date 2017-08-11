@@ -55,7 +55,7 @@ I've collaborated in writing some books:
 [Brook Anderson](https://twitter.com/gbwanderson).
 - [Developing Data Products](http://seankross.com/developing-data-products/) 
 with Dr. [Brian Caffo](https://twitter.com/bcaffo).
-- [The Unix Workbench](http://seankross.com/the-unix-workbench/).
+- [The Unix Workbench](https://leanpub.com/unix).
 
 # Courses
 
@@ -64,9 +64,12 @@ I've worked on a few courses:
 - [The Data Science Specialization](https://www.coursera.org/specializations/jhu-data-science) on Coursera.org.
 - [The Executive Data Science Specialization](https://www.coursera.org/specializations/executive-data-science) on Coursera.org.
 - [The Mastering Software Development in R Specialization](https://www.coursera.org/specializations/r) on Coursera.org.
+- [The Unix Workbench](https://www.coursera.org/learn/unix) on Coursera.org.
 
 # Talks
 
+- Joint Statistical Meetings 2017, [Slides](http://seankross.com/jsm-talk/), [Blog Post](http://seankross.com/2017/08/11/Beyond-Axes-Simulating-Systems-with-Interactive-Graphics.html)
+- Dataverse Community Meeting 2017, [Slides](http://seankross.com/iqss-talk/), [Blog Post](http://seankross.com/2017/06/19/Turning-Researcher-Fatigue-into-Puppy-Fatigue.html)
 - The computing club at the Johns Hopkins School of Public health kindly invited
 me to give a talk about a a topic of my choosing so I rambled on about
 interaction design for data and modeling. These slides are unexciting, they're
