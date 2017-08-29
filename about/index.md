@@ -7,8 +7,8 @@ jumbo_subtitle: About
 
 # About Me
 
-Hi! I'm Sean. In the past I attended NYU and the University of Maryland. 
-Currently I live in Fells Point in Baltimore. I spend most of my time writing 
+Hi! I'm Sean. In the past I attended NYU and the University of Maryland.
+Currently I live in Fells Point in Baltimore. I spend most of my time writing
 code, taking pictures, and reading books. If you're interested in what I've been
 reading lately see the [supplementary materials](supplementary-materials.html).
 
@@ -18,7 +18,7 @@ All of my blog posts are licensed under a <a rel="license" href="http://creative
 
 # Work
 
-Currently I work in the 
+Currently I work in the
 [Johns Hopkins Data Science Lab](http://jhudatascience.org/). In the past I've
 worked at the
 [University of Maryland Institute for Advanced Computer Studies](http://www.umiacs.umd.edu/)
@@ -27,20 +27,24 @@ and the
 
 # Publications
 
-E. Redmiles, **S. Kross**, M. Mazurek. 2017. Where is the Digital Divide? Examining the Impact of Socioeconomics on Security and Privacy Outcomes. In The 2017 ACM CHI Conference on Human Factors in Computing Systems. DOI: [10.13016/M2FV4T](https://cs.umd.edu/~eredmiles/camera-ready-low-ses.pdf)
+E. Redmiles, **S. Kross**, M. Mazurek. 2017. *Where is the Digital Divide? Examining the Impact of Socioeconomics on Security and Privacy Outcomes*. In The 2017 ACM CHI Conference on Human Factors in Computing Systems. DOI: [10.13016/M2FV4T](https://cs.umd.edu/~eredmiles/camera-ready-low-ses.pdf)
 
-E. Redmiles, **S. Kross**, M. Mazurek. 2016. How I Learned to be Secure: a Census-Representative Survey of Security Advice Sources and Behavior. In Proceedings of the 23rd ACM Conference on Computer and Communications Security. DOI: [10.1145/2976749.2978307](https://www.umiacs.umd.edu/~mmazurek/papers/ccs2016-learned-secure.pdf)
+E. Redmiles, **S. Kross**, M. Mazurek. 2016. *How I Learned to be Secure: a Census-Representative Survey of Security Advice Sources and Behavior*. In Proceedings of the 23rd ACM Conference on Computer and Communications Security. DOI: [10.1145/2976749.2978307](https://www.umiacs.umd.edu/~mmazurek/papers/ccs2016-learned-secure.pdf)
 
-E. Redmiles, M.A. Abad, I. Coronado, **S. Kross**, A. Malone. 2015. A Classroom Tested Accessible Multimedia Resource for Engaging Underrepresented Students in Computing. In Proceedings of the 46th ACM Technical Symposium on Computer Science Education. DOI: [10.1145/2676723.2691870](http://dl.acm.org/citation.cfm?id=2691870)
+E. Redmiles, M.A. Abad, I. Coronado, **S. Kross**, A. Malone. 2015. *A Classroom Tested Accessible Multimedia Resource for Engaging Underrepresented Students in Computing*. In Proceedings of the 46th ACM Technical Symposium on Computer Science Education. DOI: [10.1145/2676723.2691870](http://dl.acm.org/citation.cfm?id=2691870)
+
+# Technical Reports
+
+E. Redmiles, **S. Kross**, A. Pradhan, M. Mazurek. 2017. *How Well Do My Results Generalize? Comparing Security and Privacy Survey Results from MTurk and Web Panels to the U.S.* DOI: [10.13016/M2BV8D](http://drum.lib.umd.edu/handle/1903/19164)
 
 # Software
 
 I currently maintain a couple packages on [CRAN](https://www.r-project.org/):
 
 - [swirl](https://github.com/swirldev/swirl) - Learn R, in R.
-- [swirlify](https://github.com/swirldev/swirlify) - A package for creating 
+- [swirlify](https://github.com/swirldev/swirlify) - A package for creating
 [swirl](http://swirlstats.com/) courses.
-- [minimap](https://github.com/seankross/minimap) - A tool for creating tile 
+- [minimap](https://github.com/seankross/minimap) - A tool for creating tile
 grid maps of the United States, Canada, and Mexico. (Get in touch with me if
 you'd like to add a country).
 - [twilio](https://github.com/seankross/twilio) - Send and receive text messages
@@ -51,9 +55,9 @@ using the [Twilio](https://www.twilio.com/) API.
 I've collaborated in writing some books:
 
 - [Mastering Software Development in R](https://leanpub.com/msdr) with Drs.
-[Roger Peng](https://twitter.com/rdpeng) and 
+[Roger Peng](https://twitter.com/rdpeng) and
 [Brook Anderson](https://twitter.com/gbwanderson).
-- [Developing Data Products](http://seankross.com/developing-data-products/) 
+- [Developing Data Products](http://seankross.com/developing-data-products/)
 with Dr. [Brian Caffo](https://twitter.com/bcaffo).
 - [The Unix Workbench](https://leanpub.com/unix).
 
@@ -78,6 +82,5 @@ a means to try to inspire the audience. [Slides here](http://seankross.com/data-
 - I spoke to members of the GIS community at [The University of Pennsylvania's
 Institute for Urban Design](http://penniur.upenn.edu/) at their GIS Day 2016
 celebration. [Slides and notes here](https://github.com/seankross/gisday).
-- I gave a talk about [swirl](http://swirlstats.com/) at the 2016 Seminário 
+- I gave a talk about [swirl](http://swirlstats.com/) at the 2016 Seminário
 Internacional de Estatística com R. [Slides here](http://seankross.com/notes/swirltalk/).
-
