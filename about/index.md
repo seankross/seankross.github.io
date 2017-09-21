@@ -7,21 +7,23 @@ jumbo_subtitle: About
 
 # About Me
 
-Hi! I'm Sean. In the past I attended NYU and the University of Maryland.
-Currently I live in Fells Point in Baltimore. I spend most of my time writing
+Hi! I'm Sean. In the past I attended NYU and the University of Maryland. I'm
+currently a PhD student at the University of California San Diego.
+I live in La Jolla, California where you can find me spending most of my time writing
 code, taking pictures, and reading books. If you're interested in what I've been
 reading lately see the [supplementary materials](supplementary-materials.html).
+I also have a sub-blog called [Notes](http://seankross.com/notes/).
 
 Email: sean at seankross dot com
 
-All of my blog posts are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+All of the content on this site is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 
 # Work
 
-Currently I work in the
-[Johns Hopkins Data Science Lab](http://jhudatascience.org/). In the past I've
-worked at the
-[University of Maryland Institute for Advanced Computer Studies](http://www.umiacs.umd.edu/)
+I work in the [UCSD Design Lab](http://designlab.ucsd.edu/) where I'm advised by
+[Philip Guo](http://pgbovine.net/). In the past I've
+worked at the [Johns Hopkins Data Science Lab](http://jhudatascience.org/), the
+[University of Maryland Institute for Advanced Computer Studies](http://www.umiacs.umd.edu/),
 and the
 [New York University Center for Genomics & Systems Biology](http://cgsb.as.nyu.edu/page/home).
 
@@ -33,7 +35,9 @@ E. Redmiles, **S. Kross**, M. Mazurek. 2016. *How I Learned to be Secure: a Cens
 
 E. Redmiles, M.A. Abad, I. Coronado, **S. Kross**, A. Malone. 2015. *A Classroom Tested Accessible Multimedia Resource for Engaging Underrepresented Students in Computing*. In Proceedings of the 46th ACM Technical Symposium on Computer Science Education. DOI: [10.1145/2676723.2691870](http://dl.acm.org/citation.cfm?id=2691870)
 
-# Technical Reports
+# Preprints & Technical Reports
+
+**S. Kross**, R.D. Peng, B.S. Caffo, I. Gooding, J.T. Leek. 2017 *The Democratization of Data Science Education* DOI: [10.7287/peerj.preprints.3195v1](10.7287/peerj.preprints.3195v1)
 
 E. Redmiles, **S. Kross**, A. Pradhan, M. Mazurek. 2017. *How Well Do My Results Generalize? Comparing Security and Privacy Survey Results from MTurk and Web Panels to the U.S.* DOI: [10.13016/M2BV8D](http://drum.lib.umd.edu/handle/1903/19164)
 
@@ -49,6 +53,8 @@ grid maps of the United States, Canada, and Mexico. (Get in touch with me if
 you'd like to add a country).
 - [twilio](https://github.com/seankross/twilio) - Send and receive text messages
 using the [Twilio](https://www.twilio.com/) API.
+- [ari](https://github.com/seankross/ari) - Create narrated lecture videos from
+plain text documents.
 
 # Books
 
