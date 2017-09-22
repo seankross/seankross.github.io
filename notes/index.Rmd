@@ -1,15 +1,25 @@
 ---
-title: "Notes"
+title: "/notes"
 output: html_document
 ---
 
-I put other webpages that I don't know what to do with here.
+Ideas and snippets that [aren't fully formed](). 
 
-- [cli](cli/cli.html) A command line interface tutorial that could be better.
-- [dpqr](dpqr/) Notes on stats functions in R.
-- [feather](feather/) A small demo of the feather package for R.
-- [runconf16](runconf16/) A list of all of the project we did at the 
-2016 ROpenSci unconference.
-- [swirldl](swirldl/) Swirl downloads over time.
-- [swirltalk](swirltalk/) A talk I gave about swirl.
-- [tidyr_use_case](tidyr_use_case/) A small example use of the tidyr R package.
+```{r, echo=FALSE, message=FALSE}
+library(knitr)
+library(tibble)
+library(dplyr)
+
+tribble(
+  ~"/", ~Description, ~Date,
+  "[cli](cli/cli.html)", "A command line interface tutorial that could be better.", "2014-06-26",
+  "[dpqr](dpqr/)", "Notes on stats functions in R.", "2015-07-15",
+  "[feather](feather/)", "A small demo of the feather package for R.", "2016-03-29",
+  "[runconf16](runconf16/)", "A list of all of the projects from the 2016 ROpenSci Unconference.", "2016-04-01",
+  "[swirldl](swirldl/)", "Swirl downloads over time.", "2016-01-29",
+  "[swirltalk](swirltalk/)", "A talk I gave about swirl.", "2016-05-10",
+  "[tidyr_use_case](tidyr_use_case/)", "A small example use of the tidyr R package.", "2016-07-20"
+) %>%
+  arrange(desc(Date)) %>%
+  kable()
+```
