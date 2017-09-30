@@ -18,7 +18,7 @@ tribble(
   "[runconf16](runconf16/)", "A list of all of the projects from the 2016 ROpenSci Unconference.", "2016-04-01",
   "[swirldl](swirldl/)", "Swirl downloads over time.", "2016-01-29",
   "[swirltalk](swirltalk/)", "A talk I gave about swirl.", "2016-05-10",
-  "[tidyr_use_case](tidyr_use_case/)", "A small example use of the tidyr R package.", "2016-07-20"
+  "[tidyr-use-case](tidyr-use-case/)", "A small example use of the tidyr R package.", "2016-07-20"
 ) %>%
   arrange(desc(Date)) %>%
   kable()
