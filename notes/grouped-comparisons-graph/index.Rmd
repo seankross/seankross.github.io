@@ -1,0 +1,37 @@
+---
+title: "Grouped Comparisons Graph"
+author: "Sean Kross"
+date: "2017-10-02"
+output: html_document
+---
+
+Thanks to [Tricia Ngoon](https://tngoon.github.io/) for inspiring the creation
+of this graph. We were trying to compare multiple metrics between a control and
+treatment group.
+
+```{r}
+library(tibble)
+library(forcats)
+library(ggplot2)
+
+data <- tribble(
+  ~condition, ~taste, ~value,
+  "Control", "Spicy", 56,
+  "Treatment", "Spicy", 60,
+  "Control", "Sweet", 68,
+  "Treatment", "Sweet", 71,
+  "Control", "Tangy", 83,
+  "Treatment", "Tangy", 98,
+  "Control", "All", 30,
+  "Treatment", "All", 53
+)
+
+ggplot(data, aes(fct_inorder(taste), value)) +   
+  geom_bar(aes(fill = condition), position = "dodge", stat="identity") +
+  labs(x = "Taste", y = "Percentage of Answers")
+
+ggplot(data, aes(fct_inorder(condition), value)) +   
+  geom_bar(aes(fill = taste), position = "dodge", stat="identity") +
+  labs(x = "Taste", y = "Percentage of Answers")
+
+```
