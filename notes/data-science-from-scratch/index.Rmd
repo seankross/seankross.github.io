@@ -1,0 +1,67 @@
+---
+title: "Data Science from Scratch"
+author: "Sean Kross"
+date: "2017-10-09"
+output: html_document
+---
+
+Data science is roughly split up into four areas:
+
+1. Programming
+2. Statistics
+3. Communication
+4. Domain Expertise. 
+
+This document details how to get started with the first three. This is a very
+R-centric guide because I live an R-centric life. Free resources are strongly
+favorred because I'm a graduate student.
+
+## Programming
+
+Programming allows you to articulate yourself in the dimension of computational
+action. Serious programmers are taken seriously, so you should aim to become
+one.
+
+- [Learn Python the Hard Way](https://learnpythonthehardway.org/book/) by
+[Zed Shaw](https://twitter.com/zedshaw). Thousands of people have used this
+book to learn hwo to code for the first time. Teaches you many fundamental
+programming concepts, and Python is an essential language to know for anyone
+who writes code.
+- [The Unix Workbench](http://seankross.com/the-unix-workbench/) by
+[me](https://twitter.com/seankross). A book I wrote for beginners about how to
+use the command line, another baseline skill for a data scientist. Read to the
+end of the third chapter before starting Learn Python the Hard Way, then come
+back if you feel like you want more command line skills.
+- [R Programming for Data Science](https://bookdown.org/rdpeng/rprogdatascience/)
+by [Roger Peng](https://twitter.com/rdpeng). Learn R deeply to really start
+your journey towards specializing as a data scientist.
+- [R for Data Science](http://r4ds.had.co.nz/) by 
+[Hadley Wickham](https://twitter.com/hadleywickham) and
+[Garrett Grolemund](https://twitter.com/StatGarrett). Modern data scientific
+paradigms applied in R based in the philosophy of
+[Tidy Data](http://vita.had.co.nz/papers/tidy-data.html).
+
+## Statistics
+
+Statistics will help you quantify uncertainly. 90% of what you need to
+understand falls into the following four categories:
+
+1. Probability and Combinatorics
+2. The Law of Large Numbers and the Central Limit Theorem
+3. Regression
+4. The Bootstrap
+
+- [OpenIntro Statistics](https://www.openintro.org/stat/textbook.php) by
+[David Diez](https://twitter.com/OpenIntroOrg) and
+[Mine Cetinkaya-Rundel](https://twitter.com/minebocek). If you took one or
+fewer statistics coursese in college, or if you just need a stats refresher
+start here.
+- [Regression Models for Data Science in R](https://leanpub.com/regmods) by
+[Brian Caffo](https://twitter.com/bcaffo). Linear and generalized linear models
+solve 80% of problems and their results are interpretable. They're the bread
+and butter model for any data scientist.
+- [The Elements of Statistical Learning](https://web.stanford.edu/~hastie/ElemStatLearn/)
+by [Trevor Hastie](), [Robert Tibshirani](), and [Jerome Friedman](). My favorite
+introduction to machine learning.
+
+## Communication

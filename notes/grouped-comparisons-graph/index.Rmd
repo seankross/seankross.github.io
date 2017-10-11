@@ -32,6 +32,6 @@ ggplot(data, aes(fct_inorder(taste), value)) +
 
 ggplot(data, aes(fct_inorder(condition), value)) +   
   geom_bar(aes(fill = taste), position = "dodge", stat="identity") +
-  labs(x = "Taste", y = "Percentage of Answers")
+  labs(x = "Condition", y = "Percentage of Answers")
 
 ```

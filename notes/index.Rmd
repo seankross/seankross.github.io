@@ -5,7 +5,7 @@ output: html_document
 
 Ideas and snippets that [aren't fully formed](). 
 
-```{r, echo=FALSE, message=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 library(knitr)
 library(tibble)
 library(dplyr)
@@ -19,7 +19,8 @@ tribble(
   "[swirldl](swirldl/)", "Swirl downloads over time.", "2016-01-29",
   "[swirltalk](swirltalk/)", "A talk I gave about swirl.", "2016-05-10",
   "[tidyr-use-case](tidyr-use-case/)", "A small example use of the tidyr R package.", "2016-07-20",
-  "[grouped-comparisons-graph](grouped-comparisons-graph)", "Making a grouped bar graph with ggplot2.", "2017-10-02"
+  "[grouped-comparisons-graph](grouped-comparisons-graph)", "Making a grouped bar graph with ggplot2.", "2017-10-02",
+  "[data-science-from-scratch](data-science-from-scratch)", "Resources for Transitioning into a Data Science Career", "2017-10-09"
 ) %>%
   arrange(desc(Date)) %>%
   kable()
