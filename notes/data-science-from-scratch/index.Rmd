@@ -1,7 +1,7 @@
 ---
 title: "Data Science from Scratch"
-author: "Sean Kross"
-date: "2017-10-09"
+author: "[Sean Kross](http://seankross.com/)"
+date: "2017-10-12"
 output: html_document
 ---
 
@@ -61,7 +61,96 @@ start here.
 solve 80% of problems and their results are interpretable. They're the bread
 and butter model for any data scientist.
 - [The Elements of Statistical Learning](https://web.stanford.edu/~hastie/ElemStatLearn/)
-by [Trevor Hastie](), [Robert Tibshirani](), and [Jerome Friedman](). My favorite
+by [Trevor Hastie](https://web.stanford.edu/~hastie/), 
+[Robert Tibshirani](https://statweb.stanford.edu/~tibs/), and 
+[Jerome Friedman](https://statweb.stanford.edu/~jhf/). My favorite
 introduction to machine learning.
+- [Introduction to Empirical Bayes](https://gumroad.com/l/empirical-bayes) by
+[David Robinson](https://twitter.com/drob). A great next step after OpenIntro
+Statistics, with examples that are easily translatable to how Bayesian methods
+are used in corporate environments.
 
 ## Communication
+
+### People
+
+The most valuable and important part of the data science profession are the
+folks who enable the empathetic, conscientious, and delightful community.
+Many great data science conversations take place on
+[Twitter](https://twitter.com/), and there's
+a friendly and active discussion around the 
+[#rstats](https://twitter.com/search?q=rstats&src=spxr) hashtag. The following
+are short descriptions of some awesome people in the community plus links to
+their Twitter profiles which are usually good protals to their personal
+websites, portfolios, and other examples of their work.
+
+- [Renee Teate](https://twitter.com/BecomingDataSci) is a poineer in terms of
+documenting her transition into a data science career, and helping others
+who want to enter the field. She is the creator of
+[*Data Sci Guide*](http://www.datasciguide.com/) and the host of the
+[Becoming a Data Scientist Podcast](https://www.becomingadatascientist.com/category/podcast/).
+- [Julia Silge](https://twitter.com/juliasilge) is a data scientist at
+[Stack Overflow](https://stackoverflow.com/users/5468471/julia-silge). Julia
+transitioned in to data science after working in educational technology and
+earning her PhD in Astronomy. She and David Robinson are the authors of
+[Text Mining with R](http://tidytextmining.com/).
+- [Hadley Wickham](https://twitter.com/hadleywickham) is the cheif scientist at
+[RStudio](https://www.rstudio.com/). Hadley creates some of the most widely used
+tools for data scientists. He is also an advocate for newcomers to R.
+- [Jesse Maegan](https://twitter.com/kierisi) is a data scientist and the
+creator of the
+["R for Data Science" online learning community](https://medium.com/@kierisi/join-the-r-for-data-science-online-learning-community-842527222ab3).
+- [Alice Daish](https://twitter.com/alice_data) is a data scientist at The
+British Museum, which sounds like the absolute coolest job in the world. She's
+one of the leaders of [R-Ladies Global](https://twitter.com/RLadiesGlobal).
+- [Mara Averick](https://twitter.com/dataandme) is a data scientist and a
+one-stop-shop for the latest technologies and trends that actually affect folk's
+data scientific workflows. Her writings and tweets could be made into a history
+of how data science tools have evolved.
+- [Roger Peng](https://twitter.com/rdpeng) is a professor of biostatistics,
+author of a myriad of data science books and courses, co-founder of the 
+[Johns Hopkins Data Science Lab](http://jhudatascience.org/), and co-host of
+the podcasts [Not So Standard Deviations](http://nssdeviations.com/)
+and [The Effort Report](http://effortreport.libsyn.com/).
+- [Hilary Parker](https://twitter.com/hspter) is a data scientist at Stitch Fix
+and the co-host (with Roger) of Not So Standard Deviations. Hilary is one of
+the field's [leading thinkers](https://peerj.com/preprints/3210/) in the 
+[development of data analyses](https://www.rstudio.com/resources/videos/opinionated-analysis-development/).
+- [David Robinson](https://twitter.com/drob) is a data scientist at Stack
+Overflow, an author, and an
+[accidental presidential historian](http://varianceexplained.org/r/trump-tweets/).
+- [Amelia McNamara](https://twitter.com/AmeliaMN) is a professor if statistical
+and data sciences at Smith College. Amelia has am inspiring
+[vision](http://www.science.smith.edu/~amcnamara/FoSP.html) for the future of
+statistical programming. She also builds incredible
+[explorable explanations](http://tinlizzie.org/histograms/).
+- [Stefanie Butland](https://twitter.com/StefanieButland) is a bioinformagician,
+expert people-connector, and community manager of 
+[rOpenSci](https://twitter.com/rOpenSci), and organization which develops software
+to enable data sharing and open science.
+
+### Tools
+
+Once you've learned R or Python and a little bit about how to use the command
+line you will be able ot use some powerful tools for communicating your ideas.
+
+- [R Markdown](http://rmarkdown.rstudio.com/) allows you to create documents,
+reports, websites, and web applications. This site was created with R Markdown.
+- [Jupyter](http://jupyter.org/) allows you interactively develop a data
+analysis much like R Markdown. Especially popular in the Python community.
+- [Git and GitHub](https://github.com/) allow you to share code and publish
+websites for free. Getting started with both can be a little difficult, but
+there are many fine tutorials available, including 
+[one that I wrote](http://seankross.com/the-unix-workbench/git-and-github.html)
+as a part of [The Unix Workbench](http://seankross.com/the-unix-workbench/).
+
+## Online Courses
+
+I spent two years working in the Johns Hopkins Data Science Lab developing
+courses in data science. There are two programs that I endorse:
+
+- [The Data Science Specialization](https://www.coursera.org/specializations/jhu-data-science). Nine courses in data science followed by
+a capstone project with an industry partner, all designed by the team at Johns
+Hopkins.
+- [DataCamp](https://www.datacamp.com/) Interactive R tutorials in your web browser. Designed by friends
+of the lab.

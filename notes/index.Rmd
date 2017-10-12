@@ -20,7 +20,7 @@ tribble(
   "[swirltalk](swirltalk/)", "A talk I gave about swirl.", "2016-05-10",
   "[tidyr-use-case](tidyr-use-case/)", "A small example use of the tidyr R package.", "2016-07-20",
   "[grouped-comparisons-graph](grouped-comparisons-graph)", "Making a grouped bar graph with ggplot2.", "2017-10-02",
-  "[data-science-from-scratch](data-science-from-scratch)", "Resources for Transitioning into a Data Science Career", "2017-10-09"
+  "[data-science-from-scratch](data-science-from-scratch)", "Resources for Transitioning into a Data Science Career", "2017-10-12"
 ) %>%
   arrange(desc(Date)) %>%
   kable()
