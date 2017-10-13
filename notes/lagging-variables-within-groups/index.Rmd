@@ -1,0 +1,54 @@
+---
+title: "Lagging Variables Within Groups"
+author: "Sean Kross"
+date: "2017-10-13"
+output: html_document
+---
+
+[Click here](index.Rmd) to download this Rmd file so you can modify it yourself.
+
+```{r, warning=FALSE, message=FALSE, fig.width=10}
+set.seed(2017-10-13)
+
+library(tibble)
+library(dplyr)
+library(purrr)
+library(knitr)
+library(ggplot2)
+
+# Making the fake data
+data <- data_frame(Name1 = sample(c("Sean", "Emily", "Stephan"), 
+                                  size = 100, replace = TRUE)) %>% 
+  mutate(Name2 = map_chr(Name1, function(x) {
+    possible <- c("Sean", "Emily", "Stephan")
+    possible <- possible[possible != x]
+    sample(possible, 1)
+  })) %>% 
+  mutate(Dyad = paste(Name1, Name2, sep = "+")) %>% 
+  mutate(Session = rep(1:10, each = 10)) %>% 
+  mutate(Action = sample(c("High-Five", "Shake-Hands", "Fist-Bump"), 
+                         size = 100, replace = TRUE))
+
+# Let's peak at the data
+data %>%
+  slice(1:10) %>% 
+  kable()
+
+# Creating lagged actions by Session and Dyad
+data <- data %>%
+  arrange(Session, Dyad) %>% 
+  group_by(Session, Dyad) %>% 
+  mutate(Prev_Action = lag(Action)) %>% 
+  ungroup()
+
+# Let's take a look at some slices of the data
+data %>% 
+  slice(c(1:5, 31:36, 71:76)) %>% 
+  kable()
+  
+# Now let's visualize it
+data %>%
+  ggplot(aes(Dyad)) + 
+    geom_bar(aes(fill = Action), position = "dodge")
+```
+
