@@ -1,6 +1,6 @@
 ---
 title: "Lagging Variables Within Groups"
-author: "Sean Kross"
+author: "[Sean Kross](http://seankross.com/)"
 date: "2017-10-13"
 output: html_document
 ---

@@ -10,11 +10,11 @@ Data science is roughly split up into four areas:
 1. Programming
 2. Statistics
 3. Communication
-4. Domain Expertise. 
+4. Domain Expertise
 
 This document details how to get started with the first three. This is a very
 R-centric guide because I live an R-centric life. Free resources are strongly
-favorred because I'm a graduate student.
+favored because I'm a graduate student.
 
 ## Programming
 
@@ -24,7 +24,7 @@ one.
 
 - [Learn Python the Hard Way](https://learnpythonthehardway.org/book/) by
 [Zed Shaw](https://twitter.com/zedshaw). Thousands of people have used this
-book to learn hwo to code for the first time. Teaches you many fundamental
+book to learn how to code for the first time. Teaches you many fundamental
 programming concepts, and Python is an essential language to know for anyone
 who writes code.
 - [The Unix Workbench](http://seankross.com/the-unix-workbench/) by
@@ -43,7 +43,7 @@ paradigms applied in R based in the philosophy of
 
 ## Statistics
 
-Statistics will help you quantify uncertainly. 90% of what you need to
+Statistics will help you quantify uncertainty. 90% of what you need to
 understand falls into the following four categories:
 
 1. Probability and Combinatorics
@@ -81,7 +81,7 @@ Many great data science conversations take place on
 a friendly and active discussion around the 
 [#rstats](https://twitter.com/search?q=rstats&src=spxr) hashtag. The following
 are short descriptions of some awesome people in the community plus links to
-their Twitter profiles which are usually good protals to their personal
+their Twitter profiles which are usually good portals to their personal
 websites, portfolios, and other examples of their work.
 
 - [Renee Teate](https://twitter.com/BecomingDataSci) is a poineer in terms of
@@ -94,7 +94,7 @@ who want to enter the field. She is the creator of
 transitioned in to data science after working in educational technology and
 earning her PhD in Astronomy. She and David Robinson are the authors of
 [Text Mining with R](http://tidytextmining.com/).
-- [Hadley Wickham](https://twitter.com/hadleywickham) is the cheif scientist at
+- [Hadley Wickham](https://twitter.com/hadleywickham) is the chief scientist at
 [RStudio](https://www.rstudio.com/). Hadley creates some of the most widely used
 tools for data scientists. He is also an advocate for newcomers to R.
 - [Jesse Maegan](https://twitter.com/kierisi) is a data scientist and the
@@ -120,13 +120,13 @@ the field's [leading thinkers](https://peerj.com/preprints/3210/) in the
 Overflow, an author, and an
 [accidental presidential historian](http://varianceexplained.org/r/trump-tweets/).
 - [Amelia McNamara](https://twitter.com/AmeliaMN) is a professor if statistical
-and data sciences at Smith College. Amelia has am inspiring
+and data sciences at Smith College. Amelia has an inspiring
 [vision](http://www.science.smith.edu/~amcnamara/FoSP.html) for the future of
 statistical programming. She also builds incredible
 [explorable explanations](http://tinlizzie.org/histograms/).
 - [Stefanie Butland](https://twitter.com/StefanieButland) is a bioinformagician,
 expert people-connector, and community manager of 
-[rOpenSci](https://twitter.com/rOpenSci), and organization which develops software
+[rOpenSci](https://twitter.com/rOpenSci), an organization which develops software
 to enable data sharing and open science.
 
 ### Tools

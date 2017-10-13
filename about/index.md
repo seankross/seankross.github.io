@@ -20,7 +20,7 @@ All of the content on this site is licensed under a <a rel="license" href="https
 
 # Work
 
-I work in the [UCSD Design Lab](http://designlab.ucsd.edu/) where I'm advised by
+I work in the [UC San Diego Design Lab](http://designlab.ucsd.edu/) where I'm advised by
 [Philip Guo](http://pgbovine.net/). In the past I've
 worked at the [Johns Hopkins Data Science Lab](http://jhudatascience.org/), the
 [University of Maryland Institute for Advanced Computer Studies](http://www.umiacs.umd.edu/),
