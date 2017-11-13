@@ -1,0 +1,45 @@
+---
+title: "Graduate School Essays"
+author: "[Sean Kross](http://seankross.com/)"
+date: "2017-11-13"
+output: html_document
+---
+
+I applied to graduate school in the Winter of 2016 to start in the Fall of 2017
+with the intention to study human-computer interaction, research programming,
+and online learning. I was accepted to the PhD in Information at the University
+of Michigan and the PhD in Cognitive Science at the University of California
+San Diego. I was also rejected from many programs. Below are my personal
+statements from the programs where I was accepted. I **do not feel** that any
+of these essays are generally good examples of my writing, but perhaps they can
+help someone somewhere.
+
+- University of Michigan School of Information
+    - [Academic Statement of Purpose](UMStatementofPurpose.pdf)
+    - [Personal Statement](UMPersonalStatement.pdf)
+- University of California San Diego Cognitive Science
+    - [Statement of Purpose](UCSDStatementofPurpose.pdf)
+
+After applying to UC San Diego [my eventual advisor](http://pgbovine.net/)
+encouraged me to also apply to the PhD in Computer Science and he commented on
+how *long* my personal statement was for Cognitive Science. This freaked me out
+so I wrote a much shorter personal statement which is linked below. I was
+rejected from the PhD but accepted to the MS program.
+
+- University of California San Diego Computer Science
+    - [Statement of Purpose](ShortPersonalStatement.pdf)
+
+In the Winter of 2015 I applied and was accepted to the Ohio State University
+for the MS in Biostatistics program. The personal essay I applied with is
+below. I ended up not attending OSU, instead I accepted a position as the Chief
+Technology Officer at the Johns Hopkins Data Science Lab.
+
+- The Ohio State University Biostatistics
+    - [Personal Statement](OSUPersonalStatement.pdf)
+
+---
+
+**Silly side note**: I love college football and I wonder if I'm one of the
+only people in history to have applied to and been accepted to both Ohio State
+and Michigan **and** to have chosen other options over both. Or expressed at an
+emojiquation: 🤔 (🐦 > 🌰) ∩ (🔱 > 〽️)
