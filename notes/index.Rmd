@@ -3,7 +3,7 @@ title: "/notes"
 output: html_document
 ---
 
-Ideas and snippets that [aren't fully formed](). 
+Ideas and snippets that [aren't fully formed](http://seankross.com/2017/11/06/Enabling-Frequent-Brain-Dumps.html). 
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 library(knitr)
@@ -21,7 +21,8 @@ tribble(
   "[tidyr-use-case](tidyr-use-case/)", "A small example use of the tidyr R package.", "2016-07-20",
   "[grouped-comparisons-graph](grouped-comparisons-graph)", "Making a grouped bar graph with ggplot2.", "2017-10-02",
   "[data-science-from-scratch](data-science-from-scratch)", "Resources for Transitioning into a Data Science Career.", "2017-10-12",
-  "[lagging-variables-within-groups](lagging-variables-within-groups)", "How to use dplyr to make lagging variables.", "2017-10-13"
+  "[lagging-variables-within-groups](lagging-variables-within-groups)", "How to use dplyr to make lagging variables.", "2017-10-13",
+  "[grad-school-essays](grad-school-essays)", "The stress-laden essays that I sent in with my graduate school applications.", "2017-11-13"
 ) %>%
   arrange(desc(Date)) %>%
   kable()
