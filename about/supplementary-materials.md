@@ -18,5 +18,4 @@ another:
 - [Poor Little Rich Women](https://www.nytimes.com/2015/05/17/opinion/sunday/poor-little-rich-women.html) by Wednesday Martin in *The New York Times*
 - [The Faithful](https://story.californiasunday.com/colombian-church-orthodox-judaism) by Graciela Mochkofsky in *The California Sunday Magazine*
 - [Design Better Data Tables](https://medium.com/mission-log/design-better-data-tables-430a30a00d8c) by Matthew Ström in *Medium*
-
-
+- [A Year in Computer Vision](http://www.themtank.org/a-year-in-computer-vision) by Benjamin Duffy & Daniel Flynn in *Medium*
