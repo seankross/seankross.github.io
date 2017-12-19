@@ -1,0 +1,39 @@
+---
+title: "A Tiny Analysis of Simply Statistics Posts"
+author: "[Sean Kross](http://seankross.com/)"
+date: "2017-12-19"
+output: html_document
+---
+
+[Simply Statistics](https://simplystatistics.org/) is the internet's favorite
+statistics blog which is lovingly maintained by 
+[Rafa Irizarry](https://twitter.com/rafalab),
+[Roger Peng](https://twitter.com/rdpeng), and 
+[Jeff Leek](https://twitter.com/jtleek). I wanted to analyze their blog posts
+so these are just some initial scratchings:
+
+```{r, warning=FALSE, error=FALSE, message=FALSE, results='hide'}
+library(dplyr)
+library(git2r)
+
+temp <- file.path(tempdir(), "simplystats.github.io")
+if(!file.exists(temp) || !in_repository(temp)){
+  dir.create(temp)
+  clone("https://github.com/simplystats/simplystats.github.io.git", temp)  
+}
+
+posts <- data_frame(
+  File_Name = list.files(file.path(temp, "_posts")),
+  Full_Name = list.files(file.path(temp, "_posts"), full.names = TRUE)) %>% 
+  mutate(Date = substring(File_Name, 1, 10)) %>% 
+  mutate(Month = substring(Date, 1, 7)) %>% 
+  mutate(Month = paste0(Month, "-01")) %>% 
+  mutate(Month = as.Date(Month))
+
+posts %>% 
+  group_by(Month) %>% 
+  summarize(Count = n()) %>% 
+  with(., plot(Month, Count, type = "l", 
+               xlab = "Date", ylab = "Number of Posts",
+               main = "Number of Posts Over Time"))
+```
