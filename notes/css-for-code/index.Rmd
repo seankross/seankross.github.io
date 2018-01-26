@@ -12,7 +12,7 @@ Every once in a while I come across a friend's blog post where they're writing
 some code that just doesn't look pretty on mobile. Here's an example from a
 recent post on this blog:
 
-<img style="max-height:40%" src="ugly.png">
+<img style="max-height:45vh" src="ugly.png">
 
 The way the text wraps around just looks yucky to me. Thankfully there's a
 solution! Make it possible for your code blocks to scroll from side to side
@@ -28,7 +28,7 @@ pre code {
 
 Then gaze upon the resulting beauty:
 
-<img style="max-height:40%" src="beautiful.png">
+<img style="max-height:45vh" src="beautiful.png">
 
 If you want to add this feature to a simple R Markdown document, you can put
 the code above in a file called `styles.css`, then you can use it in your
