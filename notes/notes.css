@@ -1,0 +1,11 @@
+/* Horizontal Scrolling for Code  */
+pre code {
+  overflow: auto;
+  word-wrap: normal;
+  white-space: pre;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
