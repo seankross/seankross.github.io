@@ -25,7 +25,8 @@ tribble(
   "[grad-school-essays](grad-school-essays)", "The stress-laden essays that I sent in with my graduate school applications.", "2017-11-13",
   "[simplystats-posts](simplystats-posts)", "A Tiny Analysis of Simply Statistics Posts.", "2017-12-19",
   "[modeling-inequality](modeling-inequality)", "A little R programming lesson for teaching.", "2018-01-22",
-  "[css-for-code](css-for-code)", "Make your code look beautiful on mobile.", "2018-01-25"
+  "[css-for-code](css-for-code)", "Make your code look beautiful on mobile.", "2018-01-25",
+  "[grad-school-interviews](grad-school-interviews)", "Advice about graduate school interviews.", "2018-01-30"
 ) %>%
   arrange(desc(Date)) %>%
   kable()

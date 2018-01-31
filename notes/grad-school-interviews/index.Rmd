@@ -1,0 +1,88 @@
+---
+title: "Advice for Graduate School Interviews"
+author: "[Sean Kross](http://seankross.com/)"
+date: "2018-01-30"
+output: 
+  html_document:
+    highlight: pygments
+    css: ../notes.css
+---
+
+I've been asked a few times to give advice to people who have been invited for
+in-person graduate school interviews, so I'm going to jot down that advice in
+case other people find it useful. I've been invited to three graduate school
+interviews: for a masters in biostatistics at the Ohio State University, for
+a PhD in Information at the University of Michigan, and for a PhD in Cognitive
+Science at the University of California San Diego. I was admitted to all of
+these programs and accepted the offer from UC San Diego. Obviously my experiences
+are biased towards more technical/scientific/mathematical programs so take this
+advice at your own risk! Also this advice is heavily slanted towards PhD
+programs although masters interviews can certainly be similar.
+
+If you've received an invitation to a graduate school interview then 
+congratulations! You've already made it past the hardest part of the process:
+just getting your foot in the door! If you haven't even applied to graduate
+school yet and you're looking for advice I recommend these links from
+[Philip Guo](http://www.pgbovine.net/PhD-application-tips.htm) (my advisor)
+or [Matt Might](http://matt.might.net/articles/how-to-apply-and-get-in-to-graduate-school-in-science-mathematics-engineering-or-computer-science/).
+
+The in-person interview is meant to serve as a *confirmation* that you have the
+potential to be a good researcher. Admitting a student to a PhD program is a
+sort of academic marriage proposal! By admitting you, your advisor is
+committing to spending four, five, or six years working with you, plus the 
+hundreds of thousands of dollars they will spend on training you. Therefore, 
+they want to make sure that you can both work well together over long periods
+of time. Considering the investment they want to make in you, of course it's
+reasonable that they want to meet you in person.
+
+First and foremost: understand that a graduate school interview is a
+*job interview*, and all of the standard job interview advice applies. Be 
+polite, punctual, gracious, and wear nice clothes that you'll be comfortable in
+all day. 
+
+Many graduate interviews are events that last two or three days, which in
+addition to the interviews themselves include meals, tours, and other social
+activities with professors, current graduate students, and your fellow
+interviewees. The people that you meet at these events will likely ask you
+about your research interests, since it's a good basis for getting to know you
+and why you're interested in graduate school. It can be a good idea to polish
+the usual internal scripts you have about your interests. Some people might
+call this internal script your *elevator pitch*, but for me it's more like what
+I tell my family or friends when they ask me about my work. 
+Having something to say
+about your research interests can help the professors that you meet either
+understand that you might be interested in working with them, or it can help
+them direct you to professors who would be interested in working with you.
+
+The professors you're going to be interviewing with are certainly interested
+in you (since they want to hire you), so it's good to explicitly indicate that
+you're interested in working with some of them. In all of my graduate school
+visits I was extremely sure who I wanted to work with before I applied, so I
+was already familiar with the work of my top-choice advisor.
+This isn't the case for all applicants and that's perfectly okay and widely
+expected. If you know which professors you're going to be interviewing with
+ahead of time, take a look at their most recent publications (you can usually
+find these on their personal website) and at a few of their
+top-cited publications (you can usually find these by searching for the
+professor's name of Google Scholar). If you don't know who you're going to be
+interviewing with, then you should do the same but for two or three professors
+that you think you may want to work with.
+You don't need to have these publications
+memorized, but it's good to read the abstracts and a select handful
+of the papers that are most exciting and interesting to you. It's
+very possible that their past research won't come up at all during the
+interview, but it's good for you to have a few talking points to fall back on
+to keep your conversation with them moving along. 
+
+Most importantly these interviews and the events surrounding them are designed
+to be fun! If you've specialized your education to the point where you're
+attending one of these interviews, then the professors you meet and the other
+applicants are likely to be in their same field as you for a long time. That
+means it's great opportunity to make friends! You were invited because the
+admissions committee was interested in meeting the real you, so relax and be
+yourself.
+
+Good luck with the rest of the admissions process! If you have any questions or
+you feel like I've left anything out, please get in touch on
+[Twitter](https://twitter.com/seankross) or 
+[send me an email](http://seankross.com/about/).
