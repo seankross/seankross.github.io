@@ -6,6 +6,8 @@ jumbo_title: The Difference Between Chi-Squared Tests
 jumbo_subtitle:
 ---
 
+> "Expectations is the place you must always go to before you get to where you're going." - The Whether Man from Norton Juster's *The Phantom Tollbooth*
+
 My first quarter at UC San Diego is coming to an end, and so far graduate
 school been everything I hoped for ☺️. For the past few months I worked as 
 a teaching assistant with [my advisor](http://pgbovine.net/) for a course
@@ -48,13 +50,33 @@ In each version of the Chi Squared test, a different question about this
 relationship between observations and expectations is being asked, mostly based
 on how we created the expectations that are being tested. The following Chi
 Squared tests are best used with counts of categorical variables from an
-observed sample.
+observed sample. The general formula for calculating the Chi Squared statistic
+is the following:
 
 $$
 \chi^2 = \frac{(Observed - Expected)^2}{Expected}
 $$
 
-## The test for Goodness-of-Fit
+The *Observed* variable is the counts of an event that we actaully measure,
+while the *Expected* variable is the count that we expected. If we have
+expectations about multiple related counts, then we can add up multiple Chi
+Squared values to obtain a final value that we can use to evaluate the
+relationship between the counts.
+
+## The Test for Goodness-of-Fit
+
+The first Chi Squared test we'll discuss, the test for goodness-of-fit, is a
+tool for assessing whether a system produces counts that follow a
+pre-determined set of proportions. For example, imagine you're in charge of
+the factory that produces all of the M&Ms for the winter Olympics in
+PyeongChang South Korea. As a promotion for the olympics, all of the M&Ms
+produced need to be in one of four colors of the flag of South Korea: red,
+white, blue, and black. You have instructions that these colors should be
+produced in the following proportions: for every ten M&Ms, four should be
+white, three should be blue, two should be red, and one should be black. You
+program the manufacturing equipment to mix different colored M&Ms in that
+ratio, but how can you be sure that the process is working?
+
 
 In the Chi Squared Goodness-of-Fit test, there is a pre-determined ratio
 between categories
@@ -69,5 +91,9 @@ categorical variables are related?
 Goodness-of-fit
 Bee gene distribution
 
+http://www.stat.yale.edu/Courses/1997-98/101/chigf.htm
 
+https://onlinecourses.science.psu.edu/stat414/node/311
+
+https://onlinecourses.science.psu.edu/stat500/node/56
 
