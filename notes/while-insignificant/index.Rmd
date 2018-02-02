@@ -1,0 +1,42 @@
+---
+title: "A Good Day to Use a While Loop"
+author: "[Sean Kross](http://seankross.com/)"
+date: "2018-02-02"
+output: 
+  html_document:
+    highlight: pygments
+    css: ../notes.css
+---
+
+The `while` loop is a sometimes controversial programming construct since
+it is often not clear that the loop will ever end. Here's one situation where
+I think it is appropriate to use. In this example I would like to generate a
+small dataset with a high correlation coefficient ($r > 0.9$) and a significant
+p-value for the correlation ($p < 0.05$). In order to do this I just keep
+generating random datasets until I find one that satisfies my criteria. This is
+certainly a non-elegant brute-force approach, but it gets the job done. I use
+this approach when I'm trying to generate a "true positive" plot to 
+illustrate the concept of using a 
+[line up](http://had.co.nz/stat645/graphical-inference.pdf)
+for graphical inference.
+
+```{r, fig.asp=1, message=FALSE, warning=FALSE}
+library(dplyr)
+
+set.seed(2018-02-01)
+
+n <- 10
+
+data <- data_frame(x = runif(n),
+           y = runif(n))
+
+test <- cor.test(data$x, data$y)
+
+while(!(test$p.value < 0.05 && abs(test$estimate) > 0.9)) {
+  data$x <- runif(n)
+  data$y <- runif(n)
+  test <- cor.test(data$x, data$y)
+}
+
+plot(data, xlim = c(0, 1), ylim = c(0, 1), asp = 1)
+```
