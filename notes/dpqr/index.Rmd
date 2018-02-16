@@ -244,7 +244,7 @@ n10000 <-  rnorm(10000, mean = 70, sd = 5)
 n10
 ```
 
-Which historgram do you think will be most centered around the true mean of 70?
+Which histogram do you think will be most centered around the true mean of 70?
 
 ```{r, warning=FALSE}
 # This is for getting two graphs next to each other
