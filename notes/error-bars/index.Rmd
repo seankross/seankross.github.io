@@ -1,0 +1,46 @@
+---
+title: "ggplot2 Bar Graph Error Bars"
+author: "[Sean Kross](http://seankross.com/)"
+date: "2018-03-23"
+output: 
+  html_document:
+    highlight: pygments
+    css: ../notes.css
+---
+
+```{r, message=FALSE}
+library(ggplot2)
+library(dplyr)
+
+set.seed(2018-03-23)
+
+# Generate exmaple data
+
+data <- data_frame(Condition = c(rep("Control", 50), rep("Treatment", 75)),
+                   Status = c(rbinom(50, 1, .5), rbinom(75, 1, .35)))
+
+data %>% 
+  slice(c(1:5 , 51:55))
+
+# Visualize binary proportions in each group
+
+ggplot(data, aes(Status)) +
+  geom_bar(aes(fill = Condition))
+
+data_avgs <- data %>%
+  group_by(Condition) %>% 
+  summarize(Avg = mean(Status),
+            SD = sd(Status),
+            N = n()) %>% 
+  ungroup() %>% 
+  mutate(L_CI = Avg - 1.96 * sqrt(Avg * (1 - Avg) / N)) %>% 
+  mutate(U_CI = Avg + 1.96 * sqrt(Avg * (1 - Avg) / N))
+
+data_avgs
+
+# Visualize average proportion
+
+ggplot(data_avgs, aes(Condition, Avg)) +
+  geom_col(fill = "royalblue1") + 
+  geom_errorbar(aes(ymin = L_CI, ymax = U_CI), width = .25)
+```

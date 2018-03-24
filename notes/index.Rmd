@@ -27,7 +27,8 @@ tribble(
   "[modeling-inequality](modeling-inequality)", "A little R programming lesson for teaching.", "2018-01-22",
   "[css-for-code](css-for-code)", "Make your code look beautiful on mobile.", "2018-01-25",
   "[grad-school-interviews](grad-school-interviews)", "Advice about graduate school interviews.", "2018-01-30",
-  "[while-insignificant](while-insignificant)", "How to use a while loop to simulate a dataset under constraints.", "2018-02-02"
+  "[while-insignificant](while-insignificant)", "How to use a while loop to simulate a dataset under constraints.", "2018-02-02",
+  "[error-bars](error-bars)", "Bar graph error bars for a binary outcome with ggplot2.", "2018-03-23",
 ) %>%
   arrange(desc(Date)) %>%
   kable()
