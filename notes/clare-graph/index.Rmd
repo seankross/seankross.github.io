@@ -1,0 +1,44 @@
+---
+title: "Simple Mean and Confidence Intervals with Base Graphics"
+author: "[Sean Kross](http://seankross.com/)"
+date: "2018-03-30"
+output: 
+  html_document:
+    highlight: pygments
+    css: ../notes.css
+---
+
+```{r, message=FALSE}
+# You can find pch values for shapes here: 
+# https://cdn-images-1.medium.com/max/1600/1*0QEVFHrgqmkVsCVCQceh6w.jpeg
+
+data <- data.frame(
+  Name = c("Ohio State", "Purdue", "Indiana", "Wisconsin", "Nebreaska"),
+  Min =   c(0.37, 0.25, 0.13, 0.22, 0.28),
+  Max =   c(0.88, 0.57, 0.68, 0.77, 0.63),
+  Value = c(0.51, 0.32, 0.24, 0.65, 0.57),
+  Pch = c(1, 2, 5, 6, 22),
+  stringsAsFactors = FALSE
+)
+
+data
+
+# Graph margins
+par(mar = c(6.1, 4.1, 3.1, 2.1))
+
+plot(1:nrow(data), 
+     col  = "white",
+     ylim = c(0, 1),
+     xlab = "",
+     ylab = "Coolness",
+     xaxt = "n")
+
+title(xlab = "Schools", line=5)
+
+for (i in 1:nrow(data)) {
+  segments(i, data$Min[i], i, data$Max[i])
+  points(i, data$Value[i], pch = data$Pch[i])
+}
+
+axis(1, at = 1:nrow(data), labels = data$Name, las=2)
+```
