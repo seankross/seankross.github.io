@@ -1,0 +1,19 @@
+---
+title: "German Data Visualizations"
+author: "[Sean Kross](http://seankross.com/)"
+date: "2018-04-10"
+output: 
+  html_document:
+    highlight: pygments
+    css: ../notes.css
+---
+
+I have been coming across several great data visualizations about Germany
+and German-related subjects. I am starting to collect them here.
+
+- [Mapping German Dialects](https://timogrossenbacher.ch/2018/03/categorical-spatial-interpolation-with-r/) by [Timo Grossenbacher](https://twitter.com/grssnbchr). His entire
+[site](https://timogrossenbacher.ch/) is great.
+- [Do you remember where the wall divided Berlin?](https://interaktiv.morgenpost.de/berliner-mauer/) in the Berliner Morgenpost.
+- [A rusting fountain of youth in Germany](https://blog.datawrapper.de/weekly-chart-rustingfountain/) by
+[Lisa Charlotte Rost](https://twitter.com/lisacrost) who also maintains a
+fantastic [site](http://lisacharlotterost.de/).
