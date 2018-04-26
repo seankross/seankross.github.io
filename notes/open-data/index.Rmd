@@ -1,0 +1,32 @@
+---
+title: "Yet Another List of Data Sources"
+author: "[Sean Kross](http://seankross.com/)"
+date: "2018-04-26"
+output: 
+  html_document:
+    highlight: pygments
+    css: ../notes.css
+---
+
+## Other Collections of Datasets
+
+- [Awesome Public Datasets](https://github.com/awesomedata/awesome-public-datasets)
+- [Gapminder Global Development Data](https://www.gapminder.org/data/)
+- [USDA Economic Research Service](https://www.ers.usda.gov/data-products)
+- [USDL Bureau of Labor Statistics](https://www.bls.gov/data/)
+- [Pew Research Center Datasets](http://www.pewresearch.org/download-datasets/)
+- [US Center for Disease Control Data](https://wonder.cdc.gov/)
+
+## Data That I Like
+
+- [Human Rights Abuses in the Syrian Civil War](https://syrianarchive.org/)
+- [Salaries of Every BART Employee](http://enjalot.github.io/bart/)
+- [Battles Throughout History](https://github.com/jrnold/CDB90)
+- [Risky Behaviors Among Youths](https://www.cdc.gov/healthyyouth/data/yrbs/index.htm)
+- [Flights and Airports](https://openflights.org/data.html)
+- [USDA Census of Agriculture](https://www.agcensus.usda.gov/Publications/2012/)
+- [State of California SAT Results](https://www.cde.ca.gov/ds/sp/ai/)
+- [USED College Scorecard](https://collegescorecard.ed.gov/data/)
+- [USED College Athletics Data](https://ope.ed.gov/athletics/#/)
+- [Knight Foundation NCAA Athletics Spending Data](http://spendingdatabase.knightcommission.org/about-the-data)
+- [Wikipedia Per Capita Tables](https://en.wikipedia.org/wiki/Category:Lists_of_countries_by_per_capita_values)
