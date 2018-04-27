@@ -10,6 +10,7 @@ output:
 
 ## Other Collections of Datasets
 
+- [Data is Pural by Jeremy Singer-Vine](https://tinyletter.com/data-is-plural/archive)
 - [Awesome Public Datasets](https://github.com/awesomedata/awesome-public-datasets)
 - [Gapminder Global Development Data](https://www.gapminder.org/data/)
 - [USDA Economic Research Service](https://www.ers.usda.gov/data-products)
