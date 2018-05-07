@@ -31,3 +31,7 @@ output:
 - [USED College Athletics Data](https://ope.ed.gov/athletics/#/)
 - [Knight Foundation NCAA Athletics Spending Data](http://spendingdatabase.knightcommission.org/about-the-data)
 - [Wikipedia Per Capita Tables](https://en.wikipedia.org/wiki/Category:Lists_of_countries_by_per_capita_values)
+
+## Friendly APIs
+
+- [The Investors Exchange](https://iextrading.com/developer/docs/)
