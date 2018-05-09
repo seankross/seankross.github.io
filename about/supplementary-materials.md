@@ -20,3 +20,4 @@ another:
 - [Design Better Data Tables](https://medium.com/mission-log/design-better-data-tables-430a30a00d8c) by Matthew Ström in *Medium*
 - [A Year in Computer Vision](http://www.themtank.org/a-year-in-computer-vision) by Benjamin Duffy & Daniel Flynn in *Medium*
 - [The Human Factor](https://www.vanityfair.com/news/business/2014/10/air-france-flight-447-crash) by William Langewiesche in *Vanity Fair*
+- [The Smartphone War](http://www.nybooks.com/articles/2018/04/19/syria-smartphone-war/) by Lindsey Hilsum in *The New York Review of Books*
