@@ -5,6 +5,8 @@ jumbo_title: Postcards
 jumbo_subtitle: About
 ---
 
+<img src="https://pbs.twimg.com/profile_images/851893231235338242/339Vr6Cp_400x400.jpg" class="img-rounded" style="height:25rem">
+
 # About Me
 
 Hi! I'm Sean. In the past I attended NYU and the University of Maryland. I'm
@@ -29,7 +31,11 @@ and the
 
 # Publications
 
-E. Redmiles, **S. Kross**, M. Mazurek. 2017. *Where is the Digital Divide? Examining the Impact of Socioeconomics on Security and Privacy Outcomes*. In The 2017 ACM CHI Conference on Human Factors in Computing Systems. DOI: [10.13016/M2FV4T](https://cs.umd.edu/~eredmiles/camera-ready-low-ses.pdf)
+E. Redmiles, **S. Kross**, M. Mazurek. 2019. *How Well Do My Results Generalize? Comparing Security and Privacy Survey Results from MTurk, Web, and Telephone Samples* In the 2019 IEEE Symposium on Security and Privacy. DOI: [10.13016/M2BV8D](http://drum.lib.umd.edu/handle/1903/19164)
+
+**S. Kross**, P.J. Guo. 2018. *Students, Systems, and Interactions: Synthesizing the First Four Years of Learning@Scale and Charting the Future*. In Proceedings of the Fifth Annual ACM Conference on Learning at Scale. DOI: [10.1145/3231644.3231662](https://seankross.com/las-2018/)
+
+E. Redmiles, **S. Kross**, M. Mazurek. 2017. *Where is the Digital Divide? Examining the Impact of Socioeconomics on Security and Privacy Outcomes*. In the 2017 ACM CHI Conference on Human Factors in Computing Systems. DOI: [10.13016/M2FV4T](https://cs.umd.edu/~eredmiles/camera-ready-low-ses.pdf)
 
 E. Redmiles, **S. Kross**, M. Mazurek. 2016. *How I Learned to be Secure: a Census-Representative Survey of Security Advice Sources and Behavior*. In Proceedings of the 23rd ACM Conference on Computer and Communications Security. DOI: [10.1145/2976749.2978307](https://www.umiacs.umd.edu/~mmazurek/papers/ccs2016-learned-secure.pdf)
 
@@ -37,9 +43,7 @@ E. Redmiles, M.A. Abad, I. Coronado, **S. Kross**, A. Malone. 2015. *A Classroom
 
 # Preprints & Technical Reports
 
-**S. Kross**, R.D. Peng, B.S. Caffo, I. Gooding, J.T. Leek. 2017 *The Democratization of Data Science Education* DOI: [10.7287/peerj.preprints.3195v1](10.7287/peerj.preprints.3195v1)
-
-E. Redmiles, **S. Kross**, A. Pradhan, M. Mazurek. 2017. *How Well Do My Results Generalize? Comparing Security and Privacy Survey Results from MTurk and Web Panels to the U.S.* DOI: [10.13016/M2BV8D](http://drum.lib.umd.edu/handle/1903/19164)
+**S. Kross**, R.D. Peng, B.S. Caffo, I. Gooding, J.T. Leek. 2017 *The Democratization of Data Science Education* DOI: [10.7287/peerj.preprints.3195v1](https://peerj.com/preprints/3195/)
 
 # Software
 
