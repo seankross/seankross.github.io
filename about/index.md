@@ -33,6 +33,8 @@ and the
 
 E. Redmiles, **S. Kross**, M. Mazurek. 2019. *How Well Do My Results Generalize? Comparing Security and Privacy Survey Results from MTurk, Web, and Telephone Samples* In the 2019 IEEE Symposium on Security and Privacy. DOI: [10.13016/M2BV8D](http://drum.lib.umd.edu/handle/1903/19164)
 
+E. Redmiles, Z. Zhu, **S. Kross**, D. Kuchhal, T. Dumitras, M. Mazurek. 2018. *Asking for a Friend: Evaluating Response Biases in Security User Studies* In Proceedings of the 25th ACM Conference on Computer and Communications Security.
+
 **S. Kross**, P.J. Guo. 2018. *Students, Systems, and Interactions: Synthesizing the First Four Years of Learning@Scale and Charting the Future*. In Proceedings of the Fifth Annual ACM Conference on Learning at Scale. DOI: [10.1145/3231644.3231662](https://seankross.com/las-2018/)
 
 E. Redmiles, **S. Kross**, M. Mazurek. 2017. *Where is the Digital Divide? Examining the Impact of Socioeconomics on Security and Privacy Outcomes*. In the 2017 ACM CHI Conference on Human Factors in Computing Systems. DOI: [10.13016/M2FV4T](https://cs.umd.edu/~eredmiles/camera-ready-low-ses.pdf)
