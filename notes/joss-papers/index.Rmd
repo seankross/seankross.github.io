@@ -1,0 +1,44 @@
+---
+title: "JOSS Papers are Getting Longer"
+author: "[Sean Kross](http://seankross.com/)"
+date: "2018-10-02"
+output: 
+  html_document:
+    highlight: pygments
+    css: ../notes.css
+---
+
+I have been a fan of the [Journal of Open Source Software](http://joss.theoj.org/)
+for a while. Recently I had the opportunity to review a submission for them,
+which was a great experience. As of today they have accepted 378 papers!
+Sometimes I browse the new papers and recently I have noticed that the papers
+seem to be getting longer. I thought I would investigate this observation by
+looking at the data:
+
+```{r, warning=FALSE, message=FALSE}
+library(dplyr)
+library(purrr)
+library(fs)
+library(tsibble)
+library(pdftools)
+library(git2r)
+
+jp <- path_home("Downloads", "joss-papers")
+
+if (!dir_exists(jp)) {
+  dir_create(jp)
+  clone("https://github.com/openjournals/joss-papers.git", 
+      local_path = jp)  
+}
+
+paper_length <- jp %>% 
+  dir_ls(recursive = TRUE, glob = "*.pdf") %>% 
+  map_dbl(~ pdf_info(.x)$pages)
+
+avg_length <- paper_length %>% 
+  slide_dbl(mean, .size = 25)
+
+plot(paper_length, pch = 1, cex = 0.3, bty = "L",
+     xlab = "Paper Number", ylab = "Page Length")
+lines(avg_length, lwd = 3, col = "blue")
+```
