@@ -1,0 +1,15 @@
+---
+title: "City Guides"
+author: "[Sean Kross](http://seankross.com/)"
+date: "2018-12-18"
+output: 
+  html_document:
+    highlight: pygments
+    css: ../notes.css
+---
+
+I maintain a few city guides with cafes, restaurants, and parks I like in
+cities I have lived in before:
+
+- [Washington, DC](https://drive.google.com/open?id=17rjiHO4jFFS2ZCrT53-M65QjH_dKAghr&usp=sharing)
+- [San Diego, CA](https://drive.google.com/open?id=18nCY9DGvyRtoKZOC9FCFYYwUVugdsRPC&usp=sharing)
