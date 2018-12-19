@@ -32,7 +32,8 @@ tribble(
   "[clare-graph](clare-graph)", "A graph I made for Clare showing means and confidence intervals.", "2018-03-30",
   "[deutschland-data](deutschland-data)", "A collection of German data visualizations.", "2018-04-10",
   "[open-data](open-data)", "A collection of collections of open datasets.", "2018-04-26",
-  "[joss-papers](joss-papers)", "JOSS papers are getting longer.", "2018-10-02"
+  "[joss-papers](joss-papers)", "JOSS papers are getting longer.", "2018-10-02",
+  "[city-guides](city-guides)", "City guides I have created.", "2018-12-18"
 ) %>%
   arrange(desc(Date)) %>%
   kable()
