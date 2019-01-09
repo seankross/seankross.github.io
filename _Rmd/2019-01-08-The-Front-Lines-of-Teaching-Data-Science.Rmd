@@ -14,18 +14,18 @@ Last year I had the privilege of talking to twenty data scientists who also
 teach their craft in a variety of settings: big and small courses, online
 and in person, and in academia and industry. They graciously told me
 about how they approach the challenge of teaching such a broad and 
-rapidly-changing field. Data science now encompasses a overwhelming number of 
+rapidly-changing field. Data science now encompasses an overwhelming number of 
 technologies and techniques including modeling, visualization, data wrangling, 
 storytelling, version control, and system administration.
 How can they possibly keep a handle on everything? For all of the juicy details
 see the paper linked above. Below are the key points from our investigation:
 
 - Data scientists are often characterized as "end user programmers," meaning
-that they see programming as a means to an end (ends like answering scientific
+they see programming as a means to an end (ends like answering scientific
 questions) rather than a pursuit that is inherently interesting. We found that
 instructors teach skills beyond end user programming, including how to integrate
-data analysis code into mature technology stacks to create more modular and
-reusable software.
+data analysis code into mature technology stacks so that their software is more 
+modular and reusable.
 - One major framework in data science education is teaching an entire workflow,
 as opposed to teaching any individual library or method. Instructors want their
 students to know how to properly collect data, how to import and
@@ -67,8 +67,9 @@ science computing environment:
     to configure their own environment.
     3. *Web application*: Instructors create a course in a specialized markup
     language which they then upload to a web application that simulates a
-    computing environment for students. These environments require no student or
-    instructor setup or maintenance, however this medium makes lessons easy to
+    computing environment for students. These environments are very convenient
+    since they require no student or instructor setup or maintenance. However 
+    despite instructors' best efforts, this medium makes lessons easy to
     complete [without actually learning any of the material](https://youtu.be/P-mAGIE52yY?t=1610).
 - Preparing a data science course is aggravated by how difficult it is to find
 relevant, domain-specific datasets. Data that students will have access to in
@@ -85,11 +86,11 @@ answers to student questions. They also teach the meta-skill of keeping one's
 data science skills up to date, since data science technologies are
 constantly evolving.
 
-The purpose of this investigation and writing this paper is to highlight these
-challenges for the human-computer interaction community, as an invitation to
-study the quickly growing field of data science education. It is my personal 
-belief that programming in the style of current data scientists will become the
-dominant and most in demand form of programming in the near future. Since data
-science touches so many other fields, it is imperative that we pay attention
-to the needs of this community so that we can expand learning
-opportunites and spread best practices for data science educatiors.
+The purpose of this investigation is to highlight these
+challenges for the human-computer interaction community, as a call to action to
+study the quickly growing field of data science education. It is my
+belief that in the near future data analytic programming  will become the
+most common and in-demand form of programming. Since data
+science is becoming integrated into many other fields, it is imperative that 
+we pay attention to the needs of this community so that we can expand learning
+opportunities and systematize best practices for data science educators.
