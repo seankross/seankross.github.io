@@ -21,3 +21,5 @@ another:
 - [A Year in Computer Vision](http://www.themtank.org/a-year-in-computer-vision) by Benjamin Duffy & Daniel Flynn in *Medium*
 - [The Human Factor](https://www.vanityfair.com/news/business/2014/10/air-france-flight-447-crash) by William Langewiesche in *Vanity Fair*
 - [The Smartphone War](http://www.nybooks.com/articles/2018/04/19/syria-smartphone-war/) by Lindsey Hilsum in *The New York Review of Books*
+- [How Ferrero Rocher Became a Status Symbol for Immigrant Families](https://www.thrillist.com/eat/nation/ferrero-rocher-chocolates-status-symbol-immigrants) by Liana Aghajanian in *Thrillist*
+- [There's No Such Thing as a Free Watch](https://www.topic.com/there-s-no-such-thing-as-a-free-watch) by [Jenny Odell](http://www.jennyodell.com/) in *Topic*
