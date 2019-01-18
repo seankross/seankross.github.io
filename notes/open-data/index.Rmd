@@ -10,6 +10,7 @@ output:
 
 ## Other Collections of Datasets
 
+- [Amelia McNamara's Places to Find Data](http://www.amelia.mn/sds220/project.html#places_to_find_data)
 - [Data is Pural by Jeremy Singer-Vine](https://tinyletter.com/data-is-plural/archive)
 - [Awesome Public Datasets](https://github.com/awesomedata/awesome-public-datasets)
 - [Gapminder Global Development Data](https://www.gapminder.org/data/)
