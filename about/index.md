@@ -31,7 +31,7 @@ and the
 
 # Publications
 
-**S. Kross**, P.J. Guo. 2019. *Practitioners Teaching Data Science in Industry and Academia: Expectations, Workflows, and Challenges* In the 2019 ACM CHI Conference on Human Factors in Computing Systems. DOI: 10.1145/3290605.3300493](https://seankross.com/chi-2019/)
+**S. Kross**, P.J. Guo. 2019. *Practitioners Teaching Data Science in Industry and Academia: Expectations, Workflows, and Challenges* In the 2019 ACM CHI Conference on Human Factors in Computing Systems. DOI: [10.1145/3290605.3300493](https://seankross.com/chi-2019/)
 
 E. Redmiles, **S. Kross**, M. Mazurek. 2019. *How Well Do My Results Generalize? Comparing Security and Privacy Survey Results from MTurk, Web, and Telephone Samples* In the 2019 IEEE Symposium on Security and Privacy. DOI: [10.13016/M2BV8D](http://drum.lib.umd.edu/handle/1903/19164)
 
