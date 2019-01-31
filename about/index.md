@@ -14,7 +14,9 @@ currently a PhD student at the University of California San Diego.
 I live in La Jolla, California where you can find me spending most of my time writing
 code, taking pictures, and reading books. If you're interested in what I've been
 reading lately see the [supplementary materials](supplementary-materials.html).
-I also have a sub-blog called [Notes](http://seankross.com/notes/).
+I also have a sub-blog called [Notes](http://seankross.com/notes/). If you want
+the information on this page in a single document you can 
+[download my CV](http://seankross.com/cv/).
 
 Email: sean at seankross dot com
 
