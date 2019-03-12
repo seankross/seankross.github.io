@@ -1,0 +1,13 @@
+---
+title: "Getting Your First Job in Data Science"
+author: "[Sean Kross](http://seankross.com/)"
+date: "2019-03-12"
+output: 
+  html_document:
+    highlight: pygments
+    css: ../notes.css
+---
+
+- [Slides from the talk](https://docs.google.com/presentation/d/1Gk3o1OYwN6vx62CMkvOs_eI8_1QncEGYPoHW4Kc_xQ8/edit?usp=sharing)
+- [Advice for Applying to Data Science Jobs](https://hookedondata.org/advice-for-applying-to-data-science-jobs/) by Emily Robinson
+- [Data science is different now](http://veekaybee.github.io/2019/02/13/data-science-is-different/) by Vicki Boykis
