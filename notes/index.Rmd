@@ -33,7 +33,8 @@ tribble(
   "[deutschland-data](deutschland-data)", "A collection of German data visualizations.", "2018-04-10",
   "[open-data](open-data)", "A collection of collections of open datasets.", "2018-04-26",
   "[joss-papers](joss-papers)", "JOSS papers are getting longer.", "2018-10-02",
-  "[city-guides](city-guides)", "City guides I have created.", "2018-12-18"
+  "[city-guides](city-guides)", "City guides I have created.", "2018-12-18",
+  "[first-ds-job](first-ds-job)", "A talk about getting your first job in data science", "2019-03-12"
 ) %>%
   arrange(desc(Date)) %>%
   kable()
