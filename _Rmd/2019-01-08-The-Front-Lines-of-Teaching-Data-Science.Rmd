@@ -8,7 +8,8 @@ jumbo_subtitle: ""
 
 > Short version: [Philip Guo](https://twitter.com/pgbovine) and I wrote 
 [a paper](https://seankross.com/chi-2019/) about challenges facing data 
-science instructors for the 2019 CHI conference.
+science instructors for the 2019 CHI conference. The paper won a
+Best Paper Honorable Mention award (top 5% of papers).
 
 Last year I had the privilege of talking to twenty data scientists who also
 teach their craft in a variety of settings: big and small courses, online
@@ -53,7 +54,7 @@ presenting analytically results and in writing essays that explain their reasoni
 and conclusions. Computational notebooks like R Markdown and Jupyter are often
 used for weaving together code, data, visualizations, and prose.
 - It is often a challenge for instructors to make the appropriate
-technology for doing data data science available to students. We identified three 
+technology for doing data science available to students. We identified three 
 different approaches that instructors used for setting students up with a data
 science computing environment:
     1. *Desktop*: Each student configures their computing environment on their
