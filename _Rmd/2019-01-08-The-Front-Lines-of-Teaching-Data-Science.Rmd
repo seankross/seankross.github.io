@@ -9,7 +9,8 @@ jumbo_subtitle: ""
 > Short version: [Philip Guo](https://twitter.com/pgbovine) and I wrote 
 [a paper](https://seankross.com/chi-2019/) about challenges facing data 
 science instructors for the 2019 CHI conference. The paper won a
-Best Paper Honorable Mention award (top 5% of papers).
+[Best Paper Honorable Mention](https://chi2019.acm.org/2019/03/15/chi-2019-best-papers-honourable-mentions/)
+award (top 5% of papers).
 
 Last year I had the privilege of talking to twenty data scientists who also
 teach their craft in a variety of settings: big and small courses, online
