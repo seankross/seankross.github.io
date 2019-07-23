@@ -33,7 +33,10 @@ and the
 
 # Publications
 
-**S. Kross**, P.J. Guo. 2019. *Practitioners Teaching Data Science in Industry and Academia: Expectations, Workflows, and Challenges* In the 2019 ACM CHI Conference on Human Factors in Computing Systems. DOI: [10.1145/3290605.3300493](https://seankross.com/chi-2019/)
+**S. Kross**, P.J. Guo. 2019. *End-User Programmers Repurposing End-User
+Programming Tools to Foster Diversity in Adult End-User Programming Education* In the 2019 ACM CHI Conference on Human Factors in Computing Systems. [Paper Link](https://seankross.com/vlhcc-2019/)
+
+**S. Kross**, P.J. Guo. 2019. *Practitioners Teaching Data Science in Industry and Academia: Expectations, Workflows, and Challenges* In the 2019 IEEE Symposium on Visual Languages and Human-Centric Computing. DOI: [10.1145/3290605.3300493](https://seankross.com/chi-2019/)
 
 E. Redmiles, **S. Kross**, M. Mazurek. 2019. *How Well Do My Results Generalize? Comparing Security and Privacy Survey Results from MTurk, Web, and Telephone Samples* In the 2019 IEEE Symposium on Security and Privacy. DOI: [10.13016/M2BV8D](http://drum.lib.umd.edu/handle/1903/19164)
 
@@ -88,6 +91,7 @@ I've worked on a few courses:
 
 # Talks
 
+- 2nd Year Qualifying Exam Talk. [Video](https://youtu.be/rihmaqI1ukw)
 - Joint Statistical Meetings 2017, [Slides](http://seankross.com/jsm-talk/), [Blog Post](http://seankross.com/2017/08/11/Beyond-Axes-Simulating-Systems-with-Interactive-Graphics.html)
 - Dataverse Community Meeting 2017, [Slides](http://seankross.com/iqss-talk/), [Blog Post](http://seankross.com/2017/06/19/Turning-Researcher-Fatigue-into-Puppy-Fatigue.html)
 - The computing club at the Johns Hopkins School of Public health kindly invited
