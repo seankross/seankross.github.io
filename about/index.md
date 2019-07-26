@@ -34,7 +34,9 @@ and the
 # Publications
 
 **S. Kross**, P.J. Guo. 2019. *End-User Programmers Repurposing End-User
-Programming Tools to Foster Diversity in Adult End-User Programming Education* In the 2019 ACM CHI Conference on Human Factors in Computing Systems. [Paper Link](https://seankross.com/vlhcc-2019/)
+Programming Tools to Foster Diversity in Adult End-User Programming 
+Education* In Proceedings of VL/HCC 2019: IEEE Symposium on Visual Languages 
+and Human-Centric Computing. [Paper Link](https://seankross.com/vlhcc-2019/)
 
 **S. Kross**, P.J. Guo. 2019. *Practitioners Teaching Data Science in Industry and Academia: Expectations, Workflows, and Challenges* In the 2019 IEEE Symposium on Visual Languages and Human-Centric Computing. DOI: [10.1145/3290605.3300493](https://seankross.com/chi-2019/)
 
