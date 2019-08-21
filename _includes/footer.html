@@ -35,6 +35,10 @@
           {% if site.github_username != null %}
           <li><a href="https://github.com/{{ site.github_username }}"><img src="{{ site.url }}/img/GitHub-Mark-64px.png" height=25></a></li>
           {% endif %}
+
+          {% if site.twitter_username != null %}
+          <li><a href="{{ site.url }}/rss.xml"><img src="{{ site.url }}/img/rss_icon.png" height=22></a></li>
+          {% endif %}
   		  </ul>
     </div>
   </div>
