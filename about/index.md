@@ -33,10 +33,13 @@ and the
 
 # Publications
 
+**S. Kross**, R.D. Peng, B.S. Caffo, I. Gooding, J.T. Leek. 2019 *The Democratization of Data Science Education* In The American Statistician. DOI: [10.1080/00031305.2019.1668849](https://doi.org/10.1080/00031305.2019.1668849)
+
 **S. Kross**, P.J. Guo. 2019. *End-User Programmers Repurposing End-User
 Programming Tools to Foster Diversity in Adult End-User Programming 
 Education* In Proceedings of VL/HCC 2019: IEEE Symposium on Visual Languages 
-and Human-Centric Computing. [Paper Link](https://seankross.com/vlhcc-2019/)
+and Human-Centric Computing. 
+DOI: [10.1109/VLHCC.2019.8818824](https://seankross.com/vlhcc-2019/)
 
 **S. Kross**, P.J. Guo. 2019. *Practitioners Teaching Data Science in Industry and Academia: Expectations, Workflows, and Challenges* In the 2019 IEEE Symposium on Visual Languages and Human-Centric Computing. DOI: [10.1145/3290605.3300493](https://seankross.com/chi-2019/)
 
@@ -51,10 +54,6 @@ E. Redmiles, **S. Kross**, M. Mazurek. 2017. *Where is the Digital Divide? Exami
 E. Redmiles, **S. Kross**, M. Mazurek. 2016. *How I Learned to be Secure: a Census-Representative Survey of Security Advice Sources and Behavior*. In Proceedings of the 23rd ACM Conference on Computer and Communications Security. DOI: [10.1145/2976749.2978307](https://www.umiacs.umd.edu/~mmazurek/papers/ccs2016-learned-secure.pdf)
 
 E. Redmiles, M.A. Abad, I. Coronado, **S. Kross**, A. Malone. 2015. *A Classroom Tested Accessible Multimedia Resource for Engaging Underrepresented Students in Computing*. In Proceedings of the 46th ACM Technical Symposium on Computer Science Education. DOI: [10.1145/2676723.2691870](http://dl.acm.org/citation.cfm?id=2691870)
-
-# Preprints & Technical Reports
-
-**S. Kross**, R.D. Peng, B.S. Caffo, I. Gooding, J.T. Leek. 2017 *The Democratization of Data Science Education* DOI: [10.7287/peerj.preprints.3195v1](https://peerj.com/preprints/3195/)
 
 # Software
 
