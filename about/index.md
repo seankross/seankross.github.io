@@ -95,13 +95,13 @@ I've worked on a few courses:
 - 2nd Year Qualifying Exam Talk. [Video](https://youtu.be/rihmaqI1ukw)
 - Joint Statistical Meetings 2017, [Slides](http://seankross.com/jsm-talk/), [Blog Post](http://seankross.com/2017/08/11/Beyond-Axes-Simulating-Systems-with-Interactive-Graphics.html)
 - Dataverse Community Meeting 2017, [Slides](http://seankross.com/iqss-talk/), [Blog Post](http://seankross.com/2017/06/19/Turning-Researcher-Fatigue-into-Puppy-Fatigue.html)
-- The computing club at the Johns Hopkins School of Public health kindly invited
-me to give a talk about a a topic of my choosing so I rambled on about
+- The Computing Club at the Johns Hopkins School of Public Health kindly invited
+me to give a talk about a topic of my choosing so I rambled on about
 interaction design for data and modeling. These slides are unexciting, they're
 mostly links to amazing work other folks have done which I demonstrated as
 a means to try to inspire the audience. [Slides here](http://seankross.com/data-interaction-talk/).
 - I spoke to members of the GIS community at [The University of Pennsylvania's
 Institute for Urban Design](http://penniur.upenn.edu/) at their GIS Day 2016
 celebration. [Slides and notes here](https://github.com/seankross/gisday).
-- I gave a talk about [swirl](http://swirlstats.com/) at the 2016 Seminário
-Internacional de Estatística com R. [Slides here](http://seankross.com/notes/swirltalk/).
+- I gave a talk about [swirl](http://swirlstats.com/) at the 2016 Seminario
+Internacional de Estadística con R. [Slides here](http://seankross.com/notes/swirltalk/).
