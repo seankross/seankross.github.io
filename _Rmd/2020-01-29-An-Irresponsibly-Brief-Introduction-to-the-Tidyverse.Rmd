@@ -1,0 +1,140 @@
+---
+layout: post
+title: "An Irresponsibly Brief Introduction to the Tidyverse"
+date: 2020-01-29 12:00:00
+jumbo_title: An Irresponsibly Brief Introduction to the Tidyverse
+---
+
+While attending RStudio::conf 2020 a couple people asked me for a very
+lightweight introduction to the [Tidyverse](https://www.tidyverse.org/),
+a collection of some of the
+most useful R packages that are designed to work well together. I thought I
+would try writing the most concise introduction possible for people who are in
+a hurry or only want a little taste of what is out there.
+
+## Setting Up
+
+First install the Tidyverse:
+
+```{r, eval=FALSE}
+install.packages("tidyverse")
+```
+
+Then load the Tidyverse:
+
+```{r}
+library(tidyverse)
+```
+
+## Using the Pipe Operator
+
+If you have used R before you probably know how to create sequences of
+integers with the colon (`:`) operator:
+
+```{r}
+1:10
+```
+
+If you wanted to know the sum of all of the numbers between 1 and 10 you might
+write some code like:
+
+```{r}
+sum(1:10)
+```
+
+The Tidyverse makes heavy use of the pipe operator (`%>%`), which takes
+whatever is on the left-hand-side of the pipe and makes it the first argument
+of whatever function is on the right-hand-side of the pipe. 
+Therefore `1:10 %>% sum()` is equivalent to `sum(1:10)`.
+
+```{r}
+1:10 %>% sum()
+```
+
+The Tidyverse is largely concerned with manipulating data frames. One of my
+favorite data frames that is built into R is called `trees`. The Tidyverse has
+its own kind of data frame called a tibble. Let's turn `trees` into a tibble
+for our future convenience:
+
+```{r}
+(trees <- trees %>% as_tibble())
+```
+
+I put the above code in parentheses so that you could see how the resulting
+tibble prints nicely. Notice that the dimensions of the rows and columns of
+this tibble are printed at the top where it says `# A tibble: 31 x 3`.
+
+## Create New Columns from Existing Data
+
+The Volume variable represents the volume of the tree in cubic feet. Let's
+**create a new column** that specifies whether is small
+using `mutate()`. Let's say that a small tree has a Volume less than 19.
+In the code below you can specify that the name of the new column will be 
+Small_Tree.
+
+```{r}
+trees %>% 
+  mutate(Small_Tree = Volume < 19)
+```
+
+## Pick Out Only the Data You Want
+
+Imagine that you only want to look at trees that have a Height greater than 70.
+You can use `filter()` to **eliminate rows** from our tibble:
+
+```{r}
+trees %>% 
+  mutate(Small_Tree = Volume < 19) %>% 
+  filter(Height > 70)
+```
+
+Notice how the dimensions printed at the top of the tibble changed from 
+`# A tibble: 31 x 4` to `# A tibble: 25 x 4` since we eliminated several rows.
+
+Let's say you are interested in how the Height of a tree is related to whether
+or not it is a small tree. In this case we only want to look at the columns
+Height and Small_Tree, and you can **keep only these columns** using `select()`:
+
+```{r}
+trees %>% 
+  mutate(Small_Tree = Volume < 19) %>% 
+  filter(Height > 70) %>% 
+  select(Height, Small_Tree)
+```
+
+## Make Calculations on Grouped Variables
+
+Now say you want to compare the Height of small trees and larger trees. You can
+use the `group_by()` function to **specify groups within a column**. As you can
+see it does not do much on its own:
+
+```{r}
+trees %>% 
+  mutate(Small_Tree = Volume < 19) %>% 
+  filter(Height > 70) %>% 
+  select(Height, Small_Tree) %>% 
+  group_by(Small_Tree)
+```
+
+To actually **make a grouped calculation** we need to use `summarize()`. In the
+example below we are going to calculate the mean Height for each group, and
+we will assign one value per group into a new column called Avg_Height. Finally,
+use `ungroup()` once you are **finished with a grouped calculation**. You should
+think about `group_by()` and `ungroup()` like open and closed parentheses. You
+would not have one without the other.
+
+```{r}
+trees %>% 
+  mutate(Small_Tree = Volume < 19) %>% 
+  filter(Height > 70) %>% 
+  select(Height, Small_Tree) %>% 
+  group_by(Small_Tree) %>% 
+  summarize(Avg_Height = mean(Height)) %>% 
+  ungroup()
+```
+
+## Where to Go from Here?
+
+This is just the snowflake at the tip of the iceberg of the Tidyverse. If you
+are interested in learning more I highly recommend the 
+[learning resources on the Tidyverse website](https://www.tidyverse.org/learn/).
