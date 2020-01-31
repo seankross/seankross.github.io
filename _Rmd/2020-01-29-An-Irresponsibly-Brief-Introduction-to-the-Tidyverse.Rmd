@@ -67,7 +67,7 @@ this tibble are printed at the top where it says `# A tibble: 31 x 3`.
 ## Create New Columns from Existing Data
 
 The Volume variable represents the volume of the tree in cubic feet. Let's
-**create a new column** that specifies whether is small
+**create a new column** that specifies whether it is a small tree
 using `mutate()`. Let's say that a small tree has a Volume less than 19.
 In the code below you can specify that the name of the new column will be 
 Small_Tree.
@@ -80,7 +80,7 @@ trees %>%
 ## Pick Out Only the Data You Want
 
 Imagine that you only want to look at trees that have a Height greater than 70.
-You can use `filter()` to **eliminate rows** from our tibble:
+You can use `filter()` to **eliminate rows** from a tibble:
 
 ```{r}
 trees %>% 
