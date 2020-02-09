@@ -35,5 +35,5 @@ interest you:
 - [Lagging Variables Within Groups](http://seankross.com/notes/lagging-variables-within-groups/)
   - Fun with lagging variables with dplyr.
 
-Thanks to [Oliver Keyes](https://ironholds.org/links/) and of course
+Thanks to [Os Keyes](https://ironholds.org/links/) and of course
 [David Robinson](https://twitter.com/drob) for the inspiration!
