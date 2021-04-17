@@ -36,7 +36,7 @@ examples of using `dnorm` are below:
 # This is a comment. Anything I write after the octothorpe is not executed.
 
 # This is the same as computing the pdf of the normal with x = 0, mu = 0 and
-# sigma = 0. The dnorm function takes three main arguments, as do all of the
+# sigma = 1. The dnorm function takes three main arguments, as do all of the
 # *norm functions in R.
 
 dnorm(0, mean = 0, sd = 1)
