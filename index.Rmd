@@ -1,0 +1,163 @@
+---
+title: "Sean Kross"
+image: "img/sean-kross.jpg"
+links:
+  - label: CV
+    url: "https://seankross.com/cv/"
+  - label: Blog
+    url: "https://seankross.com/blog/"
+  - label: GitHub
+    url: "https://github.com/seankross/"
+  - label: Twitter
+    url: "https://twitter.com/seankross/"
+  - label: YouTube
+    url: "https://www.youtube.com/c/SeanKross/"
+  - label: Notion
+    url: "https://www.seankross.com/notion/"
+#  - label: Consulting
+#    url: "https://www.seankross.com/consulting/"
+output:
+  postcards::solana
+---
+
+# About Me
+
+👋 Hello! I am a PhD Candidate studying Human-Computer Interaction at the
+University of California San
+Diego advised by [Philip Guo][pg]. My work is focused on understanding 
+[data science as a practice][fifty-years], building a better 
+[developer experience][jean-yang] for data scientists, and creating better
+outcomes in [digital education][jeff-leek]. I approach these challenges with
+computational, statistical, ethnographic, and design-driven methods.
+
+Previously I was an intern at the 
+[Research in Software Engineering Group][rise-msr] and the 
+[Computational Social Science Group][css-msr] at Microsoft Research.
+Before I started graduate school I was the Chief Technology Officer at the 
+[Johns Hopkins Data Science Lab][jhu-dsl]. I am also a frequent consultant for 
+data analysis and software development projects, in addition to being
+a maintainer of several popular open source software repositories.
+
+#### Contact
+
+Email: sean at seankross dot com
+
+<p style="margin-bottom:2em;"></p>
+
+## Publications
+
+### Conference Papers
+
+**S. Kross**, P.J. Guo. *Five Pedagogical Principles of a User-Centered Design 
+Course that Prepares Computing Undergraduates for Industry Jobs*. In Proceedings
+of SIGCSE 2022: The 53rd ACM Technical Symposium on Computer Science Education.
+[[Download]]
+[[ACM DL]]
+
+**S. Kross**, P.J. Guo. *Orienting, Framing, Bridging, Magic, and 
+Counseling: How Data Scientists Navigate the Outer Loop of Client Collaborations
+in Industry and Academia*. In Proceedings of CSCW 2021: ACM Conference
+on Computer Supported Cooperative Work.
+[[Download]](https://seankross.com/cscw-2021-sk-pg/)
+[[ACM DL]]
+
+**S. Kross**, E. Hargittai, E.M. Redmiles. *Characterizing the Online
+Learning Landscape: What and How People Learn Online*. In Proceedings
+of CSCW 2021: ACM Conference on Computer Supported Cooperative Work.
+[[Download]](https://seankross.com/cscw-2021/)
+[[ACM DL]](https://doi.org/10.1145/3449220)
+
+X. Pu, **S. Kross**, J. Hofman, D. Goldstein. *Datamations:
+Animated Explanations of Data Analysis Pipelines*. In Proceedings of CHI 2021:
+ACM Conference on Human Factors in Computing Systems.
+[[Download]](https://seankross.com/chi-2021/)
+[[ACM DL]](https://doi.org/10.1145/3411764.3445063)
+
+🏆 E.M. Redmiles, N. Warford, A. Jayanti, A. Koneru, 
+**S. Kross**, M. Morales, R. Stevens, M. Mazurek. *A Comprehensive Quality 
+Evaluation of Security and Privacy Advice on the Web*. In
+Proceedings of the 2020 USENIX Security Symposium. (Distinguished Paper Award)
+[[USENIX]](https://www.usenix.org/conference/usenixsecurity20/presentation/redmiles)
+
+E.M. Redmiles, L. Maszkiewicz, E. Hwang, D. Kuchhal, E. Liu, M. Morales, 
+D. Peskov, S. Rao, R. Stevens, K. Gligorić, **S. Kross**, M. Mazurek, 
+H. Daumé III. *Comparing and Developing Tools to Measure the Readability of 
+Domain-Specific Texts*. In Proceedings of EMNLP 2019: ACL SIGDAT Conference on
+Empirical Methods in Natural Language Processing.
+[[Download]](https://seankross.com/emr/emnlp-2019-redmiles.pdf)
+[[ACL Anthology]](http://dx.doi.org/10.18653/v1/D19-1489)
+
+**S. Kross**, P.J. Guo. *End-User Programmers Repurposing End-User
+Programming Tools to Foster Diversity in Adult End-User Programming 
+Education*. In Proceedings of VL/HCC 2019: IEEE Symposium on Visual Languages 
+and Human-Centric Computing. 
+[[Download]](https://seankross.com/vlhcc-2019/)
+[[IEEE DL]](https://doi.org/10.1109/VLHCC.2019.8818824)
+
+🏅 **S. Kross**, P.J. Guo. *Practitioners Teaching Data Science in Industry and 
+Academia: Expectations, Workflows, and Challenges*. In Proceedings of CHI 2019: 
+The ACM Conference on Human Factors in Computing Systems. (Honorable Mention Paper Award)
+[[Download]](https://seankross.com/chi-2019/)
+[[ACM DL]](https://doi.org/10.1145/3290605.3300493)
+
+E. Redmiles, **S. Kross**, M. Mazurek. *How Well Do My Results Generalize? 
+Comparing Security and Privacy Survey Results from MTurk, Web, and Telephone 
+Samples*. In IEEE S&P 2019: The IEEE Symposium on Security and Privacy.
+[[Download]](https://seankross.com/emr/sp-2019-redmiles-kross-mazurek.pdf)
+[[IEEE DL]](https://doi.org/10.1109/SP.2019.00014)
+
+E. Redmiles, Z. Zhu, **S. Kross**, D. Kuchhal, T. Dumitras, M. Mazurek. *Asking 
+for a Friend: Evaluating Response Biases in Security User Studies*. In 
+Proceedings of CCS 2018: The 25th ACM Conference on Computer and Communications 
+Security.
+[[Download]](https://seankross.com/emr/ccs-2018-redmiles.pdf)
+[[ACM DL]](https://doi.org/10.1145/3243734.3243740)
+
+**S. Kross**, P.J. Guo. *Students, Systems, and Interactions: Synthesizing the 
+First Four Years of Learning@Scale and Charting the Future*. In Proceedings of 
+LAS 2018: The Fifth Annual ACM Conference on Learning at Scale.
+[[Download]](https://seankross.com/las-2018/)
+[[ACM DL]](https://doi.org/10.1145/3231644.3231662)
+
+E. Redmiles, **S. Kross**, M. Mazurek. *Where is the Digital Divide? Examining 
+the Impact of Socioeconomics on Security and Privacy Outcomes*. In Proceedings 
+of CHI 2017: The ACM Conference on Human Factors in Computing Systems.
+[[Download]](https://seankross.com/emr/chi-2017-redmiles-kross-mazurek.pdf)
+[[ACM DL]](https://doi.org/10.1145/3025453.3025673)
+
+E. Redmiles, **S. Kross**, M. Mazurek. *How I Learned to be Secure: a 
+Census-Representative Survey of Security Advice Sources and Behavior*. In 
+Proceedings of CCS 2016: The 23rd ACM Conference on Computer and Communications 
+Security.
+[[Download]](https://seankross.com/emr/ccs-2016-redmiles-kross-mazurek.pdf)
+[[ACM DL]](https://doi.org/10.1145/2976749.2978307)
+
+E. Redmiles, M.A. Abad, I. Coronado, **S. Kross**, A. Malone. *A Classroom 
+Tested Accessible Multimedia Resource for Engaging Underrepresented Students in 
+Computing*. In Proceedings of SIGCSE 2015: The 46th ACM Technical Symposium on 
+Computer Science Education. 
+[[ACM DL]](http://dl.acm.org/citation.cfm?id=2691870)
+
+### Journal Papers
+
+**S. Kross**, J.T. Leek, J. Muschelli. *Ari: The Automated R 
+Instructor*. In The R Journal, June 2020.
+[[TRJ]](https://doi.org/10.32614/RJ-2020-023)
+
+L. D'Agostino McGowan, **S. Kross**, J.T. Leek. *Tools for Analyzing
+R Code the Tidy Way*. In The R Journal, June 2020.
+[[TRJ]](https://doi.org/10.32614/RJ-2020-011)
+
+**S. Kross**, R.D. Peng, B.S. Caffo, I. Gooding, J.T. Leek. *The Democratization
+of Data Science Education*. In The American Statistician, October 2019.
+[[Download]](https://seankross.com/tas-2019/)
+[[PeerJ Preprints]](https://doi.org/10.7287/peerj.preprints.3195v1)
+[[TAS]](https://doi.org/10.1080/00031305.2019.1668849)
+
+[pg]:https://pg.ucsd.edu/
+[fifty-years]:https://courses.csail.mit.edu/18.337/2015/docs/50YearsDataScience.pdf
+[jean-yang]:https://future.a16z.com/the-case-for-developer-experience/
+[jeff-leek]:https://youtu.be/GG5Vl7N5vCo
+[rise-msr]:https://www.microsoft.com/en-us/research/group/research-software-engineering-rise/
+[css-msr]:https://www.microsoft.com/en-us/research/theme/computational-social-science/
+[jhu-dsl]:https://jhudatascience.org/

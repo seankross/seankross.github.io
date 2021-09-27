@@ -9,7 +9,13 @@ jumbo_subtitle: About
 
 # About Me
 
-Hi! I'm Sean. In the past I attended NYU and the University of Maryland. I'm
+Hi! I'm Sean. For up-to-date information you should check out my 
+[homepage](https://seankross.com). If you're interested in what I've been
+reading lately see the [supplementary materials](supplementary-materials.html).
+I also have a sub-blog called [Notes](http://seankross.com/notes/).
+
+<!--
+In the past I attended NYU and the University of Maryland. I'm
 currently a PhD student at the University of California San Diego.
 I live in La Jolla, California where you can find me spending most of my time writing
 code, taking pictures, and reading books. If you're interested in what I've been
@@ -17,11 +23,13 @@ reading lately see the [supplementary materials](supplementary-materials.html).
 I also have a sub-blog called [Notes](http://seankross.com/notes/). If you want
 the information on this page in a single document you can 
 [download my CV](http://seankross.com/cv/).
+-->
 
 Email: sean at seankross dot com
 
 All of the content on this site is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 
+<!--
 # Work
 
 I work in the [UC San Diego Design Lab](http://designlab.ucsd.edu/) where I'm advised by
@@ -69,6 +77,8 @@ you'd like to add a country).
 using the [Twilio](https://www.twilio.com/) API.
 - [ari](https://github.com/seankross/ari) - Create narrated lecture videos from
 plain text documents.
+
+-->
 
 # Books
 

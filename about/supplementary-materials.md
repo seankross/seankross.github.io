@@ -5,7 +5,7 @@ jumbo_title: Supplementary Materials
 jumbo_subtitle:
 ---
 
-Here is a list of digital objects that I keep coming back to for one reason or
+Here is a list of articles that I keep coming back to for one reason or
 another:
 
 - [The Counter-Terrorist](http://www.newyorker.com/magazine/2002/01/14/the-counter-terrorist) by Lawrence Wright in *The New Yorker*

@@ -41,5 +41,7 @@ knit_folder <- function(infolder, outfolder, figsfolder, cachefolder) {
   }
 }
 
+rmarkdown::render(input = "index.Rmd")
+
 knit_folder(infolder = "_Rmd", outfolder = "_posts", 
             figsfolder = "img/", cachefolder = "_cache/")
