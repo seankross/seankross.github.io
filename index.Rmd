@@ -59,7 +59,7 @@ Counseling: How Data Scientists Navigate the Outer Loop of Client Collaborations
 in Industry and Academia*. In Proceedings of CSCW 2021: ACM Conference
 on Computer Supported Cooperative Work.
 [[Download]](https://seankross.com/cscw-2021-sk-pg/)
-[ACM DL]
+[[ACM DL]](https://doi.org/10.1145/3476052)
 
 **Sean Kross**, Eszter Hargittai, Elissa M. Redmiles. *Characterizing the Online
 Learning Landscape: What and How People Learn Online*. In Proceedings
