@@ -51,7 +51,7 @@ Email: sean at seankross dot com
 **Sean Kross**, Philip J. Guo. *Five Pedagogical Principles of a User-Centered Design 
 Course that Prepares Computing Undergraduates for Industry Jobs*. In Proceedings
 of SIGCSE 2022: The 53rd ACM Technical Symposium on Computer Science Education.
-[Download]
+[[Download]](https://seankross.com/sigcse-2022/)
 [ACM DL]
 
 **Sean Kross**, Philip J. Guo. *Orienting, Framing, Bridging, Magic, and 
