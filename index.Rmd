@@ -14,6 +14,8 @@ links:
     url: "https://www.youtube.com/c/SeanKross/"
   - label: Notion
     url: "https://www.seankross.com/notion/"
+  - label: Calendly
+    url: "https://calendly.com/seankross/"
 #  - label: Consulting
 #    url: "https://www.seankross.com/consulting/"
 output:
@@ -22,21 +24,21 @@ output:
 
 # About Me
 
-👋 Hello! I am a PhD Candidate studying Human-Computer Interaction at the
-University of California San
-Diego advised by [Philip Guo][pg]. My work is focused on understanding 
+👋 Hello! I am a Data Staff Scientist at the 
+[Fred Hutch Data Science Lab][dasl]. My work is focused on understanding 
 [data science as a practice][fifty-years], building a better 
 [developer experience][jean-yang] for data scientists, and creating better
 outcomes in [digital education][jeff-leek]. I approach these challenges with
 computational, statistical, ethnographic, and design-driven methods.
 
-Previously I was an intern at the 
-[Research in Software Engineering Group][rise-msr] and the 
+Previously I earned my PhD in Human-Computer Interaction at the University of 
+California San Diego where I was advised by [Philip Guo][pg]. During my PhD I
+interned at the [Research in Software Engineering Group][rise-msr] and the 
 [Computational Social Science Group][css-msr] at Microsoft Research.
 Before I started graduate school I was the Chief Technology Officer at the 
 [Johns Hopkins Data Science Lab][jhu-dsl]. I am also a frequent consultant for 
 data analysis and software development projects, in addition to being
-a maintainer of several popular open source software repositories.
+a maintainer of several open source software projects.
 
 #### Contact
 
@@ -161,3 +163,4 @@ of Data Science Education*. In The American Statistician, October 2019.
 [rise-msr]:https://www.microsoft.com/en-us/research/group/research-software-engineering-rise/
 [css-msr]:https://www.microsoft.com/en-us/research/theme/computational-social-science/
 [jhu-dsl]:https://jhudatascience.org/
+[dasl]:https://hutchdatascience.org/
