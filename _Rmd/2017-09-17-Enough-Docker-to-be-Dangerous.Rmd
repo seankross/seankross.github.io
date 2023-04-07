@@ -91,6 +91,7 @@ Switching back to our Dockerized Ubuntu shell let's make a small change by
 creating a simple text file:
 
 ```{r, engine='bash', eval=FALSE}
+# (Now we're in the Dockerized Ubuntu shell)
 cd
 echo 'My first container!' > readme.txt
 ```
@@ -125,6 +126,7 @@ We're back in the Ubuntu shell! Let just check to make sure the file we created
 is still there:
 
 ```{r, engine='bash', eval=FALSE}
+# (Now we're in the Dockerized Ubuntu shell)
 cd
 cat readme.txt
 ```
@@ -143,6 +145,7 @@ container. For example we might want to be able to download files in our
 container, so let's install `curl`:
 
 ```{r, engine='bash', eval=FALSE}
+# (Now we're in the Dockerized Ubuntu shell)
 sudo apt-get update
 sudo apt-get install curl
 ```
@@ -259,6 +262,7 @@ docker start -ai a6c228e05fca
 Now we should be in the Ubuntu shell. Did our file make it?
 
 ```{r, engine='bash', eval=FALSE}
+# (Now we're in the Dockerized Ubuntu shell)
 cd
 cat list-of-cool-websites.txt
 ```
