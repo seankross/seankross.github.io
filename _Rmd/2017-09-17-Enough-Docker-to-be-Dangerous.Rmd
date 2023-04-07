@@ -6,7 +6,7 @@ jumbo_title: Enough Docker to be Dangerous
 jumbo_subtitle: A Minimal Tutorial
 ---
 
-[Unlike Jeff Leek](https://simplystatistics.org/2017/08/29/data-science-on-a-chromebook/)
+[Unlike Jeff Leek](https://simplystatistics.org/posts/2017-08-29-data-science-on-a-chromebook/)
 I do most of my software development on a MacBook Pro, but every once in a while
 I would like to be able to access a shell on Ubuntu without too much hassle.
 One of the main reasons I want to be able to access Ubuntu is because I test
