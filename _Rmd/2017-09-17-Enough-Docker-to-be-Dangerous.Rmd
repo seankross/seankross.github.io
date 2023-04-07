@@ -356,7 +356,9 @@ docker run -it --rm -p 8888:8888 jupyter/datascience-notebook
 The console will then provide you with a URL that you can copy and paste into
 a web browser where your Jupyter notebook will be live! The container will
 automatically destroy itself after it stops, but to save the container you can
-remove the `--rm` flag from the command above.
+remove the `--rm` flag from the command above. If you want to shutdown this Jupyter server,
+press Ctrl-C in the command prompt and it will ask you a question, where you press "y" for "yes".
+
 
 If - like me - RStudio is more your flavor of data science computing environment
 and you want a fresh instance then you should look at the
