@@ -50,10 +50,10 @@ Email: sean at seankross dot com
 
 ### Conference Papers
 
-Sam Lau, **Sean Kross**, Eugene Wu, Philip J. Guo. *Teaching Data Science by 
+Sam Lau\*, **Sean Kross\***, Eugene Wu, Philip J. Guo  (\*equal contribution). *Teaching Data Science by 
 Visualizing Data Table Transformations: Pandas Tutor for Python, Tidy Data 
 Tutor for R, and SQL Tutor.* In Proceedings of DataEd 2023: The 2nd ACM 
-International Workshop on Data Systems Education
+International Workshop on Data Systems Education.
 [[Download]](https://seankross.com/dataed-2023/)
 [[ACM DL]](https://dl.acm.org/doi/10.1145/3596673.3596972)
 
