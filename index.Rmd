@@ -14,8 +14,8 @@ links:
     url: "https://www.youtube.com/c/SeanKross/"
   - label: Notion
     url: "https://www.seankross.com/notion/"
-  - label: Calendly
-    url: "https://calendly.com/seankross/"
+#  - label: Calendly
+#    url: "https://calendly.com/seankross/"
 #  - label: Consulting
 #    url: "https://www.seankross.com/consulting/"
 output:
@@ -49,6 +49,13 @@ Email: sean at seankross dot com
 ## Publications
 
 ### Conference Papers
+
+Sam Lau, **Sean Kross**, Eugene Wu, Philip J. Guo. *Teaching Data Science by 
+Visualizing Data Table Transformations: Pandas Tutor for Python, Tidy Data 
+Tutor for R, and SQL Tutor.* In Proceedings of DataEd 2023: The 2nd ACM 
+International Workshop on Data Systems Education
+[[Download]](https://seankross.com/dataed-2023/)
+[[ACM DL]](https://dl.acm.org/doi/10.1145/3596673.3596972)
 
 **Sean Kross**, Philip J. Guo. *Five Pedagogical Principles of a User-Centered Design 
 Course that Prepares Computing Undergraduates for Industry Jobs*. In Proceedings
