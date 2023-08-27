@@ -149,6 +149,14 @@ Computer Science Education.
 
 ### Journal Papers
 
+Emily J. Winokur, Cherry Song, Estelita S. Leija, Joanne Chen, **Sean Kross**, 
+Danielle Shamam, Marcelo Aguilar-Rivera, Laleh K. Quinn, Federico Rossano, and 
+Andrea A. Chiba. *Reciprocity in Dyads and Triads: Female Rats Alter Their 
+Prosocial Behavior According to the Social Context*. In Animal Behavior and 
+Cognition, August 2023.
+[[Download]](https://seankross.com/abc-2023/)
+[[AB&C]](https://www.animalbehaviorandcognition.org/article.php?id=1351)
+
 **Sean Kross**, Jeffery T. Leek, John Muschelli. *Ari: The Automated R 
 Instructor*. In The R Journal, June 2020.
 [[TRJ]](https://doi.org/10.32614/RJ-2020-023)
