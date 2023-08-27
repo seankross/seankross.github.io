@@ -150,7 +150,7 @@ Computer Science Education.
 ### Journal Papers
 
 Emily J. Winokur, Cherry Song, Estelita S. Leija, Joanne Chen, **Sean Kross**, 
-Danielle Shamam, Marcelo Aguilar-Rivera, Laleh K. Quinn, Federico Rossano, and 
+Danielle Shamam, Marcelo Aguilar-Rivera, Laleh K. Quinn, Federico Rossano, 
 Andrea A. Chiba. *Reciprocity in Dyads and Triads: Female Rats Alter Their 
 Prosocial Behavior According to the Social Context*. In Animal Behavior and 
 Cognition, August 2023.
