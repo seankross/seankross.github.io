@@ -24,3 +24,4 @@ another:
 - [How Ferrero Rocher Became a Status Symbol for Immigrant Families](https://www.thrillist.com/eat/nation/ferrero-rocher-chocolates-status-symbol-immigrants) by Liana Aghajanian in *Thrillist*
 - [There's No Such Thing as a Free Watch](https://www.topic.com/there-s-no-such-thing-as-a-free-watch) by [Jenny Odell](http://www.jennyodell.com/) in *Topic*
 - [The Murky Tale of Flint's Deceptive Water Data](https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2017.01016.x) by Robert Langkjær‐Bain in *Significance*
+- [Leadership Is A Hell Of A Drug](https://ludic.mataroa.blog/blog/leadership-is-a-hell-of-a-drug/)
