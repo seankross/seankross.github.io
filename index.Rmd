@@ -149,6 +149,16 @@ Computer Science Education.
 
 ### Journal Papers
 
+Julia Stewart Lowndes, Anna M. Holder, Emily H. Markowitz, Corey Clatterbuck, 
+Amanda L. Bradford, Kathryn Doering, Molly H. Stevens, Stefanie Butland, 
+Devan Burke, **Sean Kross**, Jeffrey W. Hollister, Christine Stawitz, 
+Margaret C. Siple, Adyan Rios, Jessica Nicole Welch, Bai Li, Farnaz Nojavan, 
+Alexandra Davis, Erin Steiner, Josh M. London, Ileana Fenwick, Alexis Hunzinger,
+Juliette Verstaen, Elizabeth Holmes, Makhan Virdi, Andrew P. Barrett, Erin Robinson
+*Shifting Institutional Culture to Develop Climate Solutions with Open Science*.
+In Ecology and Evolution, June 2024.
+[[E&E]](https://onlinelibrary.wiley.com/doi/10.1002/ece3.11341)
+
 Emily J. Winokur, Cherry Song, Estelita S. Leija, Joanne Chen, **Sean Kross**, 
 Danielle Shamam, Marcelo Aguilar-Rivera, Laleh K. Quinn, Federico Rossano, 
 Andrea A. Chiba. *Reciprocity in Dyads and Triads: Female Rats Alter Their 
