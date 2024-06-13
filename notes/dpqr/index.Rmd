@@ -117,7 +117,7 @@ pnorm(2, mean = 5, sd = 3, lower.tail = FALSE)
 
 `pnorm` is the function that replaces the table of probabilites and Z-scores at
 the back of the statistics textbook. Let's take our vector of Z-scores from
-before (`z_scores`) and compute a new vector of "probability masses" using
+before (`z_scores`) and compute a new vector of cumulative probability using
 `pnorm`. Any guesses about what this plot will look like?
 
 ```{r}
