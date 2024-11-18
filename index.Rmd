@@ -8,8 +8,8 @@ links:
     url: "https://seankross.com/blog/"
   - label: GitHub
     url: "https://github.com/seankross/"
-  - label: Twitter
-    url: "https://twitter.com/seankross/"
+  - label: Bluesky
+    url: "https://bsky.app/profile/seankross.com"
   - label: YouTube
     url: "https://www.youtube.com/c/SeanKross/"
   - label: Notion
