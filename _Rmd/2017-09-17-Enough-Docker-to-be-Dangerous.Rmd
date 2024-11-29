@@ -6,7 +6,7 @@ jumbo_title: Enough Docker to be Dangerous
 jumbo_subtitle: A Minimal Tutorial
 ---
 
-[Unlike Jeff Leek](https://simplystatistics.org/2017/08/29/data-science-on-a-chromebook/)
+[Unlike Jeff Leek](https://simplystatistics.org/posts/2017-08-29-data-science-on-a-chromebook/)
 I do most of my software development on a MacBook Pro, but every once in a while
 I would like to be able to access a shell on Ubuntu without too much hassle.
 One of the main reasons I want to be able to access Ubuntu is because I test
@@ -91,6 +91,7 @@ Switching back to our Dockerized Ubuntu shell let's make a small change by
 creating a simple text file:
 
 ```{r, engine='bash', eval=FALSE}
+# (Now we're in the Dockerized Ubuntu shell)
 cd
 echo 'My first container!' > readme.txt
 ```
@@ -125,6 +126,7 @@ We're back in the Ubuntu shell! Let just check to make sure the file we created
 is still there:
 
 ```{r, engine='bash', eval=FALSE}
+# (Now we're in the Dockerized Ubuntu shell)
 cd
 cat readme.txt
 ```
@@ -143,6 +145,7 @@ container. For example we might want to be able to download files in our
 container, so let's install `curl`:
 
 ```{r, engine='bash', eval=FALSE}
+# (Now we're in the Dockerized Ubuntu shell)
 sudo apt-get update
 sudo apt-get install curl
 ```
@@ -259,6 +262,7 @@ docker start -ai a6c228e05fca
 Now we should be in the Ubuntu shell. Did our file make it?
 
 ```{r, engine='bash', eval=FALSE}
+# (Now we're in the Dockerized Ubuntu shell)
 cd
 cat list-of-cool-websites.txt
 ```
@@ -352,7 +356,9 @@ docker run -it --rm -p 8888:8888 jupyter/datascience-notebook
 The console will then provide you with a URL that you can copy and paste into
 a web browser where your Jupyter notebook will be live! The container will
 automatically destroy itself after it stops, but to save the container you can
-remove the `--rm` flag from the command above.
+remove the `--rm` flag from the command above. If you want to shutdown this Jupyter server,
+press Ctrl-C in the command prompt and it will ask you a question, where you press "y" for "yes".
+
 
 If - like me - RStudio is more your flavor of data science computing environment
 and you want a fresh instance then you should look at the
