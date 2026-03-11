@@ -12,8 +12,8 @@ links:
     url: "https://bsky.app/profile/seankross.com"
   - label: YouTube
     url: "https://www.youtube.com/c/SeanKross/"
-  - label: Notion
-    url: "https://www.seankross.com/notion/"
+#  - label: Notion
+#    url: "https://www.seankross.com/notion/"
 #  - label: Calendly
 #    url: "https://calendly.com/seankross/"
 #  - label: Consulting
@@ -49,6 +49,13 @@ Email: sean at seankross dot com
 ## Publications
 
 ### Conference Papers
+
+Harold Triedman, Jayshree Sarathy, Priyanka Nanayakkara, Rachel Cummings, 
+Gabriel Kaptchuk, **Sean Kross**, Elissa M. Redmiles. *"Having Confidence 
+in My Confidence Intervals": How Data Users Engage with Privacy-Protected 
+Wikipedia Data.* In Proceedings of CHI 2026: ACM Conference on Human 
+Factors in Computing Systems.
+[[arXiv]](https://arxiv.org/abs/2512.06534)
 
 Sam Lau\*, **Sean Kross\***, Eugene Wu, Philip J. Guo  (\*equal contribution). *Teaching Data Science by 
 Visualizing Data Table Transformations: Pandas Tutor for Python, Tidy Data 
