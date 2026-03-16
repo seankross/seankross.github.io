@@ -44,7 +44,7 @@ in Massive Open Online Courses (MOOCs) where unlimited numbers of students can
 enroll in classes that are often offered for free.
 
 When you are teaching thousands of students from all over
-the world, how do you do provide them with meaningful feedback for the 
+the world, how do you provide them with meaningful feedback for the 
 assignments they complete for the class, let alone fair grades? If you're
 teaching computational skills, how can you ensure that all of your students can
 set up a computing environment that will allow them to achieve the goals of the
