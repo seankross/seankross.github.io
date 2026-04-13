@@ -56,6 +56,7 @@ in My Confidence Intervals": How Data Users Engage with Privacy-Protected
 Wikipedia Data.* In Proceedings of CHI 2026: ACM Conference on Human 
 Factors in Computing Systems.
 [[arXiv]](https://arxiv.org/abs/2512.06534)
+[[ACM DL]](https://dl.acm.org/doi/10.1145/3772318.3791573)
 
 Sam Lau\*, **Sean Kross\***, Eugene Wu, Philip J. Guo  (\*equal contribution). *Teaching Data Science by 
 Visualizing Data Table Transformations: Pandas Tutor for Python, Tidy Data 
